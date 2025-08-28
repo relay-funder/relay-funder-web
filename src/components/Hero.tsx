@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import heroImage from '@/assets/hero-community-new.jpg';
-import abstractBg from '@/assets/hero-abstract.jpg';
+import heroBg from '@/assets/hero-bg-minimal.jpg';
 
 const Hero = () => {
   return (
@@ -8,14 +8,14 @@ const Hero = () => {
       {/* Background layers */}
       <div className="absolute inset-0 z-0">
         <div
-          className="absolute inset-0 opacity-60"
+          className="absolute inset-0 opacity-40"
           style={{
-            backgroundImage: `url(${abstractBg})`,
+            backgroundImage: `url(${heroBg})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-background/80 via-transparent to-background/60" />
+        <div className="absolute inset-0 bg-gradient-to-br from-background/90 via-transparent to-background/70" />
       </div>
 
       <div className="max-w-content mx-auto px-6 relative z-10">
@@ -24,7 +24,7 @@ const Hero = () => {
           <div className="space-y-8 animate-fade-in-up">
             <div className="space-y-4">
               <h1 className="text-hero text-text-primary leading-[1.1]">
-                Community-driven crowdfunding for{' '}
+                Relay Thunder for{' '}
                 <span className="text-gradient">displaced communities</span>
               </h1>
               <p className="text-subhero text-text-secondary max-w-lg">
@@ -51,7 +51,7 @@ const Hero = () => {
             {/* Pilot badge */}
             <div className="inline-flex items-center px-4 py-2 bg-surface border border-border rounded-full">
               <span className="text-sm text-text-muted">
-                <strong className="text-accent">Launching in Africa with Refunite's Community Leader Network</strong> — Global participation welcome
+                <strong className="text-accent">Launching in Africa with Refunite's Community Leader Network</strong>
               </span>
             </div>
           </div>

@@ -42,6 +42,8 @@ export default {
 					dark: 'hsl(var(--accent-dark))',
 					foreground: 'hsl(var(--accent-foreground))'
 				},
+				growth: 'hsl(var(--growth))',
+				hope: 'hsl(var(--hope))',
 				hover: 'hsl(var(--hover))',
 				active: 'hsl(var(--active))',
 				focus: 'hsl(var(--focus))',

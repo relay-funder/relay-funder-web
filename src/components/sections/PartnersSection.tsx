@@ -102,11 +102,9 @@ const PartnersSection = () => {
                     className="w-8 h-8 object-contain"
                   />
                 ) : (
-                  <div className="w-8 h-8 bg-accent/20 rounded flex items-center justify-center">
-                    <span className="text-accent text-xs font-bold">
-                      {partner.name.charAt(0)}
-                    </span>
-                  </div>
+                  <span className="text-accent text-sm font-bold">
+                    {partner.name.charAt(0)}
+                  </span>
                 )}
               </div>
               <h4 className="font-medium text-text-primary text-sm mb-1">
