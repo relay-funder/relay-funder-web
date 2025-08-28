@@ -13,11 +13,11 @@ const SponsorsPreview = () => {
       <div className="max-w-content mx-auto px-6">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-section-title text-text-primary mb-6">
-            Sponsors
+            <span className="text-display-quirky">Sponsors</span>
           </h2>
           
-          <p className="text-xl text-text-secondary leading-relaxed mb-12">
-            Fuel the Match Fund. Multiply community power.
+          <p className="text-xl text-text-secondary leading-relaxed mb-12 text-body-serif">
+            Fuel the Match Fund. <span className="text-accent-serif">Multiply community power.</span>
           </p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">

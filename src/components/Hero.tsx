@@ -25,7 +25,7 @@ const Hero = () => {
             <div className="space-y-4">
               <h1 className="text-hero text-text-primary leading-[1.1]">
                 Community-driven crowdfunding for{' '}
-                <span className="text-gradient">displaced communities</span>
+                <span className="text-accent-solid">displaced communities</span>
               </h1>
               <p className="text-subhero text-text-secondary max-w-lg">
                 Leaders propose. Supporters worldwide back them. Sponsors multiply support 

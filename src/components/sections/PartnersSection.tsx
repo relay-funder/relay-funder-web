@@ -57,7 +57,7 @@ const PartnersSection = () => {
     <section className="py-16 bg-surface border-y border-border">
       <div className="max-w-content mx-auto px-6">
         <div className="text-center mb-12">
-          <p className="text-sm text-text-muted font-medium uppercase tracking-wide mb-4">
+          <p className="text-sm text-text-muted font-medium uppercase tracking-wide mb-4 text-display-quirky">
             Building with trusted partners
           </p>
           <h2 className="text-2xl font-display font-semibold text-text-primary">
@@ -78,11 +78,11 @@ const PartnersSection = () => {
             <h3 className="font-display font-semibold text-text-primary mb-2">
               Refunite
             </h3>
-            <p className="text-sm text-text-muted mb-3">
+            <p className="text-sm text-text-muted mb-3 text-display-quirky">
               Founding Partner
             </p>
-            <p className="text-text-secondary text-sm leading-relaxed">
-              Community Leader Network with 100k+ trusted leaders and 100M+ reach across displaced communities
+            <p className="text-text-secondary text-sm leading-relaxed text-body-serif">
+              Community Leader Network with <strong className="text-accent">100,000+ trusted leaders</strong> and <strong className="text-accent">100M+ reach</strong> across displaced communities worldwide
             </p>
           </div>
         </div>

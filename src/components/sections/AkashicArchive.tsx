@@ -3,17 +3,17 @@ const AkashicArchive = () => {
     <section className="py-20">
       <div className="max-w-content mx-auto px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="inline-flex items-center px-3 py-1 bg-accent/10 text-accent text-sm font-medium rounded-full mb-6">
+          <div className="inline-flex items-center px-3 py-1 bg-accent/10 text-accent text-sm font-medium rounded-full mb-6 text-display-quirky">
             Coming Soon
           </div>
           
           <h2 className="text-section-title text-text-primary mb-6">
-            Akashic Archive
+            <span className="text-display-quirky">Akashic Archive</span>
           </h2>
           
-          <p className="text-xl text-text-secondary leading-relaxed mb-8 max-w-3xl mx-auto">
-            Creators will enhance campaigns with <strong>exclusive digital rewards</strong> (art, music, cultural artifacts) 
-            minted on <strong>Akashic</strong> and preserved via <strong>IPFS</strong>—deepening engagement 
+          <p className="text-xl text-text-secondary leading-relaxed mb-8 max-w-3xl mx-auto text-body-serif">
+            Creators will enhance campaigns with <strong className="text-accent">exclusive digital rewards</strong> (art, music, cultural artifacts) 
+            minted on <strong className="text-accent">Akashic</strong> and preserved via <strong className="text-accent">IPFS</strong>—deepening engagement 
             and safeguarding cultural memory.
           </p>
 

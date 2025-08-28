@@ -16,10 +16,10 @@ const CommunityMatch = () => {
       <div className="max-w-content mx-auto px-6">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-section-title text-text-primary mb-6">
-            Community Match
+            <span className="text-display-quirky">Community Match</span>
           </h2>
           
-          <p className="text-xl text-text-secondary leading-relaxed mb-12">
+          <p className="text-xl text-text-secondary leading-relaxed mb-12 text-body-serif">
             More diverse community support creates exponentially larger matches from the Sponsor-seeded Match Fund.
           </p>
 
@@ -28,7 +28,7 @@ const CommunityMatch = () => {
             <div className="space-y-8">
               {/* Backer count slider */}
               <div>
-                <label className="block text-sm text-text-muted mb-4">
+                <label className="block text-sm text-text-muted mb-4 text-display-quirky">
                   Number of community backers
                 </label>
                 <input
