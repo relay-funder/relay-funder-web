@@ -19,8 +19,9 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'display': ['Space Grotesk', 'system-ui', 'sans-serif'],
+				'display': ['Schibsted Grotesk', 'system-ui', 'sans-serif'],
 				'body': ['Inter', 'system-ui', 'sans-serif'],
+				'serif': ['Newsreader', 'Georgia', 'serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',

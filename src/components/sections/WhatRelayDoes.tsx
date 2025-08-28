@@ -20,11 +20,11 @@ const WhatRelayDoes = () => {
       <div className="max-w-content mx-auto px-6">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-section-title text-text-primary mb-8">
-            What Relay Thunder Does
+            What Relay Funder Does
           </h2>
           
           <p className="text-xl text-text-secondary leading-relaxed mb-12 max-w-3xl mx-auto">
-            Relay Thunder is a simple way for refugee and displaced community leaders to fund 
+            Relay Funder is a simple way for refugee and displaced community leaders to fund 
             the projects they know will work—backed by supporters worldwide and 
             amplified by a Sponsor-seeded Match Fund.
           </p>

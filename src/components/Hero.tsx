@@ -24,12 +24,12 @@ const Hero = () => {
           <div className="space-y-8 animate-fade-in-up">
             <div className="space-y-4">
               <h1 className="text-hero text-text-primary leading-[1.1]">
-                Relay Thunder for{' '}
+                Community-driven crowdfunding for{' '}
                 <span className="text-gradient">displaced communities</span>
               </h1>
               <p className="text-subhero text-text-secondary max-w-lg">
                 Leaders propose. Supporters worldwide back them. Sponsors multiply support 
-                through a shared Match Fund.
+                through a <span className="text-accent-serif">shared Match Fund</span>.
               </p>
             </div>
 
