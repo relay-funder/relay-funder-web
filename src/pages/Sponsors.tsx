@@ -1,25 +1,27 @@
-import { useState } from 'react';
 import Layout from '@/components/Layout';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const Sponsors = () => {
-  const [currentTheme, setCurrentTheme] = useState(0);
 
   const themes = [
     {
       title: 'Education',
-      description: 'Supporting learning initiatives and skill development programs',
-      examples: ['Digital literacy workshops', 'Vocational training centers', 'Language learning programs'],
+      description: 'Learning initiatives and skill development',
+      color: 'bg-trust',
     },
     {
-      title: 'Micro-enterprise',
-      description: 'Empowering small business development and economic opportunities',
-      examples: ['Market access platforms', 'Equipment and tools', 'Business mentorship programs'],
+      title: 'Economic Development',
+      description: 'Small business and livelihood opportunities',
+      color: 'bg-growth',
     },
     {
-      title: 'Climate resilience',
-      description: 'Building adaptive capacity for environmental challenges',
-      examples: ['Water conservation systems', 'Sustainable agriculture', 'Renewable energy solutions'],
+      title: 'Climate Resilience',
+      description: 'Environmental adaptation and sustainability',
+      color: 'bg-hope',
+    },
+    {
+      title: 'General Aid',
+      description: 'Essential services and emergency support',
+      color: 'bg-surface-alt',
     },
   ];
 
@@ -83,61 +85,35 @@ const Sponsors = () => {
         </div>
       </section>
 
-      {/* Themes Carousel */}
+      {/* Funding Themes */}
       <section className="py-20 bg-surface">
         <div className="max-w-content mx-auto px-6">
-          <h2 className="text-section-title text-text-primary mb-12 text-center">
-            Funding Themes
-          </h2>
+          <div className="text-center mb-16">
+            <h2 className="text-section-title text-text-primary mb-6 font-display">
+              Funding Themes
+            </h2>
+            <p className="text-xl text-text-secondary max-w-2xl mx-auto font-serif">
+              Support community-led projects across key areas of impact
+            </p>
+          </div>
           
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-card border border-border rounded-2xl p-8">
-              <div className="flex items-center justify-between mb-6">
-                <button
-                  onClick={() => setCurrentTheme((prev) => (prev - 1 + themes.length) % themes.length)}
-                  className="p-2 rounded-lg border border-border hover:bg-surface interactive-base"
-                >
-                  <ChevronLeft size={20} />
-                </button>
-                
-                <div className="flex space-x-2">
-                  {themes.map((_, index) => (
-                    <div
-                      key={index}
-                      className={`w-2 h-2 rounded-full transition-colors ${
-                        index === currentTheme ? 'bg-accent' : 'bg-border'
-                      }`}
-                    />
-                  ))}
-                </div>
-
-                <button
-                  onClick={() => setCurrentTheme((prev) => (prev + 1) % themes.length)}
-                  className="p-2 rounded-lg border border-border hover:bg-surface interactive-base"
-                >
-                  <ChevronRight size={20} />
-                </button>
-              </div>
-
-              <div className="text-center">
-                <h3 className="text-2xl font-bold text-accent mb-4">
-                  {themes[currentTheme].title}
-                </h3>
-                <p className="text-text-secondary mb-6">
-                  {themes[currentTheme].description}
-                </p>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  {themes[currentTheme].examples.map((example, index) => (
-                    <div
-                      key={example}
-                      className="bg-surface rounded-lg p-4 text-text-muted text-sm"
-                    >
-                      {example}
-                    </div>
-                  ))}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {themes.map((theme, index) => (
+              <div
+                key={theme.title}
+                className="group relative overflow-hidden rounded-2xl aspect-square"
+              >
+                <div className={`absolute inset-0 ${theme.color} opacity-80 group-hover:opacity-90 transition-opacity`} />
+                <div className="relative h-full flex flex-col justify-center items-center text-center p-6">
+                  <h3 className="text-xl font-bold text-white mb-3 font-display">
+                    {theme.title}
+                  </h3>
+                  <p className="text-white/90 text-sm font-serif leading-relaxed">
+                    {theme.description}
+                  </p>
                 </div>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>

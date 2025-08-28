@@ -4,7 +4,6 @@ const PilotsProof = () => {
   const networkStats = [
     { label: 'Trusted leaders', value: '100,000+', accent: 'text-accent' },
     { label: 'Community reach', value: '100M+', accent: 'text-secondary' },
-    { label: 'Countries served', value: '35+', accent: 'text-tertiary' },
   ];
 
   return (
@@ -29,7 +28,7 @@ const PilotsProof = () => {
               </div>
 
               {/* Network Stats */}
-              <div className="grid grid-cols-3 gap-6">
+              <div className="grid grid-cols-2 gap-8">
                 {networkStats.map((stat, index) => (
                   <div
                     key={stat.label}
