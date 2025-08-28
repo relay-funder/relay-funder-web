@@ -15,7 +15,7 @@ const CommunityMatch = () => {
     <section className="py-20 mesh-bg">
       <div className="max-w-content mx-auto px-6">
         <div className="max-w-4xl mx-auto text-center relative z-10">
-          <div className="text-mono-accent mb-4">Funding Algorithm</div>
+          <div className="text-mono-accent mb-4">Matching Algorithm</div>
           <h2 className="text-section-title text-text-primary mb-6 font-display">
             Community Match
           </h2>
@@ -30,7 +30,7 @@ const CommunityMatch = () => {
               {/* Backer count slider */}
               <div>
                 <label className="block text-sm text-text-muted mb-4 font-mono">
-                  backers_count
+                  Number of Community Backers
                 </label>
                 <input
                   type="range"
@@ -55,7 +55,7 @@ const CommunityMatch = () => {
                 </div>
                 
                 <div className="flex items-center justify-center py-2">
-                  <span className="text-quantum font-medium font-mono">+ match_active</span>
+                  <span className="text-quantum font-medium font-mono">Community Match Boost</span>
                 </div>
                 
                 <div className="bio-surface p-4 flex items-center justify-between">

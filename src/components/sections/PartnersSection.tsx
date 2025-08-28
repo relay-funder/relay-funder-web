@@ -57,7 +57,7 @@ const PartnersSection = () => {
     <section className="py-20 mesh-bg">
       <div className="max-w-content mx-auto px-6">
         <div className="text-center mb-16 relative z-10">
-          <div className="text-mono-accent mb-4">Network Status</div>
+          <div className="text-mono-accent mb-4">Trusted Partners</div>
           <h2 className="text-section-title font-display text-text-primary">
             Collaborative ecosystem for displaced communities
           </h2>
@@ -77,7 +77,7 @@ const PartnersSection = () => {
               Refunite
             </h3>
             <div className="text-mono-accent mb-4">
-              FOUNDING_PARTNER
+              Founding Partner
             </div>
             <p className="text-text-secondary leading-relaxed">
               Community Leader Network with <strong className="text-quantum">100,000+ trusted leaders</strong> and <strong className="text-bio">100M+ reach</strong> across displaced communities worldwide

@@ -3,8 +3,8 @@ const AkashicArchive = () => {
     <section className="py-20 bg-surface">
       <div className="max-w-content mx-auto px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="solar-surface px-4 py-2 inline-block mb-6">
-            <div className="text-mono-accent text-background">Coming_Soon</div>
+          <div className="inline-flex items-center px-4 py-2 bg-solar text-background rounded-xl mb-6">
+            <div className="font-medium">Coming Soon</div>
           </div>
           
           <h2 className="text-section-title text-text-primary mb-6 font-display">
@@ -25,9 +25,9 @@ const AkashicArchive = () => {
               </p>
               
               <div className="flex items-center justify-center space-x-3 text-sm">
-                <span className="text-text-muted font-mono">stored_on</span>
+                <span className="text-text-muted font-mono">Stored on</span>
                 <span className="px-3 py-1 bg-bio text-background rounded-lg font-mono font-medium">IPFS</span>
-                <span className="text-text-muted font-mono">permanent</span>
+                <span className="text-text-muted font-mono">Permanent Storage</span>
               </div>
             </div>
           </div>

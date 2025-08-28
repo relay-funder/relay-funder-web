@@ -11,7 +11,7 @@ const PilotsProof = () => {
       <div className="max-w-content mx-auto px-6">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
-            <div className="text-mono-accent mb-4">Network Analysis</div>
+            <div className="text-mono-accent mb-4">Network Overview</div>
             <h2 className="text-section-title text-text-primary font-display">
               Trusted Network
             </h2>
@@ -22,7 +22,7 @@ const PilotsProof = () => {
             <div className="space-y-8">
               {/* Callout card */}
               <div className="web3-card p-8 border-l-4 border-l-bio hover-bio">
-                <div className="text-mono-accent mb-3">INIT_STATUS</div>
+                <div className="text-mono-accent mb-3">Launch Partner</div>
                 <h3 className="font-medium text-text-primary mb-4 font-display text-lg">
                   Launching with Refunite's Community Leader Network
                 </h3>

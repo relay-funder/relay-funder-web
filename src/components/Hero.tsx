@@ -23,7 +23,7 @@ const Hero = () => {
           {/* Left: Content */}
           <div className="space-y-10">
             <div className="space-y-6">
-              <div className="text-mono-accent mb-4">Humanitarian × Web3</div>
+              <div className="text-mono-accent mb-4">Humanitarian Technology</div>
               <h1 className="text-hero leading-[0.95]">
                 Community-driven crowdfunding for{' '}
                 <span className="text-quantum">displaced communities</span>
@@ -51,29 +51,29 @@ const Hero = () => {
 
             {/* Status badge */}
             <div className="quantum-surface p-6 inline-block">
-              <div className="text-mono-accent mb-2">Status: Active</div>
+              <div className="text-mono-accent mb-2">Project Status</div>
               <div className="text-display-bold text-bio">Launching in Africa with Refunite's Community Leader Network</div>
             </div>
           </div>
 
-          {/* Right: Web3 Visual */}
-          <div className="relative float-subtle">
-            <div className="web3-card p-2 hover-quantum">
+          {/* Right: Visual */}
+          <div className="relative">
+            <div className="web3-card p-2">
               <img
                 src={heroImage}
                 alt="Displaced community members collaborating with mobile technology"
                 className="rounded-xl w-full"
               />
-              <div className="absolute -bottom-6 -right-6">
-                <div className="bio-surface p-6 text-background bg-bio pulse-glow">
-                  <div className="text-mono-accent text-background/80 mb-2">MATCH ACTIVE</div>
+              <div className="absolute bottom-4 right-4">
+                <div className="bio-surface p-4 text-background bg-bio">
+                  <div className="text-xs text-background/80 mb-2 font-medium">Community Match Active</div>
                   <div className="flex items-center space-x-3">
                     <div className="flex space-x-1">
                       {[1, 2, 3, 4, 5].map((i) => (
-                        <div key={i} className="w-2 h-8 bg-background/40 rounded-sm"></div>
+                        <div key={i} className="w-2 h-6 bg-background/40 rounded-sm"></div>
                       ))}
                     </div>
-                    <div className="font-mono font-bold text-background">→ 2.5x</div>
+                    <div className="font-mono font-bold text-background">2.5x Impact</div>
                   </div>
                 </div>
               </div>
