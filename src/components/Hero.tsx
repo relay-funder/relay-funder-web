@@ -29,7 +29,7 @@ const Hero = () => {
               </h1>
               <p className="text-subhero text-text-secondary max-w-lg">
                 Leaders propose. Supporters worldwide back them. Sponsors multiply support 
-                through quadratic funding.
+                through a shared Match Fund.
               </p>
             </div>
 
@@ -66,7 +66,7 @@ const Hero = () => {
               />
               <div className="absolute -bottom-6 -right-6 lg:-right-8">
                 <div className="bg-card rounded-xl p-4 shadow-large border border-border animate-float">
-                  <p className="text-xs text-text-muted mb-2">Powered by quadratic funding</p>
+                  <p className="text-xs text-text-muted mb-2">Community Match in action</p>
                   <div className="flex items-center space-x-2">
                     <div className="flex space-x-1">
                       {[1, 2, 3, 4, 5].map((i) => (

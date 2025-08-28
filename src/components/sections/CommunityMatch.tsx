@@ -16,11 +16,11 @@ const CommunityMatch = () => {
       <div className="max-w-content mx-auto px-6">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-section-title text-text-primary mb-6">
-            Quadratic Funding
+            Community Match
           </h2>
           
           <p className="text-xl text-text-secondary leading-relaxed mb-12">
-            More diverse community support creates exponentially larger matches from the Sponsor Fund.
+            More diverse community support creates exponentially larger matches from the Sponsor-seeded Match Fund.
           </p>
 
           {/* Interactive calculator */}
@@ -54,7 +54,7 @@ const CommunityMatch = () => {
                 </div>
                 
                 <div className="flex items-center justify-center py-2">
-                  <span className="text-accent font-medium">+ Quadratic Match</span>
+                  <span className="text-accent font-medium">+ Community Match</span>
                 </div>
                 
                 <div className="flex items-center justify-between p-4 bg-surface rounded-lg">
@@ -73,8 +73,9 @@ const CommunityMatch = () => {
           </div>
 
           <p className="text-sm text-text-muted mt-6 max-w-lg mx-auto">
-            Quadratic funding rewards broad community support over large individual donations, 
+            The Community Match rewards broad community support over large individual donations, 
             ensuring projects with genuine grassroots backing receive the most funding.
+            <span className="block mt-1 text-xs opacity-75">Powered by quadratic funding algorithms</span>
           </p>
         </div>
       </div>
