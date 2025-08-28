@@ -16,12 +16,12 @@ const Navigation = () => {
   const isActive = (href: string) => location.pathname === href;
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border/50">
       <div className="max-w-content mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="font-display font-bold text-xl text-gradient kinetic-wobble">
-            Relay
+          <Link to="/" className="font-display font-medium text-xl text-text-primary">
+            Relay Funder
           </Link>
 
           {/* Desktop Navigation */}
@@ -59,12 +59,12 @@ const Navigation = () => {
               href="https://app.relay.community"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-secondary text-sm px-6 py-2"
+              className="btn-secondary text-sm px-4 py-2"
             >
               Explore Projects
             </a>
-            <Link to="/sponsors" className="btn-primary text-sm px-6 py-2">
-              Sponsor the Match Fund
+            <Link to="/sponsors" className="btn-primary text-sm px-4 py-2">
+              Sponsor Match Fund
             </Link>
           </div>
 

@@ -1,23 +1,23 @@
 const AkashicArchive = () => {
   return (
-    <section className="py-20">
+    <section className="py-20 bg-surface">
       <div className="max-w-content mx-auto px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="inline-flex items-center px-3 py-1 bg-accent/10 text-accent text-sm font-medium rounded-full mb-6 text-display-quirky">
+          <div className="inline-flex items-center px-4 py-2 clean-surface text-trust text-sm font-medium mb-6 font-display">
             Coming Soon
           </div>
           
-          <h2 className="text-section-title text-text-primary mb-6">
-            <span className="text-display-quirky">Akashic Archive</span>
+          <h2 className="text-section-title text-text-primary mb-6 font-display">
+            Akashic Archive
           </h2>
           
-          <p className="text-xl text-text-secondary leading-relaxed mb-8 max-w-3xl mx-auto text-body-serif">
-            Creators will enhance campaigns with <strong className="text-accent">exclusive digital rewards</strong> (art, music, cultural artifacts) 
-            minted on <strong className="text-accent">Akashic</strong> and preserved via <strong className="text-accent">IPFS</strong>—deepening engagement 
+          <p className="text-subhero text-text-secondary leading-relaxed mb-8 max-w-3xl mx-auto">
+            Creators will enhance campaigns with <strong className="text-trust">exclusive digital rewards</strong> (art, music, cultural artifacts) 
+            minted on <strong className="text-trust">Akashic</strong> and preserved via <strong className="text-trust">IPFS</strong>—deepening engagement 
             and safeguarding cultural memory.
           </p>
 
-          <div className="bg-card border border-border rounded-2xl p-8 max-w-2xl mx-auto">
+          <div className="geometric-card p-8 max-w-2xl mx-auto">
             <div className="space-y-6">
               <p className="text-text-secondary leading-relaxed">
                 Campaign creators can offer <strong>exclusive digital rewards</strong> — art, music, cultural artifacts — 
@@ -26,7 +26,7 @@ const AkashicArchive = () => {
               
               <div className="flex items-center justify-center space-x-3 text-sm">
                 <span className="text-text-muted">Preserved on</span>
-                <span className="px-3 py-1 bg-accent/10 text-accent rounded font-medium">IPFS</span>
+                <span className="px-3 py-1 bg-trust/10 text-trust rounded-lg font-medium">IPFS</span>
                 <span className="text-text-muted">for generations</span>
               </div>
             </div>

@@ -12,11 +12,11 @@ const SponsorsPreview = () => {
     <section className="py-20 bg-surface">
       <div className="max-w-content mx-auto px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-section-title text-text-primary mb-6">
-            <span className="text-display-quirky">Sponsors</span>
+          <h2 className="text-section-title text-text-primary mb-6 font-display">
+            Sponsors
           </h2>
           
-          <p className="text-xl text-text-secondary leading-relaxed mb-12 text-body-serif">
+          <p className="text-subhero text-text-secondary leading-relaxed mb-12">
             Fuel the Match Fund. <span className="text-accent-serif">Multiply community power.</span>
           </p>
 
@@ -24,10 +24,9 @@ const SponsorsPreview = () => {
             {benefits.map((benefit, index) => (
               <div
                 key={benefit}
-                className="text-center animate-fade-in-up"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                className="clean-surface p-6 border-l-4 border-l-trust hover-lift"
               >
-                <p className="font-medium text-text-primary border-l-2 border-accent pl-4 text-left">
+                <p className="font-medium text-text-primary font-display">
                   {benefit}
                 </p>
               </div>
