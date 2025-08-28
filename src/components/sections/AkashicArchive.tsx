@@ -18,23 +18,17 @@ const AkashicArchive = () => {
           </p>
 
           <div className="bg-card border border-border rounded-2xl p-8 max-w-2xl mx-auto">
-            <div className="grid grid-cols-3 gap-6 mb-6">
-              {['Art', 'Music', 'Stories'].map((type, index) => (
-                <div
-                  key={type}
-                  className="bg-surface rounded-lg p-4 kinetic-wobble"
-                  style={{ animationDelay: `${index * 0.5}s` }}
-                >
-                  <div className="w-8 h-8 bg-accent/20 rounded-lg mb-2 mx-auto"></div>
-                  <p className="text-sm text-text-muted">{type}</p>
-                </div>
-              ))}
-            </div>
-            
-            <div className="flex items-center justify-center space-x-2 text-sm text-text-muted">
-              <span>Preserved on</span>
-              <span className="px-2 py-1 bg-accent/10 text-accent rounded font-medium">IPFS</span>
-              <span>for generations</span>
+            <div className="space-y-6">
+              <p className="text-text-secondary leading-relaxed">
+                Campaign creators can offer <strong>exclusive digital rewards</strong> — art, music, cultural artifacts — 
+                to supporters. These digital assets are minted on Akashic and preserved via IPFS.
+              </p>
+              
+              <div className="flex items-center justify-center space-x-3 text-sm">
+                <span className="text-text-muted">Preserved on</span>
+                <span className="px-3 py-1 bg-accent/10 text-accent rounded font-medium">IPFS</span>
+                <span className="text-text-muted">for generations</span>
+              </div>
             </div>
           </div>
 

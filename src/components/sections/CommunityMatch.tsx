@@ -1,77 +1,81 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 const CommunityMatch = () => {
-  const [animationStep, setAnimationStep] = useState(0);
+  const [backerCount, setBackerCount] = useState(5);
+  
+  // Quadratic funding calculation: sqrt(sum of sqrt(individual contributions))
+  const calculateMatch = (backers: number) => {
+    return Math.floor(Math.sqrt(backers) * 1.5);
+  };
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setAnimationStep((prev) => (prev + 1) % 4);
-    }, 2000);
-    return () => clearInterval(interval);
-  }, []);
+  const matchMultiplier = calculateMatch(backerCount);
+  const totalImpact = backerCount + matchMultiplier;
 
   return (
     <section className="py-20">
       <div className="max-w-content mx-auto px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-section-title text-text-primary mb-8">
-            Community Match
+          <h2 className="text-section-title text-text-primary mb-6">
+            Quadratic Funding
           </h2>
           
           <p className="text-xl text-text-secondary leading-relaxed mb-12">
-            More individual backers → stronger match from Sponsors → bigger total for the project.
+            More diverse community support creates exponentially larger matches from the Sponsor Fund.
           </p>
 
-          {/* Visual diagram */}
-          <div className="bg-card border border-border rounded-2xl p-8 max-w-2xl mx-auto">
-            <div className="space-y-6">
-              {/* Individual Contributions */}
-              <div className="flex items-center justify-between">
-                <span className="text-text-muted text-sm">Individual backers</span>
-                <div className="flex space-x-1">
-                  {[...Array(5)].map((_, i) => (
-                    <div
-                      key={i}
-                      className={`w-4 h-8 rounded transition-all duration-500 ${
-                        animationStep >= 1 && i < 3
-                          ? 'bg-accent'
-                          : animationStep >= 2 && i < 4
-                          ? 'bg-accent'
-                          : animationStep >= 3 && i < 5
-                          ? 'bg-accent'
-                          : 'bg-border'
-                      }`}
-                    />
-                  ))}
+          {/* Interactive calculator */}
+          <div className="bg-card border border-border rounded-2xl p-8 max-w-xl mx-auto">
+            <div className="space-y-8">
+              {/* Backer count slider */}
+              <div>
+                <label className="block text-sm text-text-muted mb-4">
+                  Number of community backers
+                </label>
+                <input
+                  type="range"
+                  min="1"
+                  max="25"
+                  value={backerCount}
+                  onChange={(e) => setBackerCount(Number(e.target.value))}
+                  className="w-full h-2 bg-surface rounded-lg appearance-none cursor-pointer accent-accent"
+                />
+                <div className="flex justify-between text-xs text-text-muted mt-2">
+                  <span>1</span>
+                  <span className="font-medium text-accent">{backerCount} backers</span>
+                  <span>25</span>
                 </div>
               </div>
 
-              {/* Match Multiplier */}
-              <div className="flex items-center justify-center">
-                <div className={`text-accent font-bold transition-all duration-500 ${
-                  animationStep >= 2 ? 'scale-110' : 'scale-100'
-                }`}>
-                  × Match Fund
+              {/* Visual breakdown */}
+              <div className="space-y-4">
+                <div className="flex items-center justify-between p-4 bg-surface rounded-lg">
+                  <span className="text-sm text-text-secondary">Individual contributions</span>
+                  <span className="font-medium text-text-primary">${backerCount * 10}</span>
                 </div>
-              </div>
-
-              {/* Total Impact */}
-              <div className="flex items-center justify-between">
-                <span className="text-text-muted text-sm">Total for project</span>
-                <div className="flex space-x-1">
-                  {[...Array(8)].map((_, i) => (
-                    <div
-                      key={i}
-                      className={`w-4 h-12 rounded transition-all duration-700 ${
-                        animationStep >= 3 ? 'bg-gradient-to-t from-accent to-accent-light' : 'bg-border'
-                      }`}
-                      style={{ animationDelay: `${i * 50}ms` }}
-                    />
-                  ))}
+                
+                <div className="flex items-center justify-center py-2">
+                  <span className="text-accent font-medium">+ Quadratic Match</span>
+                </div>
+                
+                <div className="flex items-center justify-between p-4 bg-surface rounded-lg">
+                  <span className="text-sm text-text-secondary">Match Fund contribution</span>
+                  <span className="font-medium text-accent">${matchMultiplier * 10}</span>
+                </div>
+                
+                <div className="border-t pt-4">
+                  <div className="flex items-center justify-between">
+                    <span className="font-medium text-text-primary">Total for project</span>
+                    <span className="text-2xl font-bold text-accent">${totalImpact * 10}</span>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+
+          <p className="text-sm text-text-muted mt-6 max-w-lg mx-auto">
+            Quadratic funding rewards broad community support over large individual donations, 
+            ensuring projects with genuine grassroots backing receive the most funding.
+          </p>
         </div>
       </div>
     </section>

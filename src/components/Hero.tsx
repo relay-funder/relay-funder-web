@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
-import heroImage from '@/assets/hero-community.jpg';
+import heroImage from '@/assets/hero-community-new.jpg';
 import abstractBg from '@/assets/hero-abstract.jpg';
-import PartnerOrbit from './PartnerOrbit';
 
 const Hero = () => {
   return (
@@ -25,12 +24,12 @@ const Hero = () => {
           <div className="space-y-8 animate-fade-in-up">
             <div className="space-y-4">
               <h1 className="text-hero text-text-primary leading-[1.1]">
-                Crowdfunding for{' '}
-                <span className="text-gradient">refugee leaders</span>
+                Community-driven crowdfunding for{' '}
+                <span className="text-gradient">displaced communities</span>
               </h1>
               <p className="text-subhero text-text-secondary max-w-lg">
                 Leaders propose. Supporters worldwide back them. Sponsors multiply support 
-                through a shared Match Fund.
+                through quadratic funding.
               </p>
             </div>
 
@@ -52,7 +51,7 @@ const Hero = () => {
             {/* Pilot badge */}
             <div className="inline-flex items-center px-4 py-2 bg-surface border border-border rounded-full">
               <span className="text-sm text-text-muted">
-                <strong className="text-accent">Piloting in Africa with Refunite</strong> — Global participation welcome
+                <strong className="text-accent">Launching in Africa with Refunite's Community Leader Network</strong> — Global participation welcome
               </span>
             </div>
           </div>
@@ -62,14 +61,19 @@ const Hero = () => {
             <div className="relative">
               <img
                 src={heroImage}
-                alt="Community leaders collaborating on mobile-first solutions"
+                alt="Displaced community members collaborating with mobile technology"
                 className="rounded-2xl shadow-large hover-lift"
               />
-              <div className="absolute -bottom-8 -right-8 lg:-right-12">
-                <div className="bg-card rounded-2xl p-6 shadow-large border border-border animate-float">
-                  <p className="text-sm text-text-muted mb-2">Partner Ecosystem</p>
-                  <div className="scale-75 origin-top-left">
-                    <PartnerOrbit />
+              <div className="absolute -bottom-6 -right-6 lg:-right-8">
+                <div className="bg-card rounded-xl p-4 shadow-large border border-border animate-float">
+                  <p className="text-xs text-text-muted mb-2">Powered by quadratic funding</p>
+                  <div className="flex items-center space-x-2">
+                    <div className="flex space-x-1">
+                      {[1, 2, 3, 4, 5].map((i) => (
+                        <div key={i} className="w-2 h-6 bg-accent/30 rounded"></div>
+                      ))}
+                    </div>
+                    <span className="text-xs text-accent font-medium">→ 2.5x impact</span>
                   </div>
                 </div>
               </div>
@@ -77,24 +81,6 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Partner ribbon */}
-        <div className="mt-16 text-center animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-          <p className="text-text-muted text-sm mb-4">In collaboration with</p>
-          <div className="flex flex-wrap justify-center items-center gap-x-8 gap-y-4 opacity-60 hover:opacity-100 interactive-base">
-            {[
-              'Refunite', 'Celo', 'Opera (MiniPay)', 'Gitcoin', 'human.tech (RelayID)',
-              'CoalaPay', 'Grassroots Economics', 'Kickstarter CC Protocol', 'Filecoin Foundation'
-            ].map((partner, index) => (
-              <span
-                key={partner}
-                className="text-sm font-medium text-text-secondary hover:text-accent interactive-base kinetic-wobble"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                {partner}
-              </span>
-            ))}
-          </div>
-        </div>
       </div>
     </section>
   );

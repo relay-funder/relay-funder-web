@@ -24,13 +24,10 @@ const SponsorsPreview = () => {
             {benefits.map((benefit, index) => (
               <div
                 key={benefit}
-                className="bg-card border border-border rounded-xl p-6 hover-lift animate-fade-in-up"
+                className="text-center animate-fade-in-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="w-8 h-8 bg-accent/10 rounded-lg mb-4 mx-auto flex items-center justify-center">
-                  <div className="w-4 h-4 bg-accent rounded-full"></div>
-                </div>
-                <p className="font-medium text-text-primary text-sm">
+                <p className="font-medium text-text-primary border-l-2 border-accent pl-4 text-left">
                   {benefit}
                 </p>
               </div>

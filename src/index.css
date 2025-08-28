@@ -8,41 +8,41 @@
 
 @layer base {
   :root {
-    /* Base neutrals - warm off-white to charcoal */
-    --background: 45 5% 98%;
-    --foreground: 220 15% 12%;
-    --surface: 45 8% 95%;
-    --surface-alt: 45 10% 92%;
+    /* Base neutrals - warm cream to deep charcoal */
+    --background: 35 15% 97%;
+    --foreground: 210 25% 8%;
+    --surface: 35 20% 94%;
+    --surface-alt: 35 25% 91%;
 
     /* Content hierarchy */
-    --text-primary: 220 15% 12%;
-    --text-secondary: 220 10% 25%;
-    --text-muted: 220 8% 45%;
-    --text-subtle: 220 6% 65%;
+    --text-primary: 210 25% 8%;
+    --text-secondary: 210 20% 20%;
+    --text-muted: 210 15% 45%;
+    --text-subtle: 210 10% 65%;
 
-    /* Vibrant accent - teal to violet gradient */
-    --accent: 185 85% 45%;
-    --accent-light: 185 75% 55%;
-    --accent-dark: 185 95% 35%;
-    --accent-gradient: linear-gradient(135deg, hsl(185 85% 45%), hsl(270 70% 55%));
+    /* Warm earth tones with deep orange accent */
+    --accent: 25 85% 55%;
+    --accent-light: 25 75% 65%;
+    --accent-dark: 25 95% 45%;
+    --accent-gradient: linear-gradient(135deg, hsl(25 85% 55%), hsl(15 75% 50%));
     
     /* Interactive states */
-    --hover: 185 85% 50%;
-    --active: 185 95% 40%;
-    --focus: 185 75% 55%;
+    --hover: 25 90% 60%;
+    --active: 25 95% 45%;
+    --focus: 25 80% 60%;
 
     /* Component tokens */
     --card: 0 0% 100%;
     --card-foreground: 220 15% 12%;
     --border: 220 15% 88%;
     --border-light: 220 10% 92%;
-    --ring: 185 85% 45%;
+    --ring: 25 85% 55%;
 
     /* Shadows and depth */
     --shadow-subtle: 0 1px 3px 0 hsl(220 15% 12% / 0.08);
     --shadow-medium: 0 4px 6px -1px hsl(220 15% 12% / 0.08), 0 2px 4px -1px hsl(220 15% 12% / 0.04);
     --shadow-large: 0 20px 25px -5px hsl(220 15% 12% / 0.08), 0 10px 10px -5px hsl(220 15% 12% / 0.04);
-    --shadow-glow: 0 0 40px hsl(185 85% 45% / 0.15);
+    --shadow-glow: 0 0 40px hsl(25 85% 55% / 0.15);
 
     /* Animation and motion */
     --transition-base: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
