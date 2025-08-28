@@ -2,41 +2,72 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Relay Design System - Editorial kinetic aesthetic with dignity-first approach */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Base neutrals - warm off-white to charcoal */
+    --background: 45 5% 98%;
+    --foreground: 220 15% 12%;
+    --surface: 45 8% 95%;
+    --surface-alt: 45 10% 92%;
 
+    /* Content hierarchy */
+    --text-primary: 220 15% 12%;
+    --text-secondary: 220 10% 25%;
+    --text-muted: 220 8% 45%;
+    --text-subtle: 220 6% 65%;
+
+    /* Vibrant accent - teal to violet gradient */
+    --accent: 185 85% 45%;
+    --accent-light: 185 75% 55%;
+    --accent-dark: 185 95% 35%;
+    --accent-gradient: linear-gradient(135deg, hsl(185 85% 45%), hsl(270 70% 55%));
+    
+    /* Interactive states */
+    --hover: 185 85% 50%;
+    --active: 185 95% 40%;
+    --focus: 185 75% 55%;
+
+    /* Component tokens */
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 220 15% 12%;
+    --border: 220 15% 88%;
+    --border-light: 220 10% 92%;
+    --ring: 185 85% 45%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    /* Shadows and depth */
+    --shadow-subtle: 0 1px 3px 0 hsl(220 15% 12% / 0.08);
+    --shadow-medium: 0 4px 6px -1px hsl(220 15% 12% / 0.08), 0 2px 4px -1px hsl(220 15% 12% / 0.04);
+    --shadow-large: 0 20px 25px -5px hsl(220 15% 12% / 0.08), 0 10px 10px -5px hsl(220 15% 12% / 0.04);
+    --shadow-glow: 0 0 40px hsl(185 85% 45% / 0.15);
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
+    /* Animation and motion */
+    --transition-base: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-kinetic: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    
+    /* Layout */
     --radius: 0.5rem;
+    --radius-large: 1rem;
+    --max-width: 1200px;
+
+    /* Legacy compatibility */
+    --primary: 220 15% 12%;
+    --primary-foreground: 45 5% 98%;
+    --secondary: 220 8% 92%;
+    --secondary-foreground: 220 15% 12%;
+    --muted: 220 8% 92%;
+    --muted-foreground: 220 8% 45%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 12%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 45 5% 98%;
+    --input: 220 15% 88%;
+    --accent-compat: 220 8% 92%;
+    --accent-foreground: 220 15% 12%;
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +131,112 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-body antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight;
+  }
+}
+
+@layer components {
+  /* Typography Scale */
+  .text-hero {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tighter;
+  }
+  
+  .text-subhero {
+    @apply text-xl md:text-2xl font-medium leading-relaxed;
+  }
+  
+  .text-section-title {
+    @apply text-2xl md:text-3xl font-semibold leading-tight;
+  }
+
+  /* Interactive Elements */
+  .interactive-base {
+    @apply transition-all duration-200 ease-out;
+  }
+
+  .hover-lift {
+    @apply hover:translate-y-[-2px] hover:shadow-lg transition-all duration-200;
+  }
+
+  .kinetic-wobble {
+    animation: wobble 6s ease-in-out infinite;
+  }
+
+  .partner-orbit {
+    animation: orbit 20s linear infinite;
+  }
+
+  .gradient-accent {
+    background: var(--accent-gradient);
+  }
+
+  .text-gradient {
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Button Variants */
+  .btn-primary {
+    @apply bg-accent text-white hover:bg-accent-dark px-8 py-3 rounded-lg font-medium interactive-base hover-lift;
+  }
+
+  .btn-secondary {
+    @apply border-2 border-accent text-accent hover:bg-accent hover:text-white px-8 py-3 rounded-lg font-medium interactive-base;
+  }
+
+  .btn-minimal {
+    @apply text-accent hover:text-accent-dark underline underline-offset-4 font-medium interactive-base;
+  }
+}
+
+@layer utilities {
+  /* Custom animations */
+  @keyframes wobble {
+    0%, 100% { transform: rotate(0deg) scale(1); }
+    25% { transform: rotate(0.5deg) scale(1.02); }
+    75% { transform: rotate(-0.5deg) scale(0.98); }
+  }
+
+  @keyframes orbit {
+    from { transform: rotate(0deg) translateX(120px) rotate(0deg); }
+    to { transform: rotate(360deg) translateX(120px) rotate(-360deg); }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  @keyframes fade-in-up {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-fade-in-up {
+    animation: fade-in-up 0.6s ease-out;
+  }
+
+  /* Grain texture overlay */
+  .grain::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.03;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    pointer-events: none;
   }
 }
