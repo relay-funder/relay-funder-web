@@ -16,11 +16,11 @@ const Navigation = () => {
   const isActive = (href: string) => location.pathname === href;
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border/50">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-surface/80 backdrop-blur-xl border-b border-quantum/20">
       <div className="max-w-content mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="font-display font-medium text-xl text-text-primary">
+          <Link to="/" className="font-display font-medium text-xl text-text-primary hover-quantum">
             Relay Funder
           </Link>
 
@@ -33,7 +33,7 @@ const Navigation = () => {
                   href={item.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-text-secondary hover:text-accent interactive-base font-medium"
+                  className="text-text-secondary hover:text-quantum interactive-base font-medium"
                 >
                   {item.name}
                 </a>
@@ -43,8 +43,8 @@ const Navigation = () => {
                   to={item.href}
                   className={`interactive-base font-medium ${
                     isActive(item.href)
-                      ? 'text-accent'
-                      : 'text-text-secondary hover:text-accent'
+                      ? 'text-quantum'
+                      : 'text-text-secondary hover:text-quantum'
                   }`}
                 >
                   {item.name}
@@ -59,11 +59,11 @@ const Navigation = () => {
               href="https://app.relay.community"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-secondary text-sm px-4 py-2"
+              className="btn-ghost text-sm px-4 py-2"
             >
               Explore Projects
             </a>
-            <Link to="/sponsors" className="btn-primary text-sm px-4 py-2">
+            <Link to="/sponsors" className="btn-quantum text-sm px-4 py-2">
               Sponsor Match Fund
             </Link>
           </div>

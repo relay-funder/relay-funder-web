@@ -2,23 +2,27 @@ import mobilePaymentsImage from '@/assets/mobile-payments.jpg';
 
 const PilotsProof = () => {
   const networkStats = [
-    { label: 'Trusted leaders', value: '100,000+', accent: 'text-accent' },
-    { label: 'Community reach', value: '100M+', accent: 'text-secondary' },
+    { label: 'Trusted leaders', value: '100,000+', accent: 'text-quantum' },
+    { label: 'Community reach', value: '100M+', accent: 'text-bio' },
   ];
 
   return (
-    <section className="py-20">
+    <section className="py-20 bg-surface">
       <div className="max-w-content mx-auto px-6">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-section-title text-text-primary mb-16 text-center font-display">
-            Trusted Network
-          </h2>
+          <div className="text-center mb-16">
+            <div className="text-mono-accent mb-4">Network Analysis</div>
+            <h2 className="text-section-title text-text-primary font-display">
+              Trusted Network
+            </h2>
+          </div>
 
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             {/* Content */}
             <div className="space-y-8">
               {/* Callout card */}
-              <div className="geometric-card p-8 border-l-4 border-l-trust">
+              <div className="web3-card p-8 border-l-4 border-l-bio hover-bio">
+                <div className="text-mono-accent mb-3">INIT_STATUS</div>
                 <h3 className="font-medium text-text-primary mb-4 font-display text-lg">
                   Launching with Refunite's Community Leader Network
                 </h3>
@@ -34,10 +38,10 @@ const PilotsProof = () => {
                     key={stat.label}
                     className="text-center"
                   >
-                    <div className={`text-3xl font-medium mb-2 font-display ${stat.accent}`}>
+                    <div className={`text-3xl font-medium mb-2 font-mono ${stat.accent}`}>
                       {stat.value}
                     </div>
-                    <div className="text-sm text-text-muted">
+                    <div className="text-sm text-text-muted font-display">
                       {stat.label}
                     </div>
                   </div>
@@ -47,7 +51,7 @@ const PilotsProof = () => {
 
             {/* Visual */}
             <div className="relative">
-              <div className="geometric-card overflow-hidden hover-lift">
+              <div className="web3-card overflow-hidden hover-quantum">
                 <img
                   src={mobilePaymentsImage}
                   alt="Mobile-first financial technology enabling community-led projects"

@@ -54,21 +54,19 @@ const partners = [
 
 const PartnersSection = () => {
   return (
-    <section className="py-20 bg-surface">
+    <section className="py-20 mesh-bg">
       <div className="max-w-content mx-auto px-6">
-        <div className="text-center mb-16">
-          <p className="text-sm text-text-muted font-medium uppercase tracking-wide mb-4 font-display">
-            Building with trusted partners
-          </p>
+        <div className="text-center mb-16 relative z-10">
+          <div className="text-mono-accent mb-4">Network Status</div>
           <h2 className="text-section-title font-display text-text-primary">
             Collaborative ecosystem for displaced communities
           </h2>
         </div>
         
         {/* Featured partner */}
-        <div className="mb-16">
-          <div className="max-w-lg mx-auto geometric-card p-8 text-center hover-lift">
-            <div className="w-20 h-20 mx-auto mb-6 clean-surface flex items-center justify-center">
+        <div className="mb-16 relative z-10">
+          <div className="max-w-lg mx-auto web3-card p-8 text-center hover-bio">
+            <div className="w-20 h-20 mx-auto mb-6 quantum-surface flex items-center justify-center">
               <img 
                 src={refuniteLogo} 
                 alt="Refunite logo" 
@@ -78,23 +76,23 @@ const PartnersSection = () => {
             <h3 className="font-display font-medium text-text-primary mb-3 text-xl">
               Refunite
             </h3>
-            <p className="text-sm text-trust mb-4 font-display font-medium">
-              Founding Partner
-            </p>
+            <div className="text-mono-accent mb-4">
+              FOUNDING_PARTNER
+            </div>
             <p className="text-text-secondary leading-relaxed">
-              Community Leader Network with <strong className="text-trust">100,000+ trusted leaders</strong> and <strong className="text-trust">100M+ reach</strong> across displaced communities worldwide
+              Community Leader Network with <strong className="text-quantum">100,000+ trusted leaders</strong> and <strong className="text-bio">100M+ reach</strong> across displaced communities worldwide
             </p>
           </div>
         </div>
 
         {/* Partner grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 relative z-10">
           {partners.slice(1).map((partner) => (
             <div 
               key={partner.name}
-              className="text-center group hover-lift"
+              className="text-center group"
             >
-              <div className="w-16 h-16 mx-auto mb-4 clean-surface flex items-center justify-center group-hover:border-trust transition-colors">
+              <div className="w-16 h-16 mx-auto mb-4 quantum-surface flex items-center justify-center group-hover:border-quantum hover-quantum transition-colors">
                 {partner.logo ? (
                   <img 
                     src={partner.logo} 
@@ -102,7 +100,7 @@ const PartnersSection = () => {
                     className="w-10 h-10 object-contain"
                   />
                 ) : (
-                  <span className="text-trust text-lg font-bold font-display">
+                  <span className="text-quantum text-lg font-bold font-display">
                     {partner.name.charAt(0)}
                   </span>
                 )}

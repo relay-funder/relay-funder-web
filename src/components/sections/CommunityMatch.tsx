@@ -12,9 +12,10 @@ const CommunityMatch = () => {
   const totalImpact = backerCount + matchMultiplier;
 
   return (
-    <section className="py-20">
+    <section className="py-20 mesh-bg">
       <div className="max-w-content mx-auto px-6">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-4xl mx-auto text-center relative z-10">
+          <div className="text-mono-accent mb-4">Funding Algorithm</div>
           <h2 className="text-section-title text-text-primary mb-6 font-display">
             Community Match
           </h2>
@@ -24,12 +25,12 @@ const CommunityMatch = () => {
           </p>
 
           {/* Interactive calculator */}
-          <div className="geometric-card p-8 max-w-xl mx-auto">
+          <div className="web3-card p-8 max-w-xl mx-auto hover-quantum">
             <div className="space-y-8">
               {/* Backer count slider */}
               <div>
-                <label className="block text-sm text-text-muted mb-4 font-display">
-                  Number of community backers
+                <label className="block text-sm text-text-muted mb-4 font-mono">
+                  backers_count
                 </label>
                 <input
                   type="range"
@@ -37,35 +38,35 @@ const CommunityMatch = () => {
                   max="25"
                   value={backerCount}
                   onChange={(e) => setBackerCount(Number(e.target.value))}
-                  className="w-full h-2 bg-surface rounded-lg appearance-none cursor-pointer accent-trust"
+                  className="w-full h-2 bg-surface rounded-lg appearance-none cursor-pointer accent-quantum"
                 />
                 <div className="flex justify-between text-xs text-text-muted mt-2">
                   <span>1</span>
-                  <span className="font-medium text-trust">{backerCount} backers</span>
+                  <span className="font-medium text-quantum font-mono">{backerCount} backers</span>
                   <span>25</span>
                 </div>
               </div>
 
               {/* Visual breakdown */}
               <div className="space-y-4">
-                <div className="clean-surface p-4 flex items-center justify-between">
+                <div className="quantum-surface p-4 flex items-center justify-between">
                   <span className="text-sm text-text-secondary">Individual contributions</span>
                   <span className="font-medium text-text-primary">${backerCount * 10}</span>
                 </div>
                 
                 <div className="flex items-center justify-center py-2">
-                  <span className="text-trust font-medium">+ Community Match</span>
+                  <span className="text-quantum font-medium font-mono">+ match_active</span>
                 </div>
                 
-                <div className="clean-surface p-4 flex items-center justify-between">
+                <div className="bio-surface p-4 flex items-center justify-between">
                   <span className="text-sm text-text-secondary">Match Fund contribution</span>
-                  <span className="font-medium text-trust">${matchMultiplier * 10}</span>
+                  <span className="font-medium text-bio">${matchMultiplier * 10}</span>
                 </div>
                 
                 <div className="border-t pt-4">
                   <div className="flex items-center justify-between">
                     <span className="font-medium text-text-primary">Total for project</span>
-                    <span className="text-2xl font-medium text-trust font-display">${totalImpact * 10}</span>
+                    <span className="text-2xl font-medium text-solar font-mono">${totalImpact * 10}</span>
                   </div>
                 </div>
               </div>

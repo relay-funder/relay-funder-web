@@ -12,19 +12,20 @@ const SponsorsPreview = () => {
     <section className="py-20 bg-surface">
       <div className="max-w-content mx-auto px-6">
         <div className="max-w-4xl mx-auto text-center">
+          <div className="text-mono-accent mb-4">Partnership Program</div>
           <h2 className="text-section-title text-text-primary mb-6 font-display">
             Sponsors
           </h2>
           
           <p className="text-subhero text-text-secondary leading-relaxed mb-12">
-            Fuel the Match Fund. <span className="text-accent-serif">Multiply community power.</span>
+            Fuel the Match Fund. <span className="text-serif-elegant">Multiply community power.</span>
           </p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             {benefits.map((benefit, index) => (
               <div
                 key={benefit}
-                className="clean-surface p-6 border-l-4 border-l-trust hover-lift"
+                className="web3-card p-6 border-l-4 border-l-quantum hover-quantum"
               >
                 <p className="font-medium text-text-primary font-display">
                   {benefit}
@@ -36,11 +37,11 @@ const SponsorsPreview = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="mailto:sponsors@relay.community"
-              className="btn-primary"
+              className="btn-quantum"
             >
               Talk to Us
             </a>
-            <Link to="/sponsors" className="btn-secondary">
+            <Link to="/sponsors" className="btn-ghost">
               Request Starter Kit
             </Link>
           </div>

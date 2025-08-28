@@ -19,9 +19,10 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'display': ['Schibsted Grotesk', 'system-ui', 'sans-serif'],
+				'display': ['Space Grotesk', 'system-ui', 'sans-serif'],
 				'body': ['Inter', 'system-ui', 'sans-serif'],
-				'serif': ['Newsreader', 'Georgia', 'serif'],
+				'mono': ['JetBrains Mono', 'Consolas', 'monospace'],
+				'serif': ['Playfair Display', 'Georgia', 'serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -43,9 +44,10 @@ export default {
 					dark: 'hsl(var(--accent-dark))',
 					foreground: 'hsl(var(--accent-foreground))'
 				},
-				trust: 'hsl(var(--trust))',
-				growth: 'hsl(var(--growth))',
-				hope: 'hsl(var(--hope))',
+				quantum: 'hsl(var(--quantum-blue))',
+				bio: 'hsl(var(--bio-green))',
+				solar: 'hsl(var(--solar-orange))',
+				'surface-elevated': 'hsl(var(--surface-elevated))',
 				hover: 'hsl(var(--hover))',
 				active: 'hsl(var(--active))',
 				focus: 'hsl(var(--focus))',
@@ -89,6 +91,8 @@ export default {
 				'medium': 'var(--shadow-medium)',
 				'large': 'var(--shadow-large)',
 				'glow': 'var(--shadow-glow)',
+				'glow-green': 'var(--shadow-glow-green)',
+				'glow-orange': 'var(--shadow-glow-orange)',
 			},
 			maxWidth: {
 				'content': 'var(--max-width)',
