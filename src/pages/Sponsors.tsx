@@ -53,7 +53,7 @@ const Sponsors = () => {
             Fuel the Match Fund. <span className="text-gradient">Multiply community power.</span>
           </h1>
           <p className="text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
-            Partner with Relay to amplify the impact of community-driven projects. 
+            Partner with Relay Funder to amplify the impact of community-driven projects. 
             Your sponsorship creates a multiplier effect that transforms individual 
             contributions into substantial funding for refugee-led initiatives.
           </p>
