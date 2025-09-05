@@ -12,7 +12,7 @@ const Footer = () => {
             </h3>
             <p className="text-text-muted max-w-md">
               Community-driven crowdfunding for refugee and crisis-affected communities.
-              Pilots in Africa with Refunite. Supporters worldwide.
+              Pilots in Kenya and Uganda with Refunite. Supporters worldwide.
             </p>
           </div>
 
@@ -22,7 +22,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <a
-                  href="https://app.relay.community"
+                  href="https://app.relayfunder.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-text-muted hover:text-accent interactive-base"
@@ -64,7 +64,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="mailto:hello@relay.community"
+                  href="mailto:hello@relayfunder.com"
                   className="text-text-muted hover:text-accent interactive-base"
                 >
                   Contact

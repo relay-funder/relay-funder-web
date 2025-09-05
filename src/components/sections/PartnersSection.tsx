@@ -31,11 +31,6 @@ const partners = [
     role: 'RelayID identity verification'
   },
   { 
-    name: 'CoalaPay', 
-    logo: null,
-    role: 'Payment infrastructure'
-  },
-  { 
     name: 'Grassroots Economics', 
     logo: null,
     role: 'Community currency systems'
@@ -59,7 +54,7 @@ const PartnersSection = () => {
         <div className="text-center mb-16 relative z-10">
           <div className="text-mono-accent mb-4">Trusted Partners</div>
           <h2 className="text-section-title font-display text-text-primary">
-            Collaborative ecosystem for displaced communities
+            Collaborative ecosystem for refugees and displaced communities
           </h2>
         </div>
         
@@ -80,7 +75,7 @@ const PartnersSection = () => {
               Founding Partner
             </div>
             <p className="text-text-secondary leading-relaxed">
-              Community Leader Network with <strong className="text-quantum">100,000+ trusted leaders</strong> and <strong className="text-bio">100M+ reach</strong> across displaced communities worldwide
+              Community Leader Network with <strong className="text-quantum">100,000+ trusted leaders</strong> and <strong className="text-bio">100M+ reach</strong> across refugees and displaced communities worldwide
             </p>
           </div>
         </div>

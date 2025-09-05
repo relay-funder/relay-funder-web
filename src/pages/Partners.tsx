@@ -13,7 +13,6 @@ const Partners = () => {
     { name: 'Opera (MiniPay)', role: 'Distribution via Opera & MiniPay', website: 'https://minipay.opera.com' },
     { name: 'Gitcoin', role: 'Quadratic funding engine', website: 'https://gitcoin.co' },
     { name: 'human.tech (RelayID)', role: 'Privacy-preserving identity verification', website: 'https://human.tech' },
-    { name: 'CoalaPay', role: 'Payment infrastructure & mobile money rails', website: 'https://coalapay.com' },
     { name: 'Grassroots Economics', role: 'Community currency systems', website: 'https://grassrootseconomics.org' },
     { name: 'Kickstarter CC Protocol', role: 'Open crowdfunding infrastructure', website: 'https://kickstarter.com' },
     { name: 'Filecoin Foundation', role: 'IPFS long-term storage & preservation', website: 'https://fil.org' },
@@ -117,7 +116,7 @@ const Partners = () => {
               community-led funding? We'd love to explore collaboration.
             </p>
             <a
-              href="mailto:partners@relay.community"
+              href="mailto:partners@relayfunder.com"
               className="btn-primary"
             >
               Get in Touch

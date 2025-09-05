@@ -36,7 +36,7 @@ const SponsorsPreview = () => {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="mailto:sponsors@relay.community"
+              href="mailto:sponsors@relayfunder.com"
               className="btn-quantum"
             >
               Talk to Us

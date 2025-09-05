@@ -7,7 +7,7 @@ const Navigation = () => {
   const location = useLocation();
 
   const navItems = [
-    { name: 'Projects', href: 'https://app.relay.community', external: true },
+    { name: 'Projects', href: 'https://app.relayfunder.com', external: true },
     { name: 'Partners', href: '/partners' },
     { name: 'Sponsors', href: '/sponsors' },
     { name: 'FAQ', href: '/faq' },
@@ -56,7 +56,7 @@ const Navigation = () => {
           {/* Primary CTAs */}
           <div className="hidden md:flex items-center space-x-4">
             <a
-              href="https://app.relay.community"
+              href="https://app.relayfunder.com"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-ghost text-sm px-4 py-2"
@@ -110,7 +110,7 @@ const Navigation = () => {
               ))}
               <div className="pt-4 space-y-3">
                 <a
-                  href="https://app.relay.community"
+                  href="https://app.relayfunder.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block btn-secondary text-center text-sm px-6 py-2"

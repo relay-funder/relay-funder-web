@@ -8,7 +8,7 @@ const FAQ = () => {
   const faqs = [
     {
       question: 'How does Relay Funder ensure the safety of funds?',
-      answer: 'Relay Funder uses secure digital infrastructure with privacy-preserving identity verification through RelayID. All transactions are recorded on a verifiable ledger, and funds are released based on verified project milestones.',
+      answer: 'Relay Funder uses secure digital infrastructure with privacy-preserving identity verification. All transactions are recorded on a verifiable ledger, and funds are released based on verified project milestones.',
     },
     {
       question: 'Where do the funds actually go?',
@@ -20,7 +20,7 @@ const FAQ = () => {
     },
     {
       question: 'Which regions does Relay Funder currently serve?',
-      answer: 'We\'re piloting in Africa through our partnership with Refunite, with plans to expand globally. Community leaders worldwide can already engage with the platform.',
+      answer: 'We\'re piloting in Kenya and Uganda through our partnership with Refunite, with plans to expand globally. Community leaders worldwide can already engage with the platform.',
     },
     {
       question: 'Who are Sponsors and how do they work?',
@@ -32,7 +32,7 @@ const FAQ = () => {
     },
     {
       question: 'How is this different from traditional crowdfunding?',
-      answer: 'Relay Funder is community-driven rather than platform-driven. Leaders propose projects they know will work, supporters worldwide can contribute, and the Match Fund amplifies impact. Everything is built with dignity and agency for displaced communities at the center.',
+      answer: 'Relay Funder is community-driven rather than platform-driven. Leaders propose projects they know will work, supporters worldwide can contribute, and the Match Fund amplifies impact. Everything is built with dignity and agency for refugees and displaced communities at the center.',
     },
     {
       question: 'What kind of projects get funded?',
@@ -108,7 +108,7 @@ const FAQ = () => {
               or how you can get involved.
             </p>
             <a
-              href="mailto:hello@relay.community"
+              href="mailto:hello@relayfunder.com"
               className="btn-primary"
             >
               Get in Touch

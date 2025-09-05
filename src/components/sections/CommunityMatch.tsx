@@ -15,7 +15,6 @@ const CommunityMatch = () => {
     <section className="py-20 mesh-bg">
       <div className="max-w-content mx-auto px-6">
         <div className="max-w-4xl mx-auto text-center relative z-10">
-          <div className="text-mono-accent mb-4">Matching Algorithm</div>
           <h2 className="text-section-title text-text-primary mb-6 font-display">
             Community Match
           </h2>

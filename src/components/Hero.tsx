@@ -26,7 +26,7 @@ const Hero = () => {
               <div className="text-mono-accent mb-4">Humanitarian Technology</div>
               <h1 className="text-hero leading-[0.95]">
                 Community-driven crowdfunding for{' '}
-                <span className="text-quantum">displaced communities</span>
+                <span className="text-quantum">refugees and displaced communities</span>
               </h1>
               <p className="text-subhero text-text-secondary max-w-lg">
                 Leaders propose. Supporters worldwide back them. Sponsors multiply support 
@@ -37,7 +37,7 @@ const Hero = () => {
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-6">
               <a
-                href="https://app.relay.community"
+                href="https://app.relayfunder.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-quantum inline-flex items-center justify-center"
@@ -52,7 +52,7 @@ const Hero = () => {
             {/* Status badge */}
             <div className="quantum-surface p-6 inline-block">
               <div className="text-mono-accent mb-2">Project Status</div>
-              <div className="text-display-bold text-bio">Launching in Africa with Refunite's Community Leader Network</div>
+              <div className="text-display-bold text-bio">Launching in Kenya and Uganda with Refunite's Community Leader Network</div>
             </div>
           </div>
 
