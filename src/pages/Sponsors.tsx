@@ -130,13 +130,13 @@ const Sponsors = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="mailto:sponsors@relayfunder.com"
+                href="mailto:info@relayfunder.com"
                 className="btn-primary"
               >
                 Talk to Us
               </a>
               <a
-                href="mailto:sponsors@relayfunder.com?subject=Starter Kit Request"
+                href="mailto:info@relayfunder.com?subject=Starter Kit Request"
                 className="btn-secondary"
               >
                 Request Starter Kit

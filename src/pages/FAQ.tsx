@@ -108,7 +108,7 @@ const FAQ = () => {
               or how you can get involved.
             </p>
             <a
-              href="mailto:hello@relayfunder.com"
+              href="mailto:info@relayfunder.com"
               className="btn-primary"
             >
               Get in Touch

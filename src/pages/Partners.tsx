@@ -116,7 +116,7 @@ const Partners = () => {
               community-led funding? We'd love to explore collaboration.
             </p>
             <a
-              href="mailto:partners@relayfunder.com"
+              href="mailto:info@relayfunder.com"
               className="btn-primary"
             >
               Get in Touch

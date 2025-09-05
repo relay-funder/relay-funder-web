@@ -233,7 +233,7 @@
   }
 
   .quantum-surface {
-    @apply bg-surface-elevated border border-quantum/20 rounded-2xl;
+    @apply bg-surface-elevated border border-quantum/20 rounded-lg;
   }
 
   .bio-surface {
