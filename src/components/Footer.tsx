@@ -64,7 +64,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="mailto:hello@relayfunder.com"
+                  href="mailto:info@relayfunder.com"
                   className="text-text-muted hover:text-accent interactive-base"
                 >
                   Contact
@@ -76,7 +76,7 @@ const Footer = () => {
 
         <div className="mt-8 pt-8 border-t border-border text-center">
           <p className="text-text-subtle text-sm">
-            © 2024 Relay. Building community power, one project at a time.
+            © {new Date().getFullYear()} Relay. Building community power, one project at a time.
           </p>
         </div>
       </div>

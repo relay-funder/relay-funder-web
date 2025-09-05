@@ -14,7 +14,7 @@ const SponsorsPreview = () => {
         <div className="max-w-4xl mx-auto text-center">
           <div className="text-mono-accent mb-4">Partnership Opportunities</div>
           <h2 className="text-section-title text-text-primary mb-6 font-display">
-            Sponsors
+            Match Fund Sponsors
           </h2>
           
           <p className="text-subhero text-text-secondary leading-relaxed mb-12">
@@ -36,7 +36,7 @@ const SponsorsPreview = () => {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="mailto:sponsors@relayfunder.com"
+              href="mailto:info@relayfunder.com"
               className="btn-quantum"
             >
               Talk to Us

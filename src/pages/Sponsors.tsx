@@ -21,7 +21,7 @@ const Sponsors = () => {
     {
       title: 'General Aid',
       description: 'Essential services and emergency support',
-      color: 'bg-surface-alt',
+      color: 'bg-surface',
     },
   ];
 
@@ -64,7 +64,7 @@ const Sponsors = () => {
       <section className="py-20">
         <div className="max-w-content mx-auto px-6">
           <h2 className="text-section-title text-text-primary mb-12 text-center">
-            Sponsor Benefits
+            Match Fund Sponsor Benefits
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
             {benefits.map((benefit, index) => (
