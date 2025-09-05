@@ -1,15 +1,7 @@
 import { Link } from 'react-router-dom';
-
 const SponsorsPreview = () => {
-  const benefits = [
-    'Clear attribution',
-    'Transparent allocations', 
-    'Verified updates',
-    'Spotlight opportunities',
-  ];
-
-  return (
-    <section className="py-20 bg-surface">
+  const benefits = ['Clear attribution', 'Transparent allocations', 'Verified updates', 'Spotlight opportunities'];
+  return <section className="py-20 bg-surface">
       <div className="max-w-content mx-auto px-6">
         <div className="max-w-4xl mx-auto text-center">
           <div className="text-mono-accent mb-4">Partnership Opportunities</div>
@@ -22,30 +14,21 @@ const SponsorsPreview = () => {
           </p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            {benefits.map((benefit, index) => (
-              <div
-                key={benefit}
-                className="web3-card p-6 border-l-4 border-l-quantum hover-quantum"
-              >
+            {benefits.map((benefit, index) => <div key={benefit} className="web3-card p-6 border-l-4 border-l-quantum hover-quantum">
                 <p className="font-medium text-text-primary font-display">
                   {benefit}
                 </p>
-              </div>
-            ))}
+              </div>)}
           </div>
 
-          <div className="flex justify-center">
-            <a
-              href="mailto:info@relayfunder.com"
-              className="btn-quantum"
-            >
-              Talk to Us
-            </a>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="mailto:info@relayfunder.com" className="btn-quantum">Get In Touch</a>
+            <Link to="/sponsors" className="btn-ghost">
+              Request Starter Kit
+            </Link>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default SponsorsPreview;
