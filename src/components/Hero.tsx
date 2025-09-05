@@ -1,5 +1,8 @@
 import { Link } from 'react-router-dom';
-import heroImage from '@/assets/hero-community-new.jpg';
+import heroImage1 from '@/assets/hero/6717d6c767768ed6c1db79bc_photojournalist-in-bulletproof-vest-holding-his-ca-2023-11-27-05-02-01-utc-min.jpg';
+import heroImage2 from '@/assets/hero/6717d6c77b41816950fdfc88_volunteer-helping-homeless-people-outdoors-2023-11-27-05-18-04-utc-min.jpg';
+import heroImage3 from '@/assets/hero/6717d6c7e16fdfb6e86b2cf4_woman-looking-at-camera-while-holding-a-mate-with-2023-11-27-05-23-17-utc-min.jpg';
+import heroImage4 from '@/assets/hero/6717da50e7b2fb4fa2a4c278_portrait-of-smiling-amhara-woman-wearing-blue-trad-2023-11-27-05-19-56-utc-min.jpg';
 import webHeroBg from '@/assets/hero-web3-abstract.jpg';
 
 const Hero = () => {
@@ -56,14 +59,31 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Right: Visual */}
+          {/* Right: Visual Grid */}
           <div className="relative">
             <div className="web3-card p-2">
-              <img
-                src={heroImage}
-                alt="Displaced community members collaborating with mobile technology"
-                className="rounded-xl w-full"
-              />
+              <div className="grid grid-cols-2 gap-2 rounded-xl overflow-hidden">
+                <img
+                  src={heroImage1}
+                  alt="Photojournalist documenting refugee stories"
+                  className="w-full h-48 object-cover"
+                />
+                <img
+                  src={heroImage2}
+                  alt="Volunteer helping displaced community members"
+                  className="w-full h-48 object-cover"
+                />
+                <img
+                  src={heroImage3}
+                  alt="Community leader sharing local stories"
+                  className="w-full h-48 object-cover"
+                />
+                <img
+                  src={heroImage4}
+                  alt="Amhara woman in traditional blue clothing"
+                  className="w-full h-48 object-cover"
+                />
+              </div>
               <div className="absolute bottom-4 right-4">
                 <div className="bio-surface p-4 text-background bg-bio">
                   <div className="text-xs text-background/80 mb-2 font-medium">Community Match Active</div>
