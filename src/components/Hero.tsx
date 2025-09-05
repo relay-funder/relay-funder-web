@@ -62,30 +62,30 @@ const Hero = () => {
           {/* Right: Visual Grid */}
           <div className="relative">
             <div className="web3-card p-2">
-              <div className="flex gap-2 rounded-xl overflow-hidden h-[420px]">
+              <div className="flex gap-2 rounded-xl overflow-hidden h-[520px]">
                 {/* Left - large image (60% width) */}
                 <div className="flex-[3]">
                   <img
-                    src={heroImage1}
-                    alt="Photojournalist documenting refugee stories"
+                    src={heroImage3}
+                    alt="Woman looking at camera while holding a mate"
                     className="w-full h-full object-cover rounded-lg"
                   />
                 </div>
                 {/* Right column - three images (40% width) */}
                 <div className="flex-[2] flex flex-col gap-2">
                   <img
-                    src={heroImage2}
-                    alt="Volunteer helping displaced community members"
+                    src={heroImage1}
+                    alt="Photojournalist in bulletproof vest holding camera"
                     className="w-full h-[120px] object-cover rounded-lg"
                   />
                   <img
-                    src={heroImage3}
-                    alt="Community leader sharing local stories"
+                    src={heroImage2}
+                    alt="Volunteer helping homeless people outdoors"
                     className="w-full h-[160px] object-cover rounded-lg"
                   />
                   <img
                     src={heroImage4}
-                    alt="Amhara woman in traditional blue clothing"
+                    alt="Portrait of smiling Amhara woman wearing blue traditional clothing"
                     className="w-full h-[120px] object-cover rounded-lg"
                   />
                 </div>
