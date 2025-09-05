@@ -21,14 +21,9 @@ const Footer = () => {
             <h4 className="font-semibold text-text-primary mb-4">Platform</h4>
             <ul className="space-y-2">
               <li>
-                <a
-                  href="https://app.relayfunder.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-text-muted hover:text-accent interactive-base"
-                >
-                  Explore Projects
-                </a>
+                <div className="text-text-muted opacity-60 cursor-not-allowed">
+                  Coming Soon
+                </div>
               </li>
               <li>
                 <Link to="/partners" className="text-text-muted hover:text-accent interactive-base">

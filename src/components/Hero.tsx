@@ -39,14 +39,9 @@ const Hero = () => {
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-6">
-              <a
-                href="https://app.relayfunder.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-quantum inline-flex items-center justify-center"
-              >
-                Explore Projects
-              </a>
+              <div className="btn-quantum inline-flex items-center justify-center opacity-60 cursor-not-allowed">
+                Coming Soon
+              </div>
               <Link to="/sponsors" className="btn-ghost inline-flex items-center justify-center">
                 Sponsor Match Fund
               </Link>

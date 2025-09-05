@@ -55,14 +55,9 @@ const Navigation = () => {
 
           {/* Primary CTAs */}
           <div className="hidden md:flex items-center space-x-4">
-            <a
-              href="https://app.relayfunder.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-ghost text-sm px-4 py-2"
-            >
-              Explore Projects
-            </a>
+            <div className="btn-ghost text-sm px-4 py-2 opacity-60 cursor-not-allowed">
+              Coming Soon
+            </div>
             <Link to="/sponsors" className="btn-quantum text-sm px-4 py-2">
               Sponsor Match Fund
             </Link>
@@ -109,14 +104,9 @@ const Navigation = () => {
                 )
               ))}
               <div className="pt-4 space-y-3">
-                <a
-                  href="https://app.relayfunder.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block btn-secondary text-center text-sm px-6 py-2"
-                >
-                  Explore Projects
-                </a>
+                <div className="block btn-secondary text-center text-sm px-6 py-2 opacity-60 cursor-not-allowed">
+                  Coming Soon
+                </div>
                 <Link to="/sponsors" className="block btn-primary text-center text-sm px-6 py-2">
                   Sponsor the Match Fund
                 </Link>
