@@ -29,11 +29,6 @@ const partners = [
     role: 'Community currency systems'
   },
   { 
-    name: 'Sarafu Network', 
-    logo: null,
-    role: 'Commitment pooling for community economies'
-  },
-  { 
     name: 'Opera Mini', 
     logo: operaLogo,
     role: 'MiniPay wallet distribution'

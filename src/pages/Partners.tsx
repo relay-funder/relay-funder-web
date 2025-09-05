@@ -14,7 +14,6 @@ const Partners = () => {
     { name: 'Gitcoin', role: 'Quadratic funding engine', website: 'https://gitcoin.co' },
     { name: 'human.tech (RelayID)', role: 'Privacy-preserving identity verification', website: 'https://human.tech' },
     { name: 'Grassroots Economics', role: 'Community currency systems', website: 'https://grassrootseconomics.org' },
-    { name: 'Sarafu Network', role: 'Empowering communities through commitment pooling', website: 'https://sarafu.network' },
     { name: 'Kickstarter CC Protocol', role: 'Open crowdfunding infrastructure', website: 'https://kickstarter.com' },
     { name: 'Filecoin Foundation', role: 'IPFS long-term storage & preservation', website: 'https://fil.org' },
   ];
