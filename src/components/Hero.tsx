@@ -62,27 +62,33 @@ const Hero = () => {
           {/* Right: Visual Grid */}
           <div className="relative">
             <div className="web3-card p-2">
-              <div className="grid grid-cols-2 gap-2 rounded-xl overflow-hidden">
-                <img
-                  src={heroImage1}
-                  alt="Photojournalist documenting refugee stories"
-                  className="w-full h-48 object-cover"
-                />
-                <img
-                  src={heroImage2}
-                  alt="Volunteer helping displaced community members"
-                  className="w-full h-48 object-cover"
-                />
-                <img
-                  src={heroImage3}
-                  alt="Community leader sharing local stories"
-                  className="w-full h-48 object-cover"
-                />
-                <img
-                  src={heroImage4}
-                  alt="Amhara woman in traditional blue clothing"
-                  className="w-full h-48 object-cover"
-                />
+              <div className="grid grid-cols-2 gap-2 rounded-xl overflow-hidden h-[500px]">
+                {/* Left column - larger image */}
+                <div className="flex flex-col gap-2">
+                  <img
+                    src={heroImage1}
+                    alt="Photojournalist documenting refugee stories"
+                    className="w-full h-full object-cover rounded-lg"
+                  />
+                </div>
+                {/* Right column - three smaller images stacked */}
+                <div className="flex flex-col gap-2">
+                  <img
+                    src={heroImage2}
+                    alt="Volunteer helping displaced community members"
+                    className="w-full h-32 object-cover rounded-lg"
+                  />
+                  <img
+                    src={heroImage3}
+                    alt="Community leader sharing local stories"
+                    className="w-full h-40 object-cover rounded-lg"
+                  />
+                  <img
+                    src={heroImage4}
+                    alt="Amhara woman in traditional blue clothing"
+                    className="w-full h-32 object-cover rounded-lg"
+                  />
+                </div>
               </div>
               <div className="absolute bottom-4 right-4">
                 <div className="bio-surface p-4 text-background bg-bio">
