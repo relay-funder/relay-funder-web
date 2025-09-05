@@ -21,90 +21,52 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-background via-surface/50 to-background" />
       </div>
 
-      <div className="max-w-content mx-auto px-6 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-20 items-center min-h-[85vh]">
-          {/* Left: Content */}
-          <div className="space-y-10">
+      <div className="max-w-5xl mx-auto px-6 relative z-10">
+        <div className="flex flex-col items-center justify-center min-h-[85vh] text-center space-y-12">
+          {/* Content */}
+          <div className="space-y-8 max-w-4xl">
             <div className="space-y-6">
-              <div className="text-mono-accent mb-4">Humanitarian Technology</div>
-              <h1 className="text-hero leading-[0.95]">
+              <div className="text-mono-accent text-lg">Humanitarian Technology</div>
+              <h1 className="text-6xl md:text-7xl lg:text-8xl font-display leading-[0.9] tracking-tight">
                 Community-driven crowdfunding for{' '}
                 <span className="text-quantum">refugees and displaced communities</span>
               </h1>
-              <p className="text-subhero text-text-secondary max-w-lg">
+              <p className="text-xl md:text-2xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
                 Leaders propose. Supporters worldwide back them. Sponsors multiply support 
                 through a <span className="text-serif-elegant">shared Match Fund</span>.
               </p>
             </div>
 
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-6">
-              <div className="btn-quantum inline-flex items-center justify-center opacity-60 cursor-not-allowed">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+              <div className="btn-quantum inline-flex items-center justify-center opacity-60 cursor-not-allowed text-lg px-8 py-4">
                 Explore Projects (Coming Soon)
               </div>
-              <Link to="/sponsors" className="btn-ghost inline-flex items-center justify-center">
+              <Link to="/sponsors" className="btn-ghost inline-flex items-center justify-center text-lg px-8 py-4">
                 Sponsor Match Fund
               </Link>
             </div>
 
             {/* Status badge */}
-            <div className="quantum-surface p-6 inline-block">
-              <div className="text-mono-accent mb-2">Project Status</div>
-              <div className="text-display-bold text-bio">Launching in Kenya and Uganda with Refunite's Community Leader Network</div>
+            <div className="quantum-surface p-8 inline-block max-w-2xl mx-auto">
+              <div className="text-mono-accent mb-3 text-sm">Project Status</div>
+              <div className="text-xl font-bold text-bio">Launching in Kenya and Uganda with Refunite's Community Leader Network</div>
             </div>
           </div>
 
-          {/* Right: Visual Grid */}
-          <div className="relative flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-md lg:max-w-lg xl:max-w-xl">
-              <div className="web3-card p-3">
-                <div className="flex gap-3 rounded-xl overflow-hidden h-[600px] lg:h-[650px] xl:h-[700px]">
-                  {/* Left - large image (60% width) */}
-                  <div className="flex-[3]">
-                    <img
-                      src={heroImage3}
-                      alt="Woman looking at camera while holding a mate"
-                      className="w-full h-full object-cover rounded-lg"
-                    />
-                  </div>
-                  {/* Right column - three images (40% width) */}
-                  <div className="flex-[2] flex flex-col gap-3">
-                    <img
-                      src={heroImage1}
-                      alt="Photojournalist in bulletproof vest holding camera"
-                      className="w-full flex-1 object-cover rounded-lg min-h-0"
-                    />
-                    <img
-                      src={heroImage2}
-                      alt="Volunteer helping homeless people outdoors"
-                      className="w-full flex-[1.4] object-cover rounded-lg min-h-0"
-                    />
-                    <img
-                      src={heroImage4}
-                      alt="Portrait of smiling Amhara woman wearing blue traditional clothing"
-                      className="w-full flex-1 object-cover rounded-lg min-h-0"
-                    />
-                  </div>
-                </div>
+          {/* Community Impact Badge */}
+          <div className="bio-surface p-6 rounded-xl shadow-lg">
+            <div className="text-sm text-text-secondary mb-2 font-medium">Community Match Active</div>
+            <div className="flex items-center space-x-4">
+              <div className="flex space-x-1">
+                {[1, 2, 3, 4, 5].map((i) => (
+                  <div key={i} className="w-3 h-8 bg-bio/40 rounded-sm"></div>
+                ))}
               </div>
-              {/* Badge positioned to overlap and stick out */}
-              <div className="absolute -bottom-3 -right-3 z-20">
-                <div className="bio-surface p-4 text-background bg-bio rounded-lg shadow-lg">
-                  <div className="text-xs text-background/80 mb-2 font-medium">Community Match Active</div>
-                  <div className="flex items-center space-x-3">
-                    <div className="flex space-x-1">
-                      {[1, 2, 3, 4, 5].map((i) => (
-                        <div key={i} className="w-2 h-6 bg-background/40 rounded-sm"></div>
-                      ))}
-                    </div>
-                    <div className="font-mono font-bold text-background">2.5x Impact</div>
-                  </div>
-                </div>
-              </div>
+              <div className="font-mono font-bold text-bio text-lg">2.5x Impact</div>
             </div>
           </div>
         </div>
-
       </div>
     </section>
   );
