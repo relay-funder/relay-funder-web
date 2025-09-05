@@ -21,11 +21,8 @@ const SponsorsPreview = () => {
               </div>)}
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex justify-center">
             <a href="mailto:info@relayfunder.com" className="btn-quantum">Get In Touch</a>
-            <Link to="/sponsors" className="btn-ghost">
-              Request Starter Kit
-            </Link>
           </div>
         </div>
       </div>
