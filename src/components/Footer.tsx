@@ -22,7 +22,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <div className="text-text-muted opacity-60 cursor-not-allowed">
-                  Coming Soon
+                  Explore Projects (Coming Soon)
                 </div>
               </li>
               <li>
