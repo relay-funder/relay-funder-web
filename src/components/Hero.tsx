@@ -60,38 +60,41 @@ const Hero = () => {
           </div>
 
           {/* Right: Visual Grid */}
-          <div className="relative">
-            <div className="web3-card p-2">
-              <div className="flex gap-2 rounded-xl overflow-hidden h-[520px]">
-                {/* Left - large image (60% width) */}
-                <div className="flex-[3]">
-                  <img
-                    src={heroImage3}
-                    alt="Woman looking at camera while holding a mate"
-                    className="w-full h-full object-cover rounded-lg"
-                  />
-                </div>
-                {/* Right column - three images (40% width) */}
-                <div className="flex-[2] flex flex-col gap-2">
-                  <img
-                    src={heroImage1}
-                    alt="Photojournalist in bulletproof vest holding camera"
-                    className="w-full h-[120px] object-cover rounded-lg"
-                  />
-                  <img
-                    src={heroImage2}
-                    alt="Volunteer helping homeless people outdoors"
-                    className="w-full h-[160px] object-cover rounded-lg"
-                  />
-                  <img
-                    src={heroImage4}
-                    alt="Portrait of smiling Amhara woman wearing blue traditional clothing"
-                    className="w-full h-[120px] object-cover rounded-lg"
-                  />
+          <div className="relative flex justify-center lg:justify-end">
+            <div className="relative w-full max-w-md lg:max-w-lg xl:max-w-xl">
+              <div className="web3-card p-3">
+                <div className="flex gap-3 rounded-xl overflow-hidden h-[600px] lg:h-[650px] xl:h-[700px]">
+                  {/* Left - large image (60% width) */}
+                  <div className="flex-[3]">
+                    <img
+                      src={heroImage3}
+                      alt="Woman looking at camera while holding a mate"
+                      className="w-full h-full object-cover rounded-lg"
+                    />
+                  </div>
+                  {/* Right column - three images (40% width) */}
+                  <div className="flex-[2] flex flex-col gap-3">
+                    <img
+                      src={heroImage1}
+                      alt="Photojournalist in bulletproof vest holding camera"
+                      className="w-full flex-1 object-cover rounded-lg min-h-0"
+                    />
+                    <img
+                      src={heroImage2}
+                      alt="Volunteer helping homeless people outdoors"
+                      className="w-full flex-[1.4] object-cover rounded-lg min-h-0"
+                    />
+                    <img
+                      src={heroImage4}
+                      alt="Portrait of smiling Amhara woman wearing blue traditional clothing"
+                      className="w-full flex-1 object-cover rounded-lg min-h-0"
+                    />
+                  </div>
                 </div>
               </div>
-              <div className="absolute bottom-4 right-4">
-                <div className="bio-surface p-4 text-background bg-bio">
+              {/* Badge positioned to overlap and stick out */}
+              <div className="absolute -bottom-3 -right-3 z-20">
+                <div className="bio-surface p-4 text-background bg-bio rounded-lg shadow-lg">
                   <div className="text-xs text-background/80 mb-2 font-medium">Community Match Active</div>
                   <div className="flex items-center space-x-3">
                     <div className="flex space-x-1">
