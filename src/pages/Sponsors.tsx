@@ -128,18 +128,12 @@ const Sponsors = () => {
             <p className="text-text-secondary mb-8">
               Join our growing network of sponsors who believe in community-led solutions.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex justify-center">
               <a
                 href="mailto:info@relayfunder.com"
                 className="btn-primary"
               >
                 Talk to Us
-              </a>
-              <a
-                href="mailto:info@relayfunder.com?subject=Starter Kit Request"
-                className="btn-secondary"
-              >
-                Request Starter Kit
               </a>
             </div>
           </div>
