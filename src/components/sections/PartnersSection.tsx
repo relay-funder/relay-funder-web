@@ -2,7 +2,7 @@ import refuniteLogo from '@/assets/logos/logo-refunite.png';
 import celoLogo from '@/assets/logos/logo-celo.png';
 import operaLogo from '@/assets/logos/logo-opera-mini.png';
 import gitcoinLogo from '@/assets/logos/logo-gitcoin.png';
-import humanTechLogo from '@/assets/logos/logo-human-tech.png';
+import humanTechLogo from '@/assets/logos/logo-human-tech-blue.jpg';
 import grassrootsEconomicsLogo from '@/assets/logos/logo-grassroots-economics.png';
 import ccProtocolLogo from '@/assets/logos/logo-cc-protocol.jpeg';
 import filecoinFoundationLogo from '@/assets/logos/logo-filecoin-foundation.png';
@@ -59,11 +59,11 @@ const PartnersSection = () => {
         {/* Featured partner */}
         <div className="mb-16 relative z-10">
           <div className="max-w-lg mx-auto web3-card p-8 text-center hover-bio">
-            <div className="w-50 h-30 mx-auto mb-6 flex items-center justify-center">
+            <div className="w-60 h-21 mx-auto mb-6 flex items-center justify-center">
               <img 
                 src={refuniteLogo} 
                 alt="Refunite logo" 
-                className="w-50 h-30 object-contain"
+                className="w-60 h-21 object-contain"
               />
             </div>
             <div className="text-mono-accent mb-4">

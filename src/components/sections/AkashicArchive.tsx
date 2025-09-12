@@ -32,12 +32,13 @@ const AkashicArchive = () => {
             </div>
           </div>
 
-          <a
+          {/* <a
             href="#"
             className="btn-ghost mt-6 inline-flex items-center"
+            
           >
             Learn more about digital rewards
-          </a>
+          </a> */}
         </div>
       </div>
     </section>
