@@ -101,10 +101,9 @@ const Sponsors = () => {
             {themes.map((theme, index) => (
               <div
                 key={theme.title}
-                className="bg-card border border-border rounded-xl p-8 hover-lift animate-fade-in-up aspect-square flex flex-col justify-center items-center text-center group"
+                className="bg-card border border-border rounded-xl p-8 hover-lift animate-fade-in-up aspect-square flex flex-col justify-center items-center text-center"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className={`w-16 h-16 ${theme.color} rounded-full mb-6 group-hover:scale-110 transition-transform duration-300`} />
                 <h3 className="text-xl font-semibold text-text-primary mb-4 font-display">
                   {theme.title}
                 </h3>
