@@ -7,18 +7,10 @@ import webHeroBg from '@/assets/hero-web3-abstract.jpg';
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden mesh-bg">
-      {/* Web3 background layers */}
+    <section className="relative min-h-screen flex items-center overflow-hidden">
+      {/* Clean background */}
       <div className="absolute inset-0 z-0">
-        <div
-          className="absolute inset-0 opacity-20"
-          style={{
-            backgroundImage: `url(${webHeroBg})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-          }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-br from-background via-surface/50 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-br from-background via-surface/30 to-background" />
       </div>
 
       <div className="max-w-content mx-auto px-6 relative z-10">
