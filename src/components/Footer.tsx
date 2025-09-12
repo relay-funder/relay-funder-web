@@ -21,7 +21,7 @@ const Footer = () => {
             <h4 className="font-semibold text-text-primary mb-4">Platform</h4>
             <ul className="space-y-2">
               <li>
-                <div className="text-text-muted opacity-60 cursor-not-allowed">
+                <div className="text-text-muted cursor-not-allowed">
                   Explore Projects (Coming Soon)
                 </div>
               </li>

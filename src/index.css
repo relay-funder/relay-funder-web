@@ -13,24 +13,24 @@
     --surface-alt: 210 15% 92%;
     --surface-elevated: 210 20% 88%;
 
-    /* Typography hierarchy */
-    --text-primary: 220 15% 15%;
-    --text-secondary: 220 12% 35%;
-    --text-muted: 220 8% 55%;
-    --text-subtle: 220 5% 75%;
+    /* Typography hierarchy - Enhanced contrast */
+    --text-primary: 220 20% 8%;
+    --text-secondary: 220 15% 25%;
+    --text-muted: 220 12% 40%;
+    --text-subtle: 220 8% 60%;
 
-    /* Web3 × Humanitarian palette */
-    --quantum-blue: 210 100% 65%; /* Primary tech */
-    --bio-green: 150 65% 55%; /* Life/growth */
-    --solar-orange: 25 95% 65%; /* Hope/energy */
-    --accent: 210 100% 65%;
-    --accent-light: 210 85% 75%;
-    --accent-dark: 210 100% 55%;
+    /* Web3 × Humanitarian palette - Enhanced contrast */
+    --quantum-blue: 210 100% 45%; /* Primary tech - darker for better contrast */
+    --bio-green: 150 65% 40%; /* Life/growth - darker for better contrast */
+    --solar-orange: 25 95% 50%; /* Hope/energy - darker for better contrast */
+    --accent: 210 100% 45%;
+    --accent-light: 210 85% 60%;
+    --accent-dark: 210 100% 35%;
     
-    /* Interactive states */
-    --hover: 210 100% 70%;
-    --active: 210 100% 50%;
-    --focus: 210 90% 65%;
+    /* Interactive states - Enhanced contrast */
+    --hover: 210 100% 40%;
+    --active: 210 100% 35%;
+    --focus: 210 90% 45%;
 
     /* Component tokens */
     --card: 210 20% 96%;
@@ -168,7 +168,7 @@
   }
   
   .text-section-title {
-    @apply text-2xl md:text-4xl font-medium leading-tight font-display;
+    @apply text-2xl md:text-4xl font-semibold leading-tight font-display;
   }
 
   .text-mono-accent {
@@ -202,19 +202,28 @@
 
   /* Original Button Variants */
   .btn-quantum {
-    @apply bg-gradient-to-r from-quantum to-accent text-background px-6 py-3 rounded-xl font-medium interactive-base hover:shadow-glow;
+    @apply bg-gradient-to-r from-quantum to-accent text-white px-6 py-3 rounded-xl font-semibold interactive-base hover:shadow-glow;
   }
 
   .btn-bio {
-    @apply bg-gradient-to-r from-bio to-green-400 text-background px-6 py-3 rounded-xl font-medium interactive-base hover:shadow-glow-green;
+    @apply bg-gradient-to-r from-bio to-green-400 text-white px-6 py-3 rounded-xl font-semibold interactive-base hover:shadow-glow-green;
   }
 
   .btn-solar {
-    @apply bg-gradient-to-r from-solar to-yellow-400 text-background px-6 py-3 rounded-xl font-medium interactive-base hover:shadow-glow-orange;
+    @apply bg-gradient-to-r from-solar to-yellow-400 text-white px-6 py-3 rounded-xl font-semibold interactive-base hover:shadow-glow-orange;
   }
 
   .btn-ghost {
-    @apply border border-quantum text-quantum hover:bg-quantum hover:text-background px-6 py-3 rounded-xl font-medium interactive-base;
+    @apply border-2 border-quantum text-quantum hover:bg-quantum hover:text-white px-6 py-3 rounded-xl font-semibold interactive-base;
+  }
+
+  /* Enhanced disabled states for better contrast */
+  .btn-quantum.opacity-60 {
+    @apply bg-muted text-text-primary border border-border cursor-not-allowed;
+  }
+
+  .btn-quantum.opacity-60:hover {
+    @apply bg-muted text-text-primary shadow-none;
   }
 
   /* Original Geometric Elements */

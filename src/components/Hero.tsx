@@ -30,7 +30,7 @@ const Hero = () => {
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <div className="btn-quantum inline-flex items-center justify-center opacity-60 cursor-not-allowed">
+              <div className="bg-muted text-text-primary inline-flex items-center justify-center px-6 py-3 rounded-xl border border-border cursor-not-allowed font-semibold">
                 Explore Projects (Coming Soon)
               </div>
               <Link to="/sponsors" className="btn-ghost inline-flex items-center justify-center">

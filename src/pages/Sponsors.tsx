@@ -105,10 +105,10 @@ const Sponsors = () => {
               >
                 <div className={`absolute inset-0 ${theme.color} opacity-80 group-hover:opacity-90 transition-opacity`} />
                 <div className="relative h-full flex flex-col justify-center items-center text-center p-6">
-                  <h3 className="text-xl font-bold text-white mb-3 font-display">
+                  <h3 className="text-xl font-bold text-white mb-3 font-display drop-shadow-lg">
                     {theme.title}
                   </h3>
-                  <p className="text-white/90 text-sm font-serif leading-relaxed">
+                  <p className="text-white text-sm font-serif leading-relaxed drop-shadow">
                     {theme.description}
                   </p>
                 </div>

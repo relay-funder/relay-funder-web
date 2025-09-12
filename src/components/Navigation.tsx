@@ -42,7 +42,7 @@ const Navigation = () => {
 
           {/* Primary CTAs */}
           <div className="hidden md:flex items-center space-x-4">
-            <div className="btn-ghost text-sm px-4 py-2 opacity-60 cursor-not-allowed">
+            <div className="bg-muted text-text-primary text-sm px-4 py-2 rounded-xl border border-border cursor-not-allowed font-semibold">
               Explore Projects (Coming Soon)
             </div>
             <Link to="/sponsors" className="btn-quantum text-sm px-4 py-2">
@@ -78,7 +78,7 @@ const Navigation = () => {
                 </Link>
               ))}
               <div className="pt-4 space-y-3">
-                <div className="block btn-secondary text-center text-sm px-6 py-2 opacity-60 cursor-not-allowed">
+                <div className="block bg-muted text-text-primary text-center text-sm px-6 py-2 rounded-xl border border-border cursor-not-allowed font-semibold">
                   Explore Projects (Coming Soon)
                 </div>
                 <Link to="/sponsors" className="block btn-primary text-center text-sm px-6 py-2">

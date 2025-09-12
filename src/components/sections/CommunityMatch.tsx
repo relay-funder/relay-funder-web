@@ -37,7 +37,7 @@ const CommunityMatch = () => {
                   max="25"
                   value={backerCount}
                   onChange={(e) => setBackerCount(Number(e.target.value))}
-                  className="w-full h-2 bg-surface rounded-lg appearance-none cursor-pointer accent-quantum"
+                  className="w-full h-3 bg-border rounded-lg appearance-none cursor-pointer accent-quantum"
                 />
                 <div className="flex justify-between text-xs text-text-muted mt-2">
                   <span>1</span>
