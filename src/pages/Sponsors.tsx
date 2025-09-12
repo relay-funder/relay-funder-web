@@ -101,18 +101,16 @@ const Sponsors = () => {
             {themes.map((theme, index) => (
               <div
                 key={theme.title}
-                className="group relative overflow-hidden rounded-2xl aspect-square"
+                className="bg-card border border-border rounded-xl p-8 hover-lift animate-fade-in-up aspect-square flex flex-col justify-center items-center text-center group"
+                style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className={`absolute inset-0 ${theme.color} opacity-90 group-hover:opacity-95 transition-opacity`} />
-                <div className="absolute inset-0 bg-black/20" />
-                <div className="relative h-full flex flex-col justify-center items-center text-center p-6">
-                  <h3 className="text-xl font-bold text-white mb-3 font-display drop-shadow-xl shadow-black/50">
-                    {theme.title}
-                  </h3>
-                  <p className="text-white/95 text-sm font-medium leading-relaxed drop-shadow-lg shadow-black/50">
-                    {theme.description}
-                  </p>
-                </div>
+                <div className={`w-16 h-16 ${theme.color} rounded-full mb-6 group-hover:scale-110 transition-transform duration-300`} />
+                <h3 className="text-xl font-semibold text-text-primary mb-4 font-display">
+                  {theme.title}
+                </h3>
+                <p className="text-text-muted text-sm leading-relaxed">
+                  {theme.description}
+                </p>
               </div>
             ))}
           </div>
