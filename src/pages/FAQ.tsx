@@ -8,59 +8,39 @@ const FAQ = () => {
   const faqs = [
     {
       question: 'How does Relay Funder ensure the safety of funds?',
-      answer: 'Relay Funder uses secure digital infrastructure with privacy-preserving identity verification. All transactions are recorded on a verifiable ledger, and funds are released based on verified project milestones.',
-    },
-    {
-      question: 'How are funds actually processed and stored?',
-      answer: 'All funds are managed through CC Protocol smart contracts that function as secure digital treasuries on the blockchain. Contributions are held in stable coins (digital currencies tied to stable values like the US dollar) and stored transparently on-chain where anyone can verify them. Funds can only be released when project milestones are met and approved by designated administrators, ensuring accountability at every step.',
+      answer: 'Relay Funder uses secure, audited digital infrastructure with privacy-preserving identity verification. Contributions are processed through trusted payment rails, converted into stablecoins (digital currencies tied to stable values like the US dollar), and sent directly to community treasuries.',
     },
     {
       question: 'Where do the funds actually go?',
-      answer: 'Funds go directly to verified community leaders who have proposed specific projects. Each leader is part of Refunite\'s trusted Community Leader Network, which has been built over years of relationship-building and verification.',
-    },
-    {
-      question: 'How long do projects typically run?',
-      answer: 'Most projects run for 3-6 months, with clear milestones and regular updates. Leaders set their own timelines based on project scope and community needs.',
+      answer: 'Funds go directly to vetted community treasuries in the regions where our partners on the ground operate.',
     },
     {
       question: 'Which regions does Relay Funder currently serve?',
-      answer: 'We\'re piloting in Kenya and Uganda through our partnership with Refunite, with plans to expand globally. Community leaders worldwide can already engage with the platform.',
+      answer: 'We currently serve refugee and displaced communities in Kenya and Uganda, with plans to expand across East Africa and other high-need regions in partnership with humanitarian organizations.',
     },
     {
       question: 'Who are Match Fund Sponsors and how do they work?',
-      answer: 'Match Fund Sponsors are organizations or individuals who contribute to the Match Fund, which amplifies individual contributions. The more community backers a project has, the larger the match it receives from the Sponsor pool.',
+      answer: 'Match Fund Sponsors are individuals, foundations, NGOs, and philanthropies who contribute to the Match Fund, which amplifies individual contributions. The more community backers a project has, the larger the match it receives from the Sponsor pool.',
     },
     {
       question: 'How can campaigns apply to participate in match funds?',
-      answer: 'Campaign participation in match funds requires admin approval and depends on the specific topic and round sponsor requirements. Not every campaign is automatically eligible for every match fund - each round has its own focus areas and criteria set by the sponsoring organization. Community leaders must apply and be accepted based on project alignment, leader verification, and sponsor guidelines.',
-    },
-    {
-      question: 'What makes a contribution eligible for match fund amplification?',
-      answer: 'To ensure fair distribution, we use sybil-resistant verification through providers like Holonym and Human.tech to confirm proof of humanity. This prevents fake accounts from gaming the system. Match calculations favor genuine community support through small individual contributions rather than large single donations, ensuring that projects with broad grassroots backing receive larger matches from the sponsor pool.',
+      answer: 'Campaign participation in match funds requires admin approval and depends on the specific topic and round sponsor requirements. Not every campaign is automatically eligible for every match fund - each round has its own focus areas and criteria set by the sponsoring organization. Interested organizations can contact our partnerships team to explore participation and review requirements.',
     },
     {
       question: 'When and how are match funds distributed to campaigns?',
-      answer: 'Match funds are distributed after each funding round concludes. We conduct thorough validation processes to ensure all contributions are legitimate and perform comprehensive checks to prevent gaming of the system. Once validation is complete, calculated match funds are disbursed to qualifying campaign treasuries.',
-    },
-    {
-      question: 'What launch geographies are planned?',
-      answer: 'We\'re starting with communities across East Africa, West Africa, and the Horn of Africa through Refunite\'s network, with expansion to other regions based on community partnerships and demand.',
+      answer: 'At the end of each campaign round, match funds are allocated based on transparent rules—for example, proportional to the number of unique contributions a campaign receives. Funds are then disbursed directly to the community treasury.',
     },
     {
       question: 'How is this different from traditional crowdfunding?',
       answer: 'Relay Funder is community-driven rather than platform-driven. Leaders propose projects they know will work, supporters worldwide can contribute, and the Match Fund amplifies impact. Everything is built with dignity and agency for refugees and displaced communities at the center.',
     },
     {
-      question: 'Why are stable coin payments faster than traditional funding methods?',
-      answer: 'Traditional crowdfunding can take weeks or months to process payments through banks, especially for cross-border transfers. With stable coins, funds transfer instantly across the globe without currency conversion delays or high banking fees. Community leaders can access funding within hours instead of waiting for international wire transfers, making it possible to respond quickly to urgent community needs.',
-    },
-    {
       question: 'What kind of projects get funded?',
-      answer: 'Projects range from education and skill development to micro-enterprise and climate resilience initiatives. All projects are proposed by community leaders who understand local needs and have existing trust within their communities.',
+      answer: 'Projects are led by trusted community leaders and typically focus on essential needs such as housing, water, food security, skill development, education, and small business resilience.  All projects are proposed by community leaders who understand local needs and have existing trust within their communities.',
     },
     {
       question: 'How do you ensure real impact and transparency?',
-      answer: 'We work exclusively with validated partners like Refunite who have their own proven impact measurement methods and trusted community leader networks. Currently, we track impact metrics through our partners\' established systems and only work with leaders who have demonstrated community trust. We\'re building enhanced transparency features including milestone-based fund disbursement tied to verified progress and an on-chain impact proof system that will create a permanent, public record of every project\'s outcomes and community benefits.',
+      answer: 'Community leaders provide updates and reporting, so donors can clearly see where funds went and what outcomes were achieved. We are working on on-chain impact verification, stay tuned!',
     },
   ];
 
