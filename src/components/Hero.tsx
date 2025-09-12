@@ -8,10 +8,16 @@ import webHeroBg from '@/assets/hero-web3-abstract.jpg';
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Clean background */}
-      <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-background via-surface/30 to-background" />
-      </div>
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url('/lovable-uploads/4c4f89a0-59c0-4e2d-965c-65839a536530.png')`
+        }}
+      />
+      
+      {/* Lightening Overlay for Readability */}
+      <div className="absolute inset-0 z-[1] bg-white/80 backdrop-blur-[0.5px]" />
 
       <div className="max-w-content mx-auto px-6 relative z-10">
         <div className="flex items-center justify-center min-h-[85vh]">
