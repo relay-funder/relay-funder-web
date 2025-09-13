@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
-import relayFunderLogo from '@/assets/relay-funder-logo.png';
+import relayFunderLogo from '@/assets/RelayFunder_highres_transparent-horizontal.png';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,13 +18,13 @@ const Navigation = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-surface/80 backdrop-blur-xl border-b border-quantum/20">
       <div className="max-w-content mx-auto px-6">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center hover-quantum">
+          <Link to="/" className="flex items-center">
             <img 
               src={relayFunderLogo} 
               alt="Relay Funder" 
-              className="h-8"
+              className="h-14"
             />
           </Link>
 
