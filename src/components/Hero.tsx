@@ -49,17 +49,18 @@ const Hero = () => {
               </div>
 
               {/* Photo grid - Mobile version (below text) */}
-              <div className="lg:hidden w-full max-w-lg mx-auto mt-8 pb-8">
-                <div className="grid grid-cols-10 grid-rows-8 gap-3 h-[450px]">
+              <div className="lg:hidden w-full max-w-lg mx-auto mt-8 pb-16">
+                <div className="grid grid-cols-10 grid-rows-8 gap-3 h-[650px]">
                   {/* Photo 1 - Top left, large horizontal */}
                   <div 
-                    className="col-span-6 row-span-3 rounded-lg shadow-lg"
-                    style={{
-                      backgroundImage: `url(${heroImage1})`,
-                      backgroundSize: 'cover',
-                      backgroundPosition: 'center'
-                    }}
-                  />
+                    className="col-span-6 row-span-3 flex justify-end items-end"
+                  >
+                    <img 
+                      src={heroImage1}
+                      alt="Group of people receiving help"
+                      className="h-auto rounded-lg shadow-lg"
+                    />
+                  </div>
                   
                   {/* Photo 2 - Top right, medium square */}
                   <div 
@@ -67,7 +68,7 @@ const Hero = () => {
                     style={{
                       backgroundImage: `url(${heroImage2})`,
                       backgroundSize: 'cover',
-                      backgroundPosition: 'center'
+                      backgroundPosition: '65% 50%'
                     }}
                   />
                                   
@@ -83,23 +84,25 @@ const Hero = () => {
 
                   {/* Photo 3 - Middle left, medium square */}
                   <div 
-                    className="col-span-4 row-span-3 rounded-lg shadow-lg"
-                    style={{
-                      backgroundImage: `url(${heroImage3})`,
-                      backgroundSize: 'cover',
-                      backgroundPosition: 'center'
-                    }}
-                  />
+                    className="col-span-4 row-span-3 flex justify-end items-start"
+                  >
+                    <img 
+                      src={heroImage3}
+                      alt="Portrait of smiling woman"
+                      className="h-auto rounded-lg shadow-lg"
+                    />
+                  </div>
                   
                   {/* Photo 5 - Middle right, medium square */}
                   <div 
-                    className="col-span-5 row-span-3 rounded-lg shadow-lg"
-                    style={{
-                      backgroundImage: `url(${heroImage5})`,
-                      backgroundSize: 'cover',
-                      backgroundPosition: 'center'
-                    }}
-                  />
+                    className="col-span-5 row-span-3 flex justify-start items-start"
+                  >
+                    <img 
+                      src={heroImage5}
+                      alt="Woman sewing"
+                      className="h-auto rounded-lg shadow-lg"
+                    />
+                  </div>
 
                 </div>
               </div>
@@ -110,13 +113,14 @@ const Hero = () => {
               <div className="grid grid-cols-10 grid-rows-8 gap-3 h-[700px]">
                 {/* Photo 1 - Top left, large horizontal */}
                 <div 
-                  className="col-span-6 row-span-3 rounded-lg shadow-lg"
-                  style={{
-                    backgroundImage: `url(${heroImage1})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center'
-                  }}
-                />
+                  className="col-span-6 row-span-3 flex justify-end items-end"
+                >
+                  <img 
+                    src={heroImage1}
+                    alt="Group of people receiving help"
+                    className="w-3/4 h-auto rounded-lg shadow-lg"
+                  />
+                </div>
                 
                 {/* Photo 2 - Top right, medium square */}
                 <div 

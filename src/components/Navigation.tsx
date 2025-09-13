@@ -24,7 +24,7 @@ const Navigation = () => {
             <img 
               src={relayFunderLogo} 
               alt="Relay Funder" 
-              className="h-14"
+              className="h-12"
             />
           </Link>
 
