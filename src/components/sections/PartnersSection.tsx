@@ -14,7 +14,12 @@ const PartnersSection = () => {
         
         {/* Featured partner */}
         <div className="mb-16 relative z-10">
-          <div className="max-w-lg mx-auto web3-card p-8 text-center hover-bio">
+          <a 
+            href={foundingPartner.website}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block max-w-lg mx-auto web3-card p-8 text-center hover-bio group hover:transform hover:scale-105 transition-transform duration-200"
+          >
             <div className="w-60 h-21 mx-auto mb-6 flex items-center justify-center">
               <img 
                 src={foundingPartner.logo} 
@@ -22,13 +27,13 @@ const PartnersSection = () => {
                 className="w-60 h-21 object-contain"
               />
             </div>
-            <div className="text-mono-accent mb-4">
+            <div className="text-mono-accent mb-4 group-hover:text-accent transition-colors">
               Founding Partner
             </div>
             <p className="text-text-secondary leading-relaxed">
               Community Leader Network with <strong className="text-quantum">109,000+ trusted leaders</strong> and <strong className="text-bio">100M+ reach</strong> across refugees and displaced communities worldwide
             </p>
-          </div>
+          </a>
         </div>
 
         {/* Partner grid */}
