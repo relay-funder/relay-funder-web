@@ -1,22 +1,7 @@
 import Layout from '@/components/Layout';
+import { partners, foundingPartner } from '@/data/partners';
 
 const Partners = () => {
-  const foundingPartner = {
-    name: 'Refunite',
-    description: 'Our founding partner brings the Community Leader Network—100k+ trusted leaders with 100M+ reach across crisis-affected communities worldwide.',
-    role: 'Community Leader Network & Distribution',
-    website: 'https://refunite.org',
-  };
-
-  const partners = [
-    { name: 'Celo', role: 'Mobile-first blockchain rails', website: 'https://celo.org' },
-    { name: 'Opera (MiniPay)', role: 'Distribution via Opera & MiniPay', website: 'https://minipay.opera.com' },
-    { name: 'Gitcoin', role: 'Quadratic funding engine', website: 'https://gitcoin.co' },
-    { name: 'human.tech (RelayID)', role: 'Privacy-preserving identity verification', website: 'https://human.tech' },
-    { name: 'Grassroots Economics', role: 'Community currency systems', website: 'https://grassrootseconomics.org' },
-    { name: 'Kickstarter CC Protocol', role: 'Open crowdfunding infrastructure', website: 'https://kickstarter.com' },
-    { name: 'Filecoin Foundation', role: 'IPFS long-term storage & preservation', website: 'https://fil.org' },
-  ];
 
   return (
     <Layout>
@@ -44,9 +29,16 @@ const Partners = () => {
             <div className="bg-card border-2 border-accent/20 rounded-2xl p-8 hover-lift">
               <div className="grid lg:grid-cols-3 gap-8 items-center">
                 <div className="lg:col-span-2">
-                  <h3 className="text-3xl font-bold text-accent mb-4">
-                    {foundingPartner.name}
-                  </h3>
+                    <div className="mb-6">
+                    <img 
+                      src={foundingPartner.logo} 
+                      alt={`${foundingPartner.name} logo`} 
+                      className="w-20 h-20 object-contain rounded-full mb-4"
+                    />
+                    <h3 className="text-3xl font-bold text-accent">
+                      {foundingPartner.name}
+                    </h3>
+                  </div>
                   <p className="text-text-secondary text-lg leading-relaxed mb-6">
                     {foundingPartner.description}
                   </p>
@@ -84,9 +76,16 @@ const Partners = () => {
                 className="bg-card border border-border rounded-xl p-6 hover-lift animate-fade-in-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <h3 className="text-xl font-semibold text-text-primary mb-3">
-                  {partner.name}
-                </h3>
+                <div className="mb-4">
+                  <img 
+                    src={partner.logo} 
+                    alt={`${partner.name} logo`} 
+                    className="w-16 h-16 object-contain rounded-full mb-3"
+                  />
+                  <h3 className="text-xl font-semibold text-text-primary">
+                    {partner.name}
+                  </h3>
+                </div>
                 <p className="text-text-muted text-sm mb-4 leading-relaxed">
                   {partner.role}
                 </p>

@@ -1,49 +1,5 @@
-import refuniteLogo from '@/assets/logos/logo-refunite.png';
-import celoLogo from '@/assets/logos/logo-celo.png';
-import operaLogo from '@/assets/logos/logo-opera-mini.png';
-import gitcoinLogo from '@/assets/logos/logo-gitcoin.png';
-import humanTechLogo from '@/assets/logos/logo-human-tech-blue.jpg';
-import grassrootsEconomicsLogo from '@/assets/logos/logo-grassroots-economics.png';
-import ccProtocolLogo from '@/assets/logos/logo-cc-protocol.jpeg';
-import filecoinFoundationLogo from '@/assets/logos/logo-filecoin-foundation.png';
+import { partners, foundingPartner } from '@/data/partners';
 
-const partners = [
-  { 
-    name: 'CC Protocol', 
-    logo: ccProtocolLogo,
-    role: 'Kickstarted supported crowdfunding infrastructure'
-  },
-  { 
-    name: 'Celo', 
-    logo: celoLogo,
-    role: 'Blockchain infrastructure'
-  },
-  { 
-    name: 'human.tech', 
-    logo: humanTechLogo,
-    role: 'Zero-knowledge identity verification'
-  },
-  { 
-    name: 'Grassroots Economics', 
-    logo: grassrootsEconomicsLogo,
-    role: 'Community currency systems'
-  },
-  { 
-    name: 'Opera Mini', 
-    logo: operaLogo,
-    role: 'MiniPay wallet distribution'
-  },
-  { 
-    name: 'Filecoin Foundation', 
-    logo: filecoinFoundationLogo,
-    role: 'IPFS long-term storage'
-  },
-  { 
-    name: 'Gitcoin', 
-    logo: gitcoinLogo,
-    role: 'Quadratic funding and matching'
-  },
-];
 
 const PartnersSection = () => {
   return (
@@ -61,8 +17,8 @@ const PartnersSection = () => {
           <div className="max-w-lg mx-auto web3-card p-8 text-center hover-bio">
             <div className="w-60 h-21 mx-auto mb-6 flex items-center justify-center">
               <img 
-                src={refuniteLogo} 
-                alt="Refunite logo" 
+                src={foundingPartner.logo} 
+                alt={`${foundingPartner.name} logo`} 
                 className="w-60 h-21 object-contain"
               />
             </div>
@@ -76,11 +32,14 @@ const PartnersSection = () => {
         </div>
 
         {/* Partner grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-8 relative z-10 justify-items-center">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-8 relative z-10 justify-items-center">
           {partners.map((partner) => (
-            <div 
+            <a 
               key={partner.name}
-              className="text-center group"
+              href={partner.website}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-center group hover:transform hover:scale-105 transition-transform duration-200"
             >
               <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center transition-colors">
                 {partner.logo ? (
@@ -95,13 +54,13 @@ const PartnersSection = () => {
                   </span>
                 )}
               </div>
-              <h4 className="font-medium text-text-primary text-sm mb-2 font-display">
+              <h4 className="font-medium text-text-primary text-sm mb-2 font-display group-hover:text-accent transition-colors">
                 {partner.name}
               </h4>
               <p className="text-xs text-text-muted leading-relaxed">
                 {partner.role}
               </p>
-            </div>
+            </a>
           ))}
         </div>
       </div>

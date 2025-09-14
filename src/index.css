@@ -172,7 +172,8 @@
   }
 
   .text-mono-accent {
-    @apply font-mono text-quantum tracking-wider uppercase text-sm;
+    @apply font-mono text-quantum tracking-wider uppercase;
+    font-size: 17px;
   }
 
   .text-serif-elegant {

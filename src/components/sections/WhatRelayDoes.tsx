@@ -19,6 +19,7 @@ const WhatRelayDoes = () => {
     <section className="py-20 bg-surface">
       <div className="max-w-content mx-auto px-6">
         <div className="max-w-4xl mx-auto text-center">
+          <div className="text-mono-accent mb-4">Our Mission</div>
           <h2 className="text-section-title text-text-primary mb-8">
             What Relay Funder Does
           </h2>
