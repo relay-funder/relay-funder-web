@@ -49,7 +49,7 @@ const Sponsors = () => {
       {/* Hero */}
       <section className="py-24 bg-surface">
         <div className="max-w-content mx-auto px-6 text-center">
-          <h1 className="text-hero text-text-primary mb-6">
+          <h1 className="text-hero text-text-primary mb-6 pb-2">
             Fuel the Match Fund. <span className="text-gradient">Multiply community power.</span>
           </h1>
           <p className="text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
@@ -129,7 +129,7 @@ const Sponsors = () => {
             <div className="flex justify-center">
               <a
                 href="mailto:info@relayfunder.com"
-                className="btn-primary"
+                className="btn-quantum"
               >
                 Talk to Us
               </a>

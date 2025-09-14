@@ -113,7 +113,7 @@ const FAQ = () => {
             </p>
             <a
               href="mailto:info@relayfunder.com"
-              className="btn-primary"
+              className="btn-quantum"
             >
               Get in Touch
             </a>
