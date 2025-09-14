@@ -33,11 +33,11 @@ const Partners = () => {
                     <img 
                       src={foundingPartner.logo} 
                       alt={`${foundingPartner.name} logo`} 
-                      className="w-20 h-20 object-contain rounded-full mb-4"
+                      className="w-100 object-contain mb-4"
                     />
-                    <h3 className="text-3xl font-bold text-accent">
+                    {/* <h3 className="text-3xl font-bold text-accent">
                       {foundingPartner.name}
-                    </h3>
+                    </h3> */}
                   </div>
                   <p className="text-text-secondary text-lg leading-relaxed mb-6">
                     {foundingPartner.description}

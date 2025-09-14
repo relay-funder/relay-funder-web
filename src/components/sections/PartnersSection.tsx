@@ -26,7 +26,7 @@ const PartnersSection = () => {
               Founding Partner
             </div>
             <p className="text-text-secondary leading-relaxed">
-              Community Leader Network with <strong className="text-quantum">100,000+ trusted leaders</strong> and <strong className="text-bio">100M+ reach</strong> across refugees and displaced communities worldwide
+              Community Leader Network with <strong className="text-quantum">109,000+ trusted leaders</strong> and <strong className="text-bio">100M+ reach</strong> across refugees and displaced communities worldwide
             </p>
           </div>
         </div>

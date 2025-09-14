@@ -1,4 +1,4 @@
-import refuniteLogo from '@/assets/logos/logo-refunite.png';
+import refuniteLogo from '@/assets/logos/logo-refunite-black.png';
 import celoLogo from '@/assets/logos/logo-celo.png';
 import operaLogo from '@/assets/logos/logo-opera-mini.png';
 import gitcoinLogo from '@/assets/logos/logo-gitcoin.png';
@@ -26,7 +26,7 @@ export interface FoundingPartner {
 export const foundingPartner: FoundingPartner = {
   name: 'Refunite',
   logo: refuniteLogo,
-  description: 'Our founding partner brings the Community Leader Network—100k+ trusted leaders with 100M+ reach across crisis-affected communities worldwide.',
+  description: 'Our founding partner brings the Community Leader Network—109k+ trusted leaders with 100M+ reach across crisis-affected communities worldwide.',
   role: 'Community Leader Network & Distribution',
   website: 'https://refunite.org',
 };

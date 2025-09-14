@@ -2,7 +2,7 @@ import mobilePaymentsImage from '@/assets/mobile-payments.jpg';
 
 const PilotsProof = () => {
   const networkStats = [
-    { label: 'Trusted leaders', value: '100,000+', accent: 'text-quantum' },
+    { label: 'Trusted leaders', value: '109,000+', accent: 'text-quantum' },
     { label: 'Community reach', value: '100M+', accent: 'text-bio' },
   ];
 
