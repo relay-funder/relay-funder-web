@@ -27,34 +27,29 @@ const Partners = () => {
           
           <div className="max-w-4xl mx-auto">
             <div className="bg-card border-2 border-accent/20 rounded-2xl p-8 hover-lift">
-              <div className="grid lg:grid-cols-3 gap-8 items-center">
-                <div className="lg:col-span-2">
-                    <div className="mb-6">
+              <div>
+                <div className="mb-6">
+                  <a
+                    href={foundingPartner.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:opacity-80 transition-opacity"
+                  >
                     <img 
                       src={foundingPartner.logo} 
                       alt={`${foundingPartner.name} logo`} 
                       className="w-100 object-contain mb-4"
                     />
-                    {/* <h3 className="text-3xl font-bold text-accent">
-                      {foundingPartner.name}
-                    </h3> */}
-                  </div>
-                  <p className="text-text-secondary text-lg leading-relaxed mb-6">
-                    {foundingPartner.description}
-                  </p>
-                  <div className="inline-flex items-center px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-medium">
-                    {foundingPartner.role}
-                  </div>
-                </div>
-                <div className="text-center lg:text-right">
-                  <a
-                    href={foundingPartner.website}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn-primary inline-flex items-center"
-                  >
-                    Learn More
                   </a>
+                  {/* <h3 className="text-3xl font-bold text-accent">
+                    {foundingPartner.name}
+                  </h3> */}
+                </div>
+                <p className="text-text-secondary text-lg leading-relaxed mb-6">
+                  {foundingPartner.description}
+                </p>
+                <div className="inline-flex items-center px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-medium">
+                  {foundingPartner.role}
                 </div>
               </div>
             </div>
@@ -77,26 +72,35 @@ const Partners = () => {
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="mb-4">
-                  <img 
-                    src={partner.logo} 
-                    alt={`${partner.name} logo`} 
-                    className="w-16 h-16 object-contain rounded-full mb-3"
-                  />
-                  <h3 className="text-xl font-semibold text-text-primary">
-                    {partner.name}
-                  </h3>
+                  <a
+                    href={partner.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block hover:opacity-80 transition-opacity"
+                  >
+                    <img 
+                      src={partner.logo} 
+                      alt={`${partner.name} logo`} 
+                      className="w-16 h-16 object-contain rounded-full mb-3"
+                    />
+                  </a>
+                  <a
+                    href={partner.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-accent transition-colors"
+                  >
+                    <h3 className="text-xl font-semibold text-text-primary">
+                      {partner.name}
+                    </h3>
+                  </a>
                 </div>
-                <p className="text-text-muted text-sm mb-4 leading-relaxed">
+                <div className="inline-flex items-center px-3 py-1 bg-accent/10 text-accent rounded-full text-xs font-medium mb-3">
                   {partner.role}
+                </div>
+                <p className="text-text-secondary text-sm leading-relaxed">
+                  {partner.description}
                 </p>
-                <a
-                  href={partner.website}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-accent hover:text-accent-dark text-sm font-medium interactive-base"
-                >
-                  Visit Website →
-                </a>
               </div>
             ))}
           </div>
@@ -116,7 +120,7 @@ const Partners = () => {
             </p>
             <a
               href="mailto:info@relayfunder.com"
-              className="btn-primary"
+              className="btn-quantum"
             >
               Get in Touch
             </a>
