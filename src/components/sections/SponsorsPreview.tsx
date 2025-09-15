@@ -22,7 +22,7 @@ const SponsorsPreview = () => {
           </div>
 
           <div className="flex justify-center">
-            <a href="mailto:info@relayfunder.com" className="btn-quantum">Get In Touch</a>
+            <a href="mailto:sponsor@relayfunder.com" className="btn-quantum">Get In Touch</a>
           </div>
         </div>
       </div>
