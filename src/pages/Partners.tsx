@@ -18,8 +18,8 @@ const Partners = () => {
             <span className="text-gradient">Partners</span> embedded in communities
           </h1>
           <p className="text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
-            We work with organizations embedded in communities and aligned tech ecosystems 
-            to build dignity-preserving infrastructure for community-led funding.
+            We work with organizations embedded in communities and aligned tech ecosystems to build
+            dignity-preserving infrastructure for community-led funding.
           </p>
         </div>
       </section>
@@ -30,7 +30,7 @@ const Partners = () => {
           <h2 className="text-section-title text-text-primary mb-12 text-center">
             Founding Partner
           </h2>
-          
+
           <div className="max-w-4xl mx-auto">
             <div className="bg-card border-2 border-accent/20 rounded-2xl p-8 hover-lift">
               <div>
@@ -41,9 +41,9 @@ const Partners = () => {
                     rel="noopener noreferrer"
                     className="hover:opacity-80 transition-opacity"
                   >
-                    <ThemeAwareImage 
-                      src={foundingPartner.logo} 
-                      alt={`${foundingPartner.name} logo`} 
+                    <ThemeAwareImage
+                      src={foundingPartner.logo}
+                      alt={`${foundingPartner.name} logo`}
                       className="w-48 object-contain mb-4"
                     />
                   </a>
@@ -69,7 +69,7 @@ const Partners = () => {
           <h2 className="text-section-title text-text-primary mb-12 text-center">
             Technology & Infrastructure Partners
           </h2>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {partners.map((partner, index) => (
               <div
@@ -84,9 +84,9 @@ const Partners = () => {
                     rel="noopener noreferrer"
                     className="inline-block hover:opacity-80 transition-opacity"
                   >
-                    <ThemeAwareImage 
-                      src={partner.logo} 
-                      alt={`${partner.name} logo`} 
+                    <ThemeAwareImage
+                      src={partner.logo}
+                      alt={`${partner.name} logo`}
                       className="w-16 h-16 object-contain rounded-full mb-3"
                     />
                   </a>
@@ -96,17 +96,13 @@ const Partners = () => {
                     rel="noopener noreferrer"
                     className="hover:text-accent transition-colors"
                   >
-                    <h3 className="text-xl font-semibold text-text-primary">
-                      {partner.name}
-                    </h3>
+                    <h3 className="text-xl font-semibold text-text-primary">{partner.name}</h3>
                   </a>
                 </div>
                 <div className="inline-flex items-center px-3 py-1 bg-accent/10 text-accent rounded-full text-xs font-medium mb-3">
                   {partner.role}
                 </div>
-                <p className="text-text-secondary text-sm leading-relaxed">
-                  {partner.description}
-                </p>
+                <p className="text-text-secondary text-sm leading-relaxed">{partner.description}</p>
               </div>
             ))}
           </div>
@@ -117,12 +113,10 @@ const Partners = () => {
       <section className="py-20">
         <div className="max-w-content mx-auto px-6 text-center">
           <div className="max-w-2xl mx-auto">
-            <h2 className="text-section-title text-text-primary mb-6">
-              Become a Partner
-            </h2>
+            <h2 className="text-section-title text-text-primary mb-6">Become a Partner</h2>
             <p className="text-text-secondary mb-8 leading-relaxed">
-              Are you building technology or services that could strengthen 
-              community-led funding? We'd love to explore collaboration.
+              Are you building technology or services that could strengthen community-led funding?
+              We'd love to explore collaboration.
             </p>
             <a
               href="mailto:info@relayfunder.com"

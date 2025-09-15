@@ -58,9 +58,9 @@ const Sponsors = () => {
             Fuel the Match Fund. <span className="text-gradient">Multiply community power.</span>
           </h1>
           <p className="text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
-            Partner with Relay Funder to amplify the impact of community-driven projects. 
-            Your sponsorship creates a multiplier effect that transforms individual 
-            contributions into substantial funding for refugee-led initiatives.
+            Partner with Relay Funder to amplify the impact of community-driven projects. Your
+            sponsorship creates a multiplier effect that transforms individual contributions into
+            substantial funding for refugee-led initiatives.
           </p>
         </div>
       </section>
@@ -78,12 +78,8 @@ const Sponsors = () => {
                 className="bg-card border border-border rounded-xl p-8 hover-lift animate-fade-in-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <h3 className="text-xl font-semibold text-text-primary mb-4">
-                  {benefit.title}
-                </h3>
-                <p className="text-text-muted leading-relaxed">
-                  {benefit.description}
-                </p>
+                <h3 className="text-xl font-semibold text-text-primary mb-4">{benefit.title}</h3>
+                <p className="text-text-muted leading-relaxed">{benefit.description}</p>
               </div>
             ))}
           </div>
@@ -101,7 +97,7 @@ const Sponsors = () => {
               Support community-led projects across key areas of impact
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {themes.map((theme, index) => (
               <div
@@ -112,9 +108,7 @@ const Sponsors = () => {
                 <h3 className="text-xl font-semibold text-text-primary mb-4 font-display">
                   {theme.title}
                 </h3>
-                <p className="text-text-muted text-sm leading-relaxed">
-                  {theme.description}
-                </p>
+                <p className="text-text-muted text-sm leading-relaxed">{theme.description}</p>
               </div>
             ))}
           </div>
@@ -125,9 +119,7 @@ const Sponsors = () => {
       <section className="py-20">
         <div className="max-w-content mx-auto px-6 text-center">
           <div className="max-w-2xl mx-auto">
-            <h2 className="text-section-title text-text-primary mb-6">
-              Ready to multiply impact?
-            </h2>
+            <h2 className="text-section-title text-text-primary mb-6">Ready to multiply impact?</h2>
             <p className="text-text-secondary mb-8">
               Join our growing network of sponsors who believe in community-led solutions.
             </p>

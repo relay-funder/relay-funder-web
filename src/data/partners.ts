@@ -21,66 +21,75 @@ export type FoundingPartner = Partner;
 export const foundingPartner = {
   name: 'Refunite',
   logo: refuniteLogo,
-  description: 'Our founding partner brings the Community Leader Network—109k+ trusted leaders with 100M+ reach across crisis-affected communities worldwide.',
+  description:
+    'Our founding partner brings the Community Leader Network—109k+ trusted leaders with 100M+ reach across crisis-affected communities worldwide.',
   role: 'Community Leader Network & Distribution',
   website: 'https://refunite.org',
 } as const satisfies FoundingPartner;
 
 export const partners: Partner[] = [
-  { 
-    name: 'CC Protocol', 
+  {
+    name: 'CC Protocol',
     logo: ccProtocolLogo,
     role: 'Kickstarter supported crowdfunding infrastructure',
-    description: 'CC Protocol is supported by Kickstarter and provides the foundational open-source crowdfunding infrastructure that powers RelayFunder\'s on-chain campaign creation and management. Their protocol enables transparent, community-driven fundraising with built-in governance and accountability mechanisms.',
-    website: 'https://www.ccprotocol.xyz/'
+    description:
+      "CC Protocol is supported by Kickstarter and provides the foundational open-source crowdfunding infrastructure that powers RelayFunder's on-chain campaign creation and management. Their protocol enables transparent, community-driven fundraising with built-in governance and accountability mechanisms.",
+    website: 'https://www.ccprotocol.xyz/',
   },
-  { 
-    name: 'Celo', 
+  {
+    name: 'Celo',
     logo: celoLogo,
     role: 'Blockchain infrastructure',
-    description: 'Celo\'s mobile-first blockchain provides the underlying infrastructure for RelayFunder\'s financial operations. Their carbon-negative network enables fast, low-cost transactions optimized for mobile devices, making digital payments accessible to communities worldwide.',
-    website: 'https://celo.org'
+    description:
+      "Celo's mobile-first blockchain provides the underlying infrastructure for RelayFunder's financial operations. Their carbon-negative network enables fast, low-cost transactions optimized for mobile devices, making digital payments accessible to communities worldwide.",
+    website: 'https://celo.org',
   },
-  { 
-    name: 'human.tech', 
+  {
+    name: 'human.tech',
     logo: humanTechLogo,
     role: 'Zero-knowledge identity verification',
-    description: 'human.tech\'s zero-knowledge proof technology enables dignified identity verification without compromising personal data, ensuring both security and privacy for vulnerable communities.',
-    website: 'https://human.tech'
+    description:
+      "human.tech's zero-knowledge proof technology enables dignified identity verification without compromising personal data, ensuring both security and privacy for vulnerable communities.",
+    website: 'https://human.tech',
   },
-  { 
-    name: 'Grassroots Economics', 
+  {
+    name: 'Grassroots Economics',
     logo: grassrootsEconomicsLogo,
     role: 'Community currency systems',
-    description: 'Grassroots Economics brings expertise in community currency design and local economic resilience. Their work with complementary currencies in Kenya and beyond informs RelayFunder\'s approach to sustainable, community-owned financial systems.',
-    website: 'https://grassrootseconomics.org'
+    description:
+      "Grassroots Economics brings expertise in community currency design and local economic resilience. Their work with complementary currencies in Kenya and beyond informs RelayFunder's approach to sustainable, community-owned financial systems.",
+    website: 'https://grassrootseconomics.org',
   },
-  { 
-    name: 'Opera Mini', 
+  {
+    name: 'Opera Mini',
     logo: operaLogo,
     role: 'MiniPay wallet distribution',
-    description: 'Opera\'s MiniPay wallet provides seamless access to RelayFunder through their mobile browser ecosystem. With millions of users across Africa, Opera enables direct integration of funding capabilities into everyday mobile experiences.',
-    website: 'https://www.minipay.to/'
+    description:
+      "Opera's MiniPay wallet provides seamless access to RelayFunder through their mobile browser ecosystem. With millions of users across Africa, Opera enables direct integration of funding capabilities into everyday mobile experiences.",
+    website: 'https://www.minipay.to/',
   },
-  { 
-    name: 'Filecoin Foundation', 
+  {
+    name: 'Filecoin Foundation',
     logo: filecoinFoundationLogo,
     role: 'IPFS long-term storage',
-    description: 'Filecoin Foundation ensures the long-term preservation of campaign data, community records, and impact documentation through decentralized storage. Their IPFS network provides censorship-resistant archiving for accountability and transparency.',
-    website: 'https://fil.org'
+    description:
+      'Filecoin Foundation ensures the long-term preservation of campaign data, community records, and impact documentation through decentralized storage. Their IPFS network provides censorship-resistant archiving for accountability and transparency.',
+    website: 'https://fil.org',
   },
-  { 
-    name: 'Gitcoin', 
+  {
+    name: 'Gitcoin',
     logo: gitcoinLogo,
     role: 'Quadratic funding and matching',
-    description: 'Gitcoin\'s quadratic funding mechanisms amplify community contributions through democratic allocation of matching funds. Their expertise in public goods funding helps RelayFunder maximize impact by prioritizing projects with broad community support.',
-    website: 'https://gitcoin.co'
+    description:
+      "Gitcoin's quadratic funding mechanisms amplify community contributions through democratic allocation of matching funds. Their expertise in public goods funding helps RelayFunder maximize impact by prioritizing projects with broad community support.",
+    website: 'https://gitcoin.co',
   },
   {
     name: 'GSR Foundation',
     logo: gsrFoundationLogo,
     role: 'Independent charity and grantmaker',
-    description: 'GSR Foundation provides independent oversight and grant-making expertise to ensure RelayFunder\'s operations maintain the highest standards of transparency and accountability. Their charitable mission aligns with RelayFunder\'s commitment to dignified humanitarian support.',
-    website: 'https://gsr.io/'
-  }
+    description:
+      "GSR Foundation provides independent oversight and grant-making expertise to ensure RelayFunder's operations maintain the highest standards of transparency and accountability. Their charitable mission aligns with RelayFunder's commitment to dignified humanitarian support.",
+    website: 'https://gsr.io/',
+  },
 ];

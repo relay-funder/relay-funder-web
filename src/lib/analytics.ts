@@ -8,7 +8,7 @@ const shouldTrack = () => {
 // Page view tracking
 export const trackPageView = (pageName: string, additionalData?: Record<string, unknown>) => {
   if (!shouldTrack()) return;
-  
+
   track('page_view', {
     page: pageName,
     ...additionalData,
@@ -16,9 +16,13 @@ export const trackPageView = (pageName: string, additionalData?: Record<string, 
 };
 
 // Call-to-action tracking
-export const trackCTAClick = (ctaName: string, section?: string, additionalData?: Record<string, unknown>) => {
+export const trackCTAClick = (
+  ctaName: string,
+  section?: string,
+  additionalData?: Record<string, unknown>
+) => {
   if (!shouldTrack()) return;
-  
+
   track('cta_click', {
     cta_name: ctaName,
     section: section,
@@ -27,9 +31,13 @@ export const trackCTAClick = (ctaName: string, section?: string, additionalData?
 };
 
 // Navigation tracking
-export const trackNavigation = (destination: string, source?: string, additionalData?: Record<string, unknown>) => {
+export const trackNavigation = (
+  destination: string,
+  source?: string,
+  additionalData?: Record<string, unknown>
+) => {
   if (!shouldTrack()) return;
-  
+
   track('navigation', {
     destination,
     source,
@@ -38,9 +46,13 @@ export const trackNavigation = (destination: string, source?: string, additional
 };
 
 // Button click tracking
-export const trackButtonClick = (buttonName: string, buttonType?: string, additionalData?: Record<string, unknown>) => {
+export const trackButtonClick = (
+  buttonName: string,
+  buttonType?: string,
+  additionalData?: Record<string, unknown>
+) => {
   if (!shouldTrack()) return;
-  
+
   track('button_click', {
     button_name: buttonName,
     button_type: buttonType,
@@ -49,9 +61,14 @@ export const trackButtonClick = (buttonName: string, buttonType?: string, additi
 };
 
 // Link click tracking
-export const trackLinkClick = (linkText: string, linkUrl: string, linkType?: string, additionalData?: Record<string, unknown>) => {
+export const trackLinkClick = (
+  linkText: string,
+  linkUrl: string,
+  linkType?: string,
+  additionalData?: Record<string, unknown>
+) => {
   if (!shouldTrack()) return;
-  
+
   track('link_click', {
     link_text: linkText,
     link_url: linkUrl,
