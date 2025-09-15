@@ -70,6 +70,7 @@ const Hero = () => {
                       backgroundSize: 'cover',
                       backgroundPosition: '65% 50%'
                     }}
+                    aria-hidden="true"
                   />
                                   
                   {/* Photo 4 - Full width bottom */}
@@ -80,6 +81,7 @@ const Hero = () => {
                       backgroundSize: 'cover',
                       backgroundPosition: 'center'
                     }}
+                    aria-hidden="true"
                   />
 
                   {/* Photo 3 - Middle left, medium square */}
@@ -130,6 +132,7 @@ const Hero = () => {
                     backgroundSize: 'cover',
                     backgroundPosition: 'center'
                   }}
+                  aria-hidden="true"
                 />
                                 
                 {/* Photo 4 - Full width bottom */}
@@ -140,6 +143,7 @@ const Hero = () => {
                     backgroundSize: 'cover',
                     backgroundPosition: 'center'
                   }}
+                  aria-hidden="true"
                 />
 
                 {/* Photo 3 - Middle left, medium square */}
@@ -150,6 +154,7 @@ const Hero = () => {
                     backgroundSize: 'cover',
                     backgroundPosition: 'center'
                   }}
+                  aria-hidden="true"
                 />
                 
                 {/* Photo 5 - Middle right, medium square */}
@@ -160,6 +165,7 @@ const Hero = () => {
                     backgroundSize: 'cover',
                     backgroundPosition: 'center'
                   }}
+                  aria-hidden="true"
                 />
 
               </div>

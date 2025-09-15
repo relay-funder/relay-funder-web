@@ -39,7 +39,7 @@ const Partners = () => {
                     <ThemeAwareImage 
                       src={foundingPartner.logo} 
                       alt={`${foundingPartner.name} logo`} 
-                      className="w-100 object-contain mb-4"
+                      className="w-48 object-contain mb-4"
                     />
                   </a>
                   {/* <h3 className="text-3xl font-bold text-accent">

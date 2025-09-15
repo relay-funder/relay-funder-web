@@ -41,6 +41,7 @@ const Navigation = () => {
                     ? 'text-quantum'
                     : 'text-text-secondary hover:text-quantum'
                 }`}
+                {...(isActive(item.href) && { 'aria-current': 'page' })}
               >
                 {item.name}
               </Link>
@@ -84,6 +85,7 @@ const Navigation = () => {
                       : 'text-text-secondary hover:text-accent'
                   }`}
                   onClick={() => setIsOpen(false)}
+                  {...(isActive(item.href) && { 'aria-current': 'page' })}
                 >
                   {item.name}
                 </Link>

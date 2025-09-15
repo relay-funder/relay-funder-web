@@ -16,21 +16,15 @@ export interface Partner {
   website: string;
 }
 
-export interface FoundingPartner {
-  name: string;
-  logo: string;
-  description: string;
-  role: string;
-  website: string;
-}
+export type FoundingPartner = Partner;
 
-export const foundingPartner: FoundingPartner = {
+export const foundingPartner = {
   name: 'Refunite',
   logo: refuniteLogo,
   description: 'Our founding partner brings the Community Leader Network—109k+ trusted leaders with 100M+ reach across crisis-affected communities worldwide.',
   role: 'Community Leader Network & Distribution',
   website: 'https://refunite.org',
-};
+} as const satisfies FoundingPartner;
 
 export const partners: Partner[] = [
   { 
