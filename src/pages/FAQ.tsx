@@ -8,35 +8,39 @@ const FAQ = () => {
   const faqs = [
     {
       question: 'How does Relay Funder ensure the safety of funds?',
-      answer: 'Relay Funder uses secure digital infrastructure with privacy-preserving identity verification through RelayID. All transactions are recorded on a verifiable ledger, and funds are released based on verified project milestones.',
+      answer: 'Relay Funder uses secure, audited digital infrastructure with privacy-preserving identity verification. Contributions are processed through trusted payment rails, converted into stablecoins (digital currencies tied to stable values like the US dollar), and sent directly to community treasuries.',
     },
     {
       question: 'Where do the funds actually go?',
-      answer: 'Funds go directly to verified community leaders who have proposed specific projects. Each leader is part of Refunite\'s trusted Community Leader Network, which has been built over years of relationship-building and verification.',
-    },
-    {
-      question: 'How long do projects typically run?',
-      answer: 'Most projects run for 3-6 months, with clear milestones and regular updates. Leaders set their own timelines based on project scope and community needs.',
+      answer: 'Funds go directly to vetted community treasuries in the regions where our partners on the ground operate.',
     },
     {
       question: 'Which regions does Relay Funder currently serve?',
-      answer: 'We\'re piloting in Africa through our partnership with Refunite, with plans to expand globally. Community leaders worldwide can already engage with the platform.',
+      answer: 'We currently serve refugee and displaced communities in Kenya and Uganda, with plans to expand across East Africa and other high-need regions in partnership with humanitarian organizations.',
     },
     {
-      question: 'Who are Sponsors and how do they work?',
-      answer: 'Sponsors are organizations or individuals who contribute to the Match Fund, which amplifies individual contributions. The more community backers a project has, the larger the match it receives from the Sponsor pool.',
+      question: 'Who are Match Fund Sponsors and how do they work?',
+      answer: 'Match Fund Sponsors are individuals, foundations, NGOs, and philanthropies who contribute to the Match Fund, which amplifies individual contributions. The more community backers a project has, the larger the match it receives from the Sponsor pool.',
     },
     {
-      question: 'What launch geographies are planned?',
-      answer: 'We\'re starting with communities across East Africa, West Africa, and the Horn of Africa through Refunite\'s network, with expansion to other regions based on community partnerships and demand.',
+      question: 'How can campaigns apply to participate in match funds?',
+      answer: 'Campaign participation in match funds requires admin approval and depends on the specific topic and round sponsor requirements. Not every campaign is automatically eligible for every match fund - each round has its own focus areas and criteria set by the sponsoring organization. Interested organizations can contact our partnerships team to explore participation and review requirements.',
+    },
+    {
+      question: 'When and how are match funds distributed to campaigns?',
+      answer: 'At the end of each campaign round, match funds are allocated based on transparent rules—for example, proportional to the number of unique contributions a campaign receives. Funds are then disbursed directly to the community treasury.',
     },
     {
       question: 'How is this different from traditional crowdfunding?',
-      answer: 'Relay Funder is community-driven rather than platform-driven. Leaders propose projects they know will work, supporters worldwide can contribute, and the Match Fund amplifies impact. Everything is built with dignity and agency for displaced communities at the center.',
+      answer: 'Relay Funder is community-driven rather than platform-driven. Leaders propose projects they know will work, supporters worldwide can contribute, and the Match Fund amplifies impact. Everything is built with dignity and agency for refugees and displaced communities at the center.',
     },
     {
       question: 'What kind of projects get funded?',
-      answer: 'Projects range from education and skill development to micro-enterprise and climate resilience initiatives. All projects are proposed by community leaders who understand local needs and have existing trust within their communities.',
+      answer: 'Projects are led by trusted community leaders and typically focus on essential needs such as housing, water, food security, skill development, education, and small business resilience.  All projects are proposed by community leaders who understand local needs and have existing trust within their communities.',
+    },
+    {
+      question: 'How do you ensure real impact and transparency?',
+      answer: 'Community leaders provide updates and reporting, so donors can clearly see where funds went and what outcomes were achieved. We are working on on-chain impact verification, stay tuned!',
     },
   ];
 
@@ -49,7 +53,7 @@ const FAQ = () => {
       {/* Hero */}
       <section className="py-24 bg-surface">
         <div className="max-w-content mx-auto px-6 text-center">
-          <h1 className="text-hero text-text-primary mb-6">
+          <h1 className="text-hero text-text-primary mb-6 pb-2">
             Frequently Asked <span className="text-gradient">Questions</span>
           </h1>
           <p className="text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
@@ -97,8 +101,8 @@ const FAQ = () => {
       </section>
 
       {/* Contact CTA */}
-      <section className="py-20 bg-surface">
-        <div className="max-w-content mx-auto px-6 text-center">
+      <section className="py-20 mesh-bg">
+        <div className="max-w-content mx-auto px-6 text-center relative z-10">
           <div className="max-w-2xl mx-auto">
             <h2 className="text-section-title text-text-primary mb-6">
               Still have questions?
@@ -108,8 +112,8 @@ const FAQ = () => {
               or how you can get involved.
             </p>
             <a
-              href="mailto:hello@relay.community"
-              className="btn-primary"
+              href="mailto:info@relayfunder.com"
+              className="btn-quantum"
             >
               Get in Touch
             </a>

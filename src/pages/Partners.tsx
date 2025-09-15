@@ -1,23 +1,8 @@
 import Layout from '@/components/Layout';
+import { partners, foundingPartner } from '@/data/partners';
+import { ThemeAwareImage } from '@/hooks/useThemeLogo';
 
 const Partners = () => {
-  const foundingPartner = {
-    name: 'Refunite',
-    description: 'Our founding partner brings the Community Leader Network—100k+ trusted leaders with 100M+ reach across crisis-affected communities worldwide.',
-    role: 'Community Leader Network & Distribution',
-    website: 'https://refunite.org',
-  };
-
-  const partners = [
-    { name: 'Celo', role: 'Mobile-first blockchain rails', website: 'https://celo.org' },
-    { name: 'Opera (MiniPay)', role: 'Distribution via Opera & MiniPay', website: 'https://minipay.opera.com' },
-    { name: 'Gitcoin', role: 'Quadratic funding engine', website: 'https://gitcoin.co' },
-    { name: 'human.tech (RelayID)', role: 'Privacy-preserving identity verification', website: 'https://human.tech' },
-    { name: 'CoalaPay', role: 'Payment infrastructure & mobile money rails', website: 'https://coalapay.com' },
-    { name: 'Grassroots Economics', role: 'Community currency systems', website: 'https://grassrootseconomics.org' },
-    { name: 'Kickstarter CC Protocol', role: 'Open crowdfunding infrastructure', website: 'https://kickstarter.com' },
-    { name: 'Filecoin Foundation', role: 'IPFS long-term storage & preservation', website: 'https://fil.org' },
-  ];
 
   return (
     <Layout>
@@ -43,27 +28,29 @@ const Partners = () => {
           
           <div className="max-w-4xl mx-auto">
             <div className="bg-card border-2 border-accent/20 rounded-2xl p-8 hover-lift">
-              <div className="grid lg:grid-cols-3 gap-8 items-center">
-                <div className="lg:col-span-2">
-                  <h3 className="text-3xl font-bold text-accent mb-4">
-                    {foundingPartner.name}
-                  </h3>
-                  <p className="text-text-secondary text-lg leading-relaxed mb-6">
-                    {foundingPartner.description}
-                  </p>
-                  <div className="inline-flex items-center px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-medium">
-                    {foundingPartner.role}
-                  </div>
-                </div>
-                <div className="text-center lg:text-right">
+              <div>
+                <div className="mb-6">
                   <a
                     href={foundingPartner.website}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn-primary inline-flex items-center"
+                    className="hover:opacity-80 transition-opacity"
                   >
-                    Learn More
+                    <ThemeAwareImage 
+                      src={foundingPartner.logo} 
+                      alt={`${foundingPartner.name} logo`} 
+                      className="w-48 object-contain mb-4"
+                    />
                   </a>
+                  {/* <h3 className="text-3xl font-bold text-accent">
+                    {foundingPartner.name}
+                  </h3> */}
+                </div>
+                <p className="text-text-secondary text-lg leading-relaxed mb-6">
+                  {foundingPartner.description}
+                </p>
+                <div className="inline-flex items-center px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-medium">
+                  {foundingPartner.role}
                 </div>
               </div>
             </div>
@@ -72,8 +59,8 @@ const Partners = () => {
       </section>
 
       {/* Partner Grid */}
-      <section className="py-20 bg-surface">
-        <div className="max-w-content mx-auto px-6">
+      <section className="py-20 mesh-bg">
+        <div className="max-w-content mx-auto px-6 relative z-10">
           <h2 className="text-section-title text-text-primary mb-12 text-center">
             Technology & Infrastructure Partners
           </h2>
@@ -85,20 +72,36 @@ const Partners = () => {
                 className="bg-card border border-border rounded-xl p-6 hover-lift animate-fade-in-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <h3 className="text-xl font-semibold text-text-primary mb-3">
-                  {partner.name}
-                </h3>
-                <p className="text-text-muted text-sm mb-4 leading-relaxed">
+                <div className="mb-4">
+                  <a
+                    href={partner.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block hover:opacity-80 transition-opacity"
+                  >
+                    <ThemeAwareImage 
+                      src={partner.logo} 
+                      alt={`${partner.name} logo`} 
+                      className="w-16 h-16 object-contain rounded-full mb-3"
+                    />
+                  </a>
+                  <a
+                    href={partner.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-accent transition-colors"
+                  >
+                    <h3 className="text-xl font-semibold text-text-primary">
+                      {partner.name}
+                    </h3>
+                  </a>
+                </div>
+                <div className="inline-flex items-center px-3 py-1 bg-accent/10 text-accent rounded-full text-xs font-medium mb-3">
                   {partner.role}
+                </div>
+                <p className="text-text-secondary text-sm leading-relaxed">
+                  {partner.description}
                 </p>
-                <a
-                  href={partner.website}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-accent hover:text-accent-dark text-sm font-medium interactive-base"
-                >
-                  Visit Website →
-                </a>
               </div>
             ))}
           </div>
@@ -117,8 +120,8 @@ const Partners = () => {
               community-led funding? We'd love to explore collaboration.
             </p>
             <a
-              href="mailto:partners@relay.community"
-              className="btn-primary"
+              href="mailto:info@relayfunder.com"
+              className="btn-quantum"
             >
               Get in Touch
             </a>

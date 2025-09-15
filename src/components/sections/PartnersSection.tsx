@@ -1,56 +1,6 @@
-import refuniteLogo from '@/assets/logos/refunite.png';
-import celoLogo from '@/assets/logos/celo.png';
-import operaLogo from '@/assets/logos/opera.png';
-import gitcoinLogo from '@/assets/logos/gitcoin.png';
+import { partners, foundingPartner } from '@/data/partners';
+import { ThemeAwareImage } from '@/hooks/useThemeLogo';
 
-const partners = [
-  { 
-    name: 'Refunite', 
-    logo: refuniteLogo,
-    role: 'Founding Partner - Community Leader Network',
-    featured: true
-  },
-  { 
-    name: 'Celo', 
-    logo: celoLogo,
-    role: 'Mobile-first blockchain infrastructure'
-  },
-  { 
-    name: 'Opera', 
-    logo: operaLogo,
-    role: 'MiniPay wallet distribution'
-  },
-  { 
-    name: 'Gitcoin', 
-    logo: gitcoinLogo,
-    role: 'Quadratic funding engine'
-  },
-  { 
-    name: 'human.tech', 
-    logo: null,
-    role: 'RelayID identity verification'
-  },
-  { 
-    name: 'CoalaPay', 
-    logo: null,
-    role: 'Payment infrastructure'
-  },
-  { 
-    name: 'Grassroots Economics', 
-    logo: null,
-    role: 'Community currency systems'
-  },
-  { 
-    name: 'Kickstarter', 
-    logo: null,
-    role: 'CC Protocol integration'
-  },
-  { 
-    name: 'Filecoin Foundation', 
-    logo: null,
-    role: 'IPFS long-term storage'
-  },
-];
 
 const PartnersSection = () => {
   return (
@@ -59,59 +9,64 @@ const PartnersSection = () => {
         <div className="text-center mb-16 relative z-10">
           <div className="text-mono-accent mb-4">Trusted Partners</div>
           <h2 className="text-section-title font-display text-text-primary">
-            Collaborative ecosystem for displaced communities
+            Collaborative ecosystem for refugees and displaced communities
           </h2>
         </div>
         
         {/* Featured partner */}
         <div className="mb-16 relative z-10">
-          <div className="max-w-lg mx-auto web3-card p-8 text-center hover-bio">
-            <div className="w-20 h-20 mx-auto mb-6 quantum-surface flex items-center justify-center">
-              <img 
-                src={refuniteLogo} 
-                alt="Refunite logo" 
-                className="w-14 h-14 object-contain"
+          <a 
+            href={foundingPartner.website}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block max-w-lg mx-auto web3-card p-8 text-center hover-bio group hover:transform hover:scale-105 transition-transform duration-200"
+          >
+            <div className="w-60 h-21 mx-auto mb-6 flex items-center justify-center">
+              <ThemeAwareImage 
+                src={foundingPartner.logo} 
+                alt={`${foundingPartner.name} logo`} 
+                className="w-60 h-21 object-contain"
               />
             </div>
-            <h3 className="font-display font-medium text-text-primary mb-3 text-xl">
-              Refunite
-            </h3>
-            <div className="text-mono-accent mb-4">
+            <div className="text-mono-accent mb-4 group-hover:text-accent transition-colors">
               Founding Partner
             </div>
             <p className="text-text-secondary leading-relaxed">
-              Community Leader Network with <strong className="text-quantum">100,000+ trusted leaders</strong> and <strong className="text-bio">100M+ reach</strong> across displaced communities worldwide
+              Community Leader Network with <strong className="text-quantum">109,000+ trusted leaders</strong> and <strong className="text-bio">100M+ reach</strong> across refugees and displaced communities worldwide
             </p>
-          </div>
+          </a>
         </div>
 
         {/* Partner grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 relative z-10">
-          {partners.slice(1).map((partner) => (
-            <div 
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-8 relative z-10 justify-items-center">
+          {partners.map((partner) => (
+            <a 
               key={partner.name}
-              className="text-center group"
+              href={partner.website}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-center group hover:transform hover:scale-105 transition-transform duration-200"
             >
-              <div className="w-16 h-16 mx-auto mb-4 quantum-surface flex items-center justify-center group-hover:border-quantum hover-quantum transition-colors">
+              <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center transition-colors">
                 {partner.logo ? (
-                  <img 
+                  <ThemeAwareImage 
                     src={partner.logo} 
                     alt={`${partner.name} logo`} 
-                    className="w-10 h-10 object-contain"
+                    className="w-16 h-16 object-contain rounded-full"
                   />
                 ) : (
-                  <span className="text-quantum text-lg font-bold font-display">
+                  <span className="text-quantum text-xl font-bold font-display">
                     {partner.name.charAt(0)}
                   </span>
                 )}
               </div>
-              <h4 className="font-medium text-text-primary text-sm mb-2 font-display">
+              <h4 className="font-medium text-text-primary text-sm mb-2 font-display group-hover:text-accent transition-colors">
                 {partner.name}
               </h4>
               <p className="text-xs text-text-muted leading-relaxed">
                 {partner.role}
               </p>
-            </div>
+            </a>
           ))}
         </div>
       </div>
