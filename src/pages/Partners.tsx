@@ -1,5 +1,6 @@
 import Layout from '@/components/Layout';
 import { partners, foundingPartner } from '@/data/partners';
+import { ThemeAwareImage } from '@/hooks/useThemeLogo';
 
 const Partners = () => {
 
@@ -35,7 +36,7 @@ const Partners = () => {
                     rel="noopener noreferrer"
                     className="hover:opacity-80 transition-opacity"
                   >
-                    <img 
+                    <ThemeAwareImage 
                       src={foundingPartner.logo} 
                       alt={`${foundingPartner.name} logo`} 
                       className="w-100 object-contain mb-4"
@@ -78,7 +79,7 @@ const Partners = () => {
                     rel="noopener noreferrer"
                     className="inline-block hover:opacity-80 transition-opacity"
                   >
-                    <img 
+                    <ThemeAwareImage 
                       src={partner.logo} 
                       alt={`${partner.name} logo`} 
                       className="w-16 h-16 object-contain rounded-full mb-3"

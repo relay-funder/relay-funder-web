@@ -1,4 +1,5 @@
 import { partners, foundingPartner } from '@/data/partners';
+import { ThemeAwareImage } from '@/hooks/useThemeLogo';
 
 
 const PartnersSection = () => {
@@ -21,7 +22,7 @@ const PartnersSection = () => {
             className="block max-w-lg mx-auto web3-card p-8 text-center hover-bio group hover:transform hover:scale-105 transition-transform duration-200"
           >
             <div className="w-60 h-21 mx-auto mb-6 flex items-center justify-center">
-              <img 
+              <ThemeAwareImage 
                 src={foundingPartner.logo} 
                 alt={`${foundingPartner.name} logo`} 
                 className="w-60 h-21 object-contain"
@@ -48,7 +49,7 @@ const PartnersSection = () => {
             >
               <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center transition-colors">
                 {partner.logo ? (
-                  <img 
+                  <ThemeAwareImage 
                     src={partner.logo} 
                     alt={`${partner.name} logo`} 
                     className="w-16 h-16 object-contain rounded-full"

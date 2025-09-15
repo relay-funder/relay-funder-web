@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import relayFunderLogo from '@/assets/RelayFunder_highres_transparent-horizontal.png';
+import { ThemeToggle } from '@/components/ThemeToggle';
+import { ThemeAwareImage } from '@/hooks/useThemeLogo';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,7 +23,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <img 
+            <ThemeAwareImage 
               src={relayFunderLogo} 
               alt="Relay Funder" 
               className="h-12"
@@ -53,15 +55,19 @@ const Navigation = () => {
             <Link to="/sponsors" className="btn-quantum text-sm px-4 py-2">
               Sponsor Match Fund
             </Link>
+            <ThemeToggle />
           </div>
 
-          {/* Mobile menu button */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 text-text-secondary hover:text-accent interactive-base"
-          >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          {/* Mobile controls */}
+          <div className="md:hidden flex items-center space-x-2">
+            <ThemeToggle />
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="p-2 text-text-secondary hover:text-accent interactive-base"
+            >
+              {isOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Navigation */}
