@@ -58,8 +58,8 @@ const Partners = () => {
       </section>
 
       {/* Partner Grid */}
-      <section className="py-20 bg-surface">
-        <div className="max-w-content mx-auto px-6">
+      <section className="py-20 mesh-bg">
+        <div className="max-w-content mx-auto px-6 relative z-10">
           <h2 className="text-section-title text-text-primary mb-12 text-center">
             Technology & Infrastructure Partners
           </h2>

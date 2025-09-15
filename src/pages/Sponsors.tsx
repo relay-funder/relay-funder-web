@@ -86,8 +86,8 @@ const Sponsors = () => {
       </section>
 
       {/* Funding Themes */}
-      <section className="py-20 bg-surface">
-        <div className="max-w-content mx-auto px-6">
+      <section className="py-20 mesh-bg">
+        <div className="max-w-content mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-section-title text-text-primary mb-6 font-display">
               Funding Themes

@@ -53,7 +53,7 @@ const FAQ = () => {
       {/* Hero */}
       <section className="py-24 bg-surface">
         <div className="max-w-content mx-auto px-6 text-center">
-          <h1 className="text-hero text-text-primary mb-6">
+          <h1 className="text-hero text-text-primary mb-6 pb-2">
             Frequently Asked <span className="text-gradient">Questions</span>
           </h1>
           <p className="text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
@@ -101,8 +101,8 @@ const FAQ = () => {
       </section>
 
       {/* Contact CTA */}
-      <section className="py-20 bg-surface">
-        <div className="max-w-content mx-auto px-6 text-center">
+      <section className="py-20 mesh-bg">
+        <div className="max-w-content mx-auto px-6 text-center relative z-10">
           <div className="max-w-2xl mx-auto">
             <h2 className="text-section-title text-text-primary mb-6">
               Still have questions?
