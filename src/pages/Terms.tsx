@@ -1,6 +1,11 @@
+import { useEffect } from 'react';
 import Layout from '@/components/Layout';
+import { trackPageView } from '@/lib/analytics';
 
 const Terms = () => {
+  useEffect(() => {
+    trackPageView('Terms of Service');
+  }, []);
   return (
     <Layout>
       {/* Hero */}

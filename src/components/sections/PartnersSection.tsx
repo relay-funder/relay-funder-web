@@ -1,5 +1,6 @@
 import { partners, foundingPartner } from '@/data/partners';
 import { ThemeAwareImage } from '@/hooks/useThemeLogo';
+import { trackLinkClick } from '@/lib/analytics';
 
 
 const PartnersSection = () => {
@@ -20,6 +21,7 @@ const PartnersSection = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="block max-w-lg mx-auto web3-card p-8 text-center hover-bio group hover:transform hover:scale-105 transition-transform duration-200"
+            onClick={() => trackLinkClick(foundingPartner.name, foundingPartner.website, 'founding_partner')}
           >
             <div className="w-60 h-21 mx-auto mb-6 flex items-center justify-center">
               <ThemeAwareImage 
@@ -46,6 +48,7 @@ const PartnersSection = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="text-center group hover:transform hover:scale-105 transition-transform duration-200"
+              onClick={() => trackLinkClick(partner.name, partner.website, 'partner')}
             >
               <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center transition-colors">
                 {partner.logo ? (

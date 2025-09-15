@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { trackCTAClick } from '@/lib/analytics';
 const SponsorsPreview = () => {
   const benefits = ['Clear attribution', 'Transparent allocations', 'Verified updates', 'Spotlight opportunities'];
   return <section className="py-20 bg-surface">
@@ -22,7 +23,13 @@ const SponsorsPreview = () => {
           </div>
 
           <div className="flex justify-center">
-            <a href="mailto:sponsor@relayfunder.com" className="btn-quantum">Get In Touch</a>
+            <a 
+              href="mailto:sponsor@relayfunder.com" 
+              className="btn-quantum"
+              onClick={() => trackCTAClick('Get In Touch', 'Sponsors Preview')}
+            >
+              Get In Touch
+            </a>
           </div>
         </div>
       </div>

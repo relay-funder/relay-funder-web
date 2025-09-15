@@ -4,6 +4,7 @@ import { Menu, X } from 'lucide-react';
 import relayFunderLogo from '@/assets/RelayFunder_highres_transparent-horizontal.png';
 import { ThemeToggle } from '@/components/ThemeToggle';
 import { ThemeAwareImage } from '@/hooks/useThemeLogo';
+import { trackNavigation, trackCTAClick } from '@/lib/analytics';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,7 +23,11 @@ const Navigation = () => {
       <div className="max-w-content mx-auto px-6">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
+          <Link 
+            to="/" 
+            className="flex items-center"
+            onClick={() => trackNavigation('Home', 'Navigation Logo')}
+          >
             <ThemeAwareImage 
               src={relayFunderLogo} 
               alt="Relay Funder" 
@@ -41,6 +46,7 @@ const Navigation = () => {
                     ? 'text-quantum'
                     : 'text-text-secondary hover:text-quantum'
                 }`}
+                onClick={() => trackNavigation(item.name, 'Navigation Menu')}
                 {...(isActive(item.href) && { 'aria-current': 'page' })}
               >
                 {item.name}
@@ -53,7 +59,11 @@ const Navigation = () => {
             <div className="bg-muted text-text-primary text-sm px-4 py-2 rounded-xl border border-border cursor-not-allowed font-semibold">
               Explore Projects (Coming Soon)
             </div>
-            <Link to="/sponsors" className="btn-quantum text-sm px-4 py-2">
+            <Link 
+              to="/sponsors" 
+              className="btn-quantum text-sm px-4 py-2"
+              onClick={() => trackCTAClick('Sponsor Match Fund', 'Navigation Desktop')}
+            >
               Sponsor Match Fund
             </Link>
             <ThemeToggle />
@@ -84,7 +94,10 @@ const Navigation = () => {
                       ? 'text-accent'
                       : 'text-text-secondary hover:text-accent'
                   }`}
-                  onClick={() => setIsOpen(false)}
+                  onClick={() => {
+                    setIsOpen(false);
+                    trackNavigation(item.name, 'Mobile Navigation Menu');
+                  }}
                   {...(isActive(item.href) && { 'aria-current': 'page' })}
                 >
                   {item.name}
@@ -94,7 +107,11 @@ const Navigation = () => {
                 <div className="block bg-muted text-text-primary text-center text-sm px-6 py-2 rounded-xl border border-border cursor-not-allowed font-semibold">
                   Explore Projects (Coming Soon)
                 </div>
-                <Link to="/sponsors" className="block btn-primary text-center text-sm px-6 py-2">
+                <Link 
+                  to="/sponsors" 
+                  className="block btn-primary text-center text-sm px-6 py-2"
+                  onClick={() => trackCTAClick('Sponsor the Match Fund', 'Mobile Navigation')}
+                >
                   Sponsor the Match Fund
                 </Link>
               </div>

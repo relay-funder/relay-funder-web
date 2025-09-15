@@ -1,8 +1,13 @@
+import { useEffect } from 'react';
 import Layout from '@/components/Layout';
 import { partners, foundingPartner } from '@/data/partners';
 import { ThemeAwareImage } from '@/hooks/useThemeLogo';
+import { trackPageView, trackCTAClick } from '@/lib/analytics';
 
 const Partners = () => {
+  useEffect(() => {
+    trackPageView('Partners');
+  }, []);
 
   return (
     <Layout>
@@ -122,6 +127,7 @@ const Partners = () => {
             <a
               href="mailto:info@relayfunder.com"
               className="btn-quantum"
+              onClick={() => trackCTAClick('Get in Touch', 'Partners Page')}
             >
               Get in Touch
             </a>

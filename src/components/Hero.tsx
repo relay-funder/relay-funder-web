@@ -4,6 +4,7 @@ import heroImage2 from '@/assets/hero/6717d6c77b41816950fdfc88_volunteer-helping
 import heroImage4 from '@/assets/hero/relay-help-refunite.jpg';
 import heroImage3 from '@/assets/hero/6717da50e7b2fb4fa2a4c278_portrait-of-smiling-amhara-woman-wearing-blue-trad-2023-11-27-05-19-56-utc-min.jpg';
 import heroImage5 from '@/assets/hero/relay-help-refunite-sewing.jpg';
+import { trackCTAClick } from '@/lib/analytics';
 
 const Hero = () => {
   return (
@@ -37,7 +38,11 @@ const Hero = () => {
                 <div className="bg-muted text-text-primary inline-flex items-center justify-center px-6 py-3 rounded-xl border border-border cursor-not-allowed font-semibold">
                   Explore Projects (Coming Soon)
                 </div>
-                <Link to="/sponsors" className="btn-ghost inline-flex items-center justify-center">
+                <Link 
+                  to="/sponsors" 
+                  className="btn-ghost inline-flex items-center justify-center"
+                  onClick={() => trackCTAClick('Sponsor Match Fund', 'Hero')}
+                >
                   Sponsor Match Fund
                 </Link>
               </div>

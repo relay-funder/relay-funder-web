@@ -1,6 +1,11 @@
+import { useEffect } from 'react';
 import Layout from '@/components/Layout';
+import { trackPageView, trackCTAClick } from '@/lib/analytics';
 
 const Sponsors = () => {
+  useEffect(() => {
+    trackPageView('Sponsors');
+  }, []);
 
   const themes = [
     {
@@ -130,6 +135,7 @@ const Sponsors = () => {
               <a
                 href="mailto:info@relayfunder.com"
                 className="btn-quantum"
+                onClick={() => trackCTAClick('Talk to Us', 'Sponsors Page')}
               >
                 Talk to Us
               </a>

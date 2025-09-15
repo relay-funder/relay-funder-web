@@ -1,8 +1,12 @@
 import Layout from '@/components/Layout';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { ChevronDown, ChevronRight } from 'lucide-react';
+import { trackPageView, trackCTAClick, trackButtonClick } from '@/lib/analytics';
 
 const FAQ = () => {
+  useEffect(() => {
+    trackPageView('FAQ');
+  }, []);
   const [openItem, setOpenItem] = useState<number | null>(null);
 
   const faqs = [
@@ -45,7 +49,15 @@ const FAQ = () => {
   ];
 
   const toggleItem = (index: number) => {
+    const isOpening = openItem !== index;
     setOpenItem(openItem === index ? null : index);
+    
+    if (isOpening) {
+      trackButtonClick(`FAQ Item ${index + 1}`, 'accordion', { 
+        question: faqs[index].question,
+        action: 'open' 
+      });
+    }
   };
 
   return (
@@ -114,6 +126,7 @@ const FAQ = () => {
             <a
               href="mailto:info@relayfunder.com"
               className="btn-quantum"
+              onClick={() => trackCTAClick('Get in Touch', 'FAQ Page')}
             >
               Get in Touch
             </a>
