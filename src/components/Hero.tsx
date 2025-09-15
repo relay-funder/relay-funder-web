@@ -7,7 +7,7 @@ import heroImage5 from '@/assets/hero/relay-help-refunite-sewing.jpg';
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center overflow-hidden pt-20">
       {/* Clean background */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-br from-background via-surface/30 to-background" />
