@@ -8,24 +8,24 @@ import relayFunderWhiteLogo from '@/assets/RelayFunder-white_highres_transparent
 const logoMappings = {
   [refuniteBlackLogo]: {
     light: refuniteBlackLogo,
-    dark: refuniteWhiteLogo
+    dark: refuniteWhiteLogo,
   },
   [relayFunderLogo]: {
     light: relayFunderLogo,
-    dark: relayFunderWhiteLogo
-  }
+    dark: relayFunderWhiteLogo,
+  },
 } as const;
 
 export function useThemeLogo(logoPath: string): string {
   const { actualTheme } = useTheme();
-  
+
   // Check if we have a theme-specific mapping for this logo
   const mapping = logoMappings[logoPath as keyof typeof logoMappings];
-  
+
   if (mapping) {
     return mapping[actualTheme];
   }
-  
+
   // For logos without specific mappings, return original path
   return logoPath;
 }
@@ -39,11 +39,11 @@ interface ThemeAwareImageProps extends React.ImgHTMLAttributes<HTMLImageElement>
 export function ThemeAwareImage({ src, alt, className, ...props }: ThemeAwareImageProps) {
   const { actualTheme } = useTheme();
   const themeSrc = useThemeLogo(src);
-  
+
   return (
-    <img 
-      src={themeSrc} 
-      alt={alt} 
+    <img
+      src={themeSrc}
+      alt={alt}
       className={`theme-aware-image ${actualTheme === 'dark' ? 'dark-theme' : 'light-theme'} ${className || ''}`}
       {...props}
     />

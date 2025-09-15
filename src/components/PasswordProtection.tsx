@@ -1,31 +1,23 @@
-import React, { useState, useEffect } from "react";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { Label } from "@/components/ui/label";
-import { Lock, AlertCircle } from "lucide-react";
-import { cn } from "@/lib/utils";
+import React, { useState, useEffect } from 'react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/button';
+import { Label } from '@/components/ui/label';
+import { Lock, AlertCircle } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 interface PasswordProtectionProps {
   children: React.ReactNode;
 }
 
-const PasswordProtection: React.FC<PasswordProtectionProps> = ({
-  children,
-}) => {
+const PasswordProtection: React.FC<PasswordProtectionProps> = ({ children }) => {
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
-  const [password, setPassword] = useState<string>("");
-  const [error, setError] = useState<string>("");
+  const [password, setPassword] = useState<string>('');
+  const [error, setError] = useState<string>('');
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
   const sitePassword = import.meta.env.VITE_SITE_PASSWORD;
-  const sessionKey = "relay_funder_auth";
+  const sessionKey = 'relay_funder_auth';
 
   useEffect(() => {
     // If no password is set in environment, allow access
@@ -37,7 +29,7 @@ const PasswordProtection: React.FC<PasswordProtectionProps> = ({
 
     // Check if user is already authenticated
     const storedAuth = sessionStorage.getItem(sessionKey);
-    if (storedAuth === "true") {
+    if (storedAuth === 'true') {
       setIsAuthenticated(true);
     }
 
@@ -46,14 +38,14 @@ const PasswordProtection: React.FC<PasswordProtectionProps> = ({
 
   const handlePasswordSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setError("");
+    setError('');
 
     if (password === sitePassword) {
       setIsAuthenticated(true);
-      sessionStorage.setItem(sessionKey, "true");
+      sessionStorage.setItem(sessionKey, 'true');
     } else {
-      setError("Incorrect password. Please try again.");
-      setPassword("");
+      setError('Incorrect password. Please try again.');
+      setPassword('');
     }
   };
 
@@ -97,10 +89,7 @@ const PasswordProtection: React.FC<PasswordProtectionProps> = ({
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="Enter password"
-                  className={cn(
-                    error &&
-                      "border-destructive focus-visible:ring-destructive",
-                  )}
+                  className={cn(error && 'border-destructive focus-visible:ring-destructive')}
                   autoFocus
                 />
                 {error && (
@@ -110,11 +99,7 @@ const PasswordProtection: React.FC<PasswordProtectionProps> = ({
                   </div>
                 )}
               </div>
-              <Button
-                type="submit"
-                className="w-full"
-                disabled={!password.trim()}
-              >
+              <Button type="submit" className="w-full" disabled={!password.trim()}>
                 Access Site
               </Button>
             </form>

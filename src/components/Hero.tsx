@@ -4,6 +4,7 @@ import heroImage2 from '@/assets/hero/6717d6c77b41816950fdfc88_volunteer-helping
 import heroImage4 from '@/assets/hero/relay-help-refunite.jpg';
 import heroImage3 from '@/assets/hero/6717da50e7b2fb4fa2a4c278_portrait-of-smiling-amhara-woman-wearing-blue-trad-2023-11-27-05-19-56-utc-min.jpg';
 import heroImage5 from '@/assets/hero/relay-help-refunite-sewing.jpg';
+import { trackCTAClick } from '@/lib/analytics';
 
 const Hero = () => {
   return (
@@ -17,7 +18,6 @@ const Hero = () => {
         <div className="flex items-center justify-center min-h-[85vh]">
           {/* Desktop: Two column layout, Mobile: Centered single column */}
           <div className="grid lg:grid-cols-2 gap-16 items-center w-full max-w-7xl">
-            
             {/* Left column - Text content */}
             <div className="text-center lg:text-left space-y-10">
               <div className="space-y-6">
@@ -27,8 +27,8 @@ const Hero = () => {
                   <span className="text-quantum">refugees and displaced communities</span>
                 </h1>
                 <p className="text-subhero text-text-secondary lg:max-w-xl">
-                  Leaders propose. Supporters worldwide back them. Sponsors multiply support 
-                  through a <span className="text-serif-elegant">shared Match Fund</span>.
+                  Leaders propose. Supporters worldwide back them. Sponsors multiply support through
+                  a <span className="text-serif-elegant">shared Match Fund</span>.
                 </p>
               </div>
 
@@ -37,7 +37,11 @@ const Hero = () => {
                 <div className="bg-muted text-text-primary inline-flex items-center justify-center px-6 py-3 rounded-xl border border-border cursor-not-allowed font-semibold">
                   Explore Projects (Coming Soon)
                 </div>
-                <Link to="/sponsors" className="btn-ghost inline-flex items-center justify-center">
+                <Link
+                  to="/sponsors"
+                  className="btn-ghost inline-flex items-center justify-center"
+                  onClick={() => trackCTAClick('Sponsor Match Fund', 'Hero')}
+                >
                   Sponsor Match Fund
                 </Link>
               </div>
@@ -45,67 +49,62 @@ const Hero = () => {
               {/* Status badge */}
               <div className="quantum-surface p-6 inline-block">
                 <div className="text-mono-accent mb-2">Project Status</div>
-                <div className="text-display-bold text-bio">Launching in Kenya and Uganda with Refunite's Community Leader Network</div>
+                <div className="text-display-bold text-bio">
+                  Launching in Kenya and Uganda with Refunite's Community Leader Network
+                </div>
               </div>
 
               {/* Photo grid - Mobile version (below text) */}
               <div className="lg:hidden w-full max-w-lg mx-auto mt-8 pb-16">
                 <div className="grid grid-cols-10 grid-rows-8 gap-3 h-[650px]">
                   {/* Photo 1 - Top left, large horizontal */}
-                  <div 
-                    className="col-span-6 row-span-3 flex justify-end items-end"
-                  >
-                    <img 
+                  <div className="col-span-6 row-span-3 flex justify-end items-end">
+                    <img
                       src={heroImage1}
                       alt="Group of people receiving help"
                       className="h-auto rounded-lg shadow-lg"
                     />
                   </div>
-                  
+
                   {/* Photo 2 - Top right, medium square */}
-                  <div 
+                  <div
                     className="col-span-4 row-span-3 rounded-lg shadow-lg"
                     style={{
                       backgroundImage: `url(${heroImage2})`,
                       backgroundSize: 'cover',
-                      backgroundPosition: '65% 50%'
+                      backgroundPosition: '65% 50%',
                     }}
                     aria-hidden="true"
                   />
-                                  
+
                   {/* Photo 4 - Full width bottom */}
-                  <div 
+                  <div
                     className="col-span-9 row-span-2 rounded-lg shadow-lg"
                     style={{
                       backgroundImage: `url(${heroImage4})`,
                       backgroundSize: 'cover',
-                      backgroundPosition: 'center'
+                      backgroundPosition: 'center',
                     }}
                     aria-hidden="true"
                   />
 
                   {/* Photo 3 - Middle left, medium square */}
-                  <div 
-                    className="col-span-4 row-span-3 flex justify-end items-start"
-                  >
-                    <img 
+                  <div className="col-span-4 row-span-3 flex justify-end items-start">
+                    <img
                       src={heroImage3}
                       alt="Portrait of smiling woman"
                       className="h-auto rounded-lg shadow-lg"
                     />
                   </div>
-                  
+
                   {/* Photo 5 - Middle right, medium square */}
-                  <div 
-                    className="col-span-5 row-span-3 flex justify-start items-start"
-                  >
-                    <img 
+                  <div className="col-span-5 row-span-3 flex justify-start items-start">
+                    <img
                       src={heroImage5}
                       alt="Woman sewing"
                       className="h-auto rounded-lg shadow-lg"
                     />
                   </div>
-
                 </div>
               </div>
             </div>
@@ -114,65 +113,61 @@ const Hero = () => {
             <div className="hidden lg:block relative w-full max-w-xl mx-auto">
               <div className="grid grid-cols-10 grid-rows-8 gap-3 h-[700px]">
                 {/* Photo 1 - Top left, large horizontal */}
-                <div 
-                  className="col-span-6 row-span-3 flex justify-end items-end"
-                >
-                  <img 
+                <div className="col-span-6 row-span-3 flex justify-end items-end">
+                  <img
                     src={heroImage1}
                     alt="Group of people receiving help"
                     className="w-3/4 h-auto rounded-lg shadow-lg"
                   />
                 </div>
-                
+
                 {/* Photo 2 - Top right, medium square */}
-                <div 
+                <div
                   className="col-span-4 row-span-3 rounded-lg shadow-lg"
                   style={{
                     backgroundImage: `url(${heroImage2})`,
                     backgroundSize: 'cover',
-                    backgroundPosition: 'center'
+                    backgroundPosition: 'center',
                   }}
                   aria-hidden="true"
                 />
-                                
+
                 {/* Photo 4 - Full width bottom */}
-                <div 
+                <div
                   className="col-span-9 row-span-2 rounded-lg shadow-lg"
                   style={{
                     backgroundImage: `url(${heroImage4})`,
                     backgroundSize: 'cover',
-                    backgroundPosition: 'center'
+                    backgroundPosition: 'center',
                   }}
                   aria-hidden="true"
                 />
 
                 {/* Photo 3 - Middle left, medium square */}
-                <div 
+                <div
                   className="col-span-4 row-span-3 rounded-lg shadow-lg"
                   style={{
                     backgroundImage: `url(${heroImage3})`,
                     backgroundSize: 'cover',
-                    backgroundPosition: 'center'
+                    backgroundPosition: 'center',
                   }}
                   aria-hidden="true"
                 />
-                
+
                 {/* Photo 5 - Middle right, medium square */}
-                <div 
+                <div
                   className="col-span-5 row-span-2 rounded-lg shadow-lg"
                   style={{
                     backgroundImage: `url(${heroImage5})`,
                     backgroundSize: 'cover',
-                    backgroundPosition: 'center'
+                    backgroundPosition: 'center',
                   }}
                   aria-hidden="true"
                 />
-
               </div>
             </div>
           </div>
         </div>
-
       </div>
     </section>
   );

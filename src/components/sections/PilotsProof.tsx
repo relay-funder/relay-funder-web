@@ -12,9 +12,7 @@ const PilotsProof = () => {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
             <div className="text-mono-accent mb-4">Network Overview</div>
-            <h2 className="text-section-title text-text-primary font-display">
-              Trusted Network
-            </h2>
+            <h2 className="text-section-title text-text-primary font-display">Trusted Network</h2>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -27,23 +25,20 @@ const PilotsProof = () => {
                   Launching with Refunite's Community Leader Network
                 </h3>
                 <p className="text-text-muted leading-relaxed">
-                  A proven platform connecting displaced families across crisis-affected regions, powered by trusted community leaders who understand local needs and cultural contexts.
+                  A proven platform connecting displaced families across crisis-affected regions,
+                  powered by trusted community leaders who understand local needs and cultural
+                  contexts.
                 </p>
               </div>
 
               {/* Network Stats */}
               <div className="grid grid-cols-2 gap-8">
                 {networkStats.map((stat, index) => (
-                  <div
-                    key={stat.label}
-                    className="text-center"
-                  >
+                  <div key={stat.label} className="text-center">
                     <div className={`text-3xl font-medium mb-2 font-mono ${stat.accent}`}>
                       {stat.value}
                     </div>
-                    <div className="text-sm text-text-muted font-display">
-                      {stat.label}
-                    </div>
+                    <div className="text-sm text-text-muted font-display">{stat.label}</div>
                   </div>
                 ))}
               </div>

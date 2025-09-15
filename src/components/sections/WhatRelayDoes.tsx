@@ -20,14 +20,12 @@ const WhatRelayDoes = () => {
       <div className="max-w-content mx-auto px-6">
         <div className="max-w-4xl mx-auto text-center">
           <div className="text-mono-accent mb-4">Our Mission</div>
-          <h2 className="text-section-title text-text-primary mb-8">
-            What Relay Funder Does
-          </h2>
-          
+          <h2 className="text-section-title text-text-primary mb-8">What Relay Funder Does</h2>
+
           <p className="text-xl text-text-secondary leading-relaxed mb-12 max-w-3xl mx-auto">
-            Relay Funder is a simple way for refugee and displaced community leaders to fund 
-            the projects they know will work—backed by supporters worldwide and 
-            amplified by a Sponsor-seeded Match Fund.
+            Relay Funder is a simple way for refugee and displaced community leaders to fund the
+            projects they know will work—backed by supporters worldwide and amplified by a
+            Sponsor-seeded Match Fund.
           </p>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -40,14 +38,15 @@ const WhatRelayDoes = () => {
                 <h3 className="font-semibold text-text-primary mb-2 border-l-3 border-accent pl-4 relative">
                   {reason.title}
                   {reason.tooltip && (
-                    <span className="ml-2 text-xs text-accent cursor-help" title="Verifiable ledger under the hood">
+                    <span
+                      className="ml-2 text-xs text-accent cursor-help"
+                      title="Verifiable ledger under the hood"
+                    >
                       ⓘ
                     </span>
                   )}
                 </h3>
-                <p className="text-text-muted text-sm pl-4">
-                  {reason.description}
-                </p>
+                <p className="text-text-muted text-sm pl-4">{reason.description}</p>
               </div>
             ))}
           </div>

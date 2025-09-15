@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 const CommunityMatch = () => {
   const [backerCount, setBackerCount] = useState(5);
-  
+
   // Quadratic funding calculation: sqrt(sum of sqrt(individual contributions))
   const calculateMatch = (backers: number) => {
     return Math.floor(Math.sqrt(backers) * 1.5);
@@ -19,9 +19,10 @@ const CommunityMatch = () => {
           <h2 className="text-section-title text-text-primary mb-6 font-display">
             Community Match
           </h2>
-          
+
           <p className="text-subhero text-text-secondary leading-relaxed mb-12">
-            More diverse community support creates exponentially larger matches from the Sponsor-seeded Match Fund.
+            More diverse community support creates exponentially larger matches from the
+            Sponsor-seeded Match Fund.
           </p>
 
           {/* Interactive calculator */}
@@ -53,20 +54,22 @@ const CommunityMatch = () => {
                   <span className="text-sm text-text-secondary">Individual contributions</span>
                   <span className="font-medium text-text-primary">${backerCount * 10}</span>
                 </div>
-                
+
                 <div className="flex items-center justify-center py-2">
                   <span className="text-quantum font-medium font-mono">Community Match Boost</span>
                 </div>
-                
+
                 <div className="bio-surface p-4 flex items-center justify-between">
                   <span className="text-sm text-text-secondary">Match Fund contribution</span>
                   <span className="font-medium text-bio">${matchMultiplier * 10}</span>
                 </div>
-                
+
                 <div className="border-t pt-4">
                   <div className="flex items-center justify-between">
                     <span className="font-medium text-text-primary">Total for project</span>
-                    <span className="text-2xl font-medium text-solar font-mono">${totalImpact * 10}</span>
+                    <span className="text-2xl font-medium text-solar font-mono">
+                      ${totalImpact * 10}
+                    </span>
                   </div>
                 </div>
               </div>
@@ -74,9 +77,11 @@ const CommunityMatch = () => {
           </div>
 
           <p className="text-sm text-text-muted mt-6 max-w-lg mx-auto">
-            The Community Match rewards broad community support over large individual donations, 
+            The Community Match rewards broad community support over large individual donations,
             ensuring projects with genuine grassroots backing receive the most funding.
-            <span className="block mt-1 text-xs opacity-75">Powered by quadratic funding algorithms</span>
+            <span className="block mt-1 text-xs opacity-75">
+              Powered by quadratic funding algorithms
+            </span>
           </p>
         </div>
       </div>

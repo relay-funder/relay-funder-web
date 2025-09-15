@@ -1,6 +1,11 @@
+import { useEffect } from 'react';
 import Layout from '@/components/Layout';
+import { trackPageView } from '@/lib/analytics';
 
 const Terms = () => {
+  useEffect(() => {
+    trackPageView('Terms of Service');
+  }, []);
   return (
     <Layout>
       {/* Hero */}
@@ -19,21 +24,23 @@ const Terms = () => {
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-6">
           <div className="prose prose-lg max-w-none">
-            
             <div className="bg-card border border-border rounded-xl p-8 mb-8">
               <h2 className="text-section-title text-text-primary mb-6">1. Acceptance of Terms</h2>
               <p className="text-text-secondary leading-relaxed">
-                By accessing or using Relay Funder ("we," "us," or "our") platform, you agree to be bound by these Terms of Service. 
-                If you do not agree to all of these terms, do not use our services. Relay Funder Inc., PBC is a Public Benefit Corporation 
-                committed to empowering refugee communities through community-led funding solutions.
+                By accessing or using Relay Funder ("we," "us," or "our") platform, you agree to be
+                bound by these Terms of Service. If you do not agree to all of these terms, do not
+                use our services. Relay Funder Inc., PBC is a Public Benefit Corporation committed
+                to empowering refugee communities through community-led funding solutions.
               </p>
             </div>
 
             <div className="bg-card border border-border rounded-xl p-8 mb-8">
-              <h2 className="text-section-title text-text-primary mb-6">2. Description of Service</h2>
+              <h2 className="text-section-title text-text-primary mb-6">
+                2. Description of Service
+              </h2>
               <p className="text-text-secondary leading-relaxed mb-4">
-                Relay Funder operates a funding platform that connects supporters worldwide with refugee and displaced communities. 
-                Our services include:
+                Relay Funder operates a funding platform that connects supporters worldwide with
+                refugee and displaced communities. Our services include:
               </p>
               <ul className="text-text-secondary space-y-2 ml-6 list-disc">
                 <li>Facilitating contributions to community-led projects</li>
@@ -44,7 +51,9 @@ const Terms = () => {
             </div>
 
             <div className="bg-card border border-border rounded-xl p-8 mb-8">
-              <h2 className="text-section-title text-text-primary mb-6">3. User Responsibilities</h2>
+              <h2 className="text-section-title text-text-primary mb-6">
+                3. User Responsibilities
+              </h2>
               <p className="text-text-secondary leading-relaxed mb-4">
                 By using our platform, you agree to:
               </p>
@@ -58,7 +67,9 @@ const Terms = () => {
             </div>
 
             <div className="bg-card border border-border rounded-xl p-8 mb-8">
-              <h2 className="text-section-title text-text-primary mb-6">4. Financial Transactions</h2>
+              <h2 className="text-section-title text-text-primary mb-6">
+                4. Financial Transactions
+              </h2>
               <p className="text-text-secondary leading-relaxed mb-4">
                 All financial contributions made through our platform are:
               </p>
@@ -69,30 +80,39 @@ const Terms = () => {
                 <li>Not tax-deductible donations unless specifically indicated</li>
               </ul>
               <p className="text-text-secondary leading-relaxed mt-4">
-                We are not responsible for delays or failures in third-party payment processing systems.
+                We are not responsible for delays or failures in third-party payment processing
+                systems.
               </p>
             </div>
 
             <div className="bg-card border border-border rounded-xl p-8 mb-8">
-              <h2 className="text-section-title text-text-primary mb-6">5. Intellectual Property</h2>
+              <h2 className="text-section-title text-text-primary mb-6">
+                5. Intellectual Property
+              </h2>
               <p className="text-text-secondary leading-relaxed">
-                The Relay Funder platform, including all content, features, and functionality, is owned by Relay Funder Inc., PBC 
-                and is protected by copyright, trademark, and other intellectual property laws. You may not reproduce, distribute, 
-                or create derivative works from our content without written permission.
+                The Relay Funder platform, including all content, features, and functionality, is
+                owned by Relay Funder Inc., PBC and is protected by copyright, trademark, and other
+                intellectual property laws. You may not reproduce, distribute, or create derivative
+                works from our content without written permission.
               </p>
             </div>
 
             <div className="bg-card border border-border rounded-xl p-8 mb-8">
-              <h2 className="text-section-title text-text-primary mb-6">6. Privacy and Data Protection</h2>
+              <h2 className="text-section-title text-text-primary mb-6">
+                6. Privacy and Data Protection
+              </h2>
               <p className="text-text-secondary leading-relaxed">
-                Your privacy is important to us. Our collection and use of personal information is governed by our Privacy Policy, 
-                which is incorporated into these Terms by reference. We implement privacy-preserving identity verification and 
-                secure data handling practices.
+                Your privacy is important to us. Our collection and use of personal information is
+                governed by our Privacy Policy, which is incorporated into these Terms by reference.
+                We implement privacy-preserving identity verification and secure data handling
+                practices.
               </p>
             </div>
 
             <div className="bg-card border border-border rounded-xl p-8 mb-8">
-              <h2 className="text-section-title text-text-primary mb-6">7. Disclaimers and Limitations</h2>
+              <h2 className="text-section-title text-text-primary mb-6">
+                7. Disclaimers and Limitations
+              </h2>
               <p className="text-text-secondary leading-relaxed mb-4">
                 Our service is provided "as is" without warranties of any kind. We do not guarantee:
               </p>
@@ -107,17 +127,19 @@ const Terms = () => {
             <div className="bg-card border border-border rounded-xl p-8 mb-8">
               <h2 className="text-section-title text-text-primary mb-6">8. Termination</h2>
               <p className="text-text-secondary leading-relaxed">
-                We reserve the right to suspend or terminate access to our services at any time, with or without cause, 
-                with or without notice. Upon termination, these Terms will remain in effect regarding any contributions 
-                already made and any obligations that survive termination.
+                We reserve the right to suspend or terminate access to our services at any time,
+                with or without cause, with or without notice. Upon termination, these Terms will
+                remain in effect regarding any contributions already made and any obligations that
+                survive termination.
               </p>
             </div>
 
             <div className="bg-card border border-border rounded-xl p-8 mb-8">
               <h2 className="text-section-title text-text-primary mb-6">9. Governing Law</h2>
               <p className="text-text-secondary leading-relaxed">
-                These Terms are governed by the laws of the jurisdiction in which Relay Funder Inc., PBC is incorporated, 
-                without regard to conflict of law principles. Any disputes will be resolved through binding arbitration.
+                These Terms are governed by the laws of the jurisdiction in which Relay Funder Inc.,
+                PBC is incorporated, without regard to conflict of law principles. Any disputes will
+                be resolved through binding arbitration.
               </p>
             </div>
 
@@ -130,7 +152,6 @@ const Terms = () => {
                 </a>
               </p>
             </div>
-
           </div>
         </div>
       </section>

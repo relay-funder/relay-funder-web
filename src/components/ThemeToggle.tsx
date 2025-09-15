@@ -27,9 +27,9 @@ export function ThemeToggle() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button 
-          variant="ghost" 
-          size="sm" 
+        <Button
+          variant="ghost"
+          size="sm"
           className="h-9 w-9 px-0 hover:bg-surface-elevated interactive-base"
         >
           {getThemeIcon()}
