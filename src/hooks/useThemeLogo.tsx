@@ -3,6 +3,8 @@ import refuniteBlackLogo from '@/assets/logos/logo-refunite-black.png';
 import refuniteWhiteLogo from '@/assets/logos/logo-refunite-white.png';
 import relayFunderLogo from '@/assets/RelayFunder_highres_transparent-horizontal.png';
 import relayFunderWhiteLogo from '@/assets/RelayFunder-white_highres_transparent-horizontal.png';
+import fundingTheCommonsLogo from '@/assets/logos/logo-ftc-icon.png';
+import fundingTheCommonsWhiteLogo from '@/assets/logos/logo-ftc-icon-white.png';
 
 // Logo mappings for different themes
 const logoMappings = {
@@ -13,6 +15,10 @@ const logoMappings = {
   [relayFunderLogo]: {
     light: relayFunderLogo,
     dark: relayFunderWhiteLogo,
+  },
+  [fundingTheCommonsLogo]: {
+    light: fundingTheCommonsLogo,
+    dark: fundingTheCommonsWhiteLogo,
   },
 } as const;
 

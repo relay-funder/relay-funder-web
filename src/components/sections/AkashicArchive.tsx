@@ -15,8 +15,11 @@ const AkashicArchive = () => {
             Creators will enhance campaigns with{' '}
             <strong className="text-quantum">exclusive digital rewards</strong> (art, music,
             cultural artifacts) minted on <strong className="text-quantum">Akashic</strong> and
-            preserved via <strong className="text-bio">IPFS</strong>—deepening engagement and
-            safeguarding cultural memory.
+            preserved via{' '}
+            <a href="https://ipfs.tech/" target="_blank" rel="noopener noreferrer">
+              <strong className="text-bio hover:underline">IPFS</strong>
+            </a>
+            —deepening engagement and safeguarding cultural memory.
           </p>
 
           <div className="web3-card p-8 max-w-2xl mx-auto hover-solar">
@@ -24,14 +27,28 @@ const AkashicArchive = () => {
               <p className="text-text-secondary leading-relaxed">
                 Campaign creators can offer <strong>exclusive digital rewards</strong> — art, music,
                 cultural artifacts — to supporters. These digital assets are minted on Akashic and
-                preserved via IPFS.
+                preserved via{' '}
+                <a
+                  href="https://ipfs.tech/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-bio hover:underline"
+                >
+                  IPFS
+                </a>
+                .
               </p>
 
               <div className="flex items-center justify-center space-x-3 text-sm">
                 <span className="text-text-muted font-mono">Stored on</span>
-                <span className="px-3 py-1 bg-bio text-background rounded-lg font-mono font-medium">
+                <a
+                  href="https://ipfs.tech/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-3 py-1 bg-bio text-background rounded-lg font-mono font-medium hover:opacity-80 transition-opacity"
+                >
                   IPFS
-                </span>
+                </a>
                 <span className="text-text-muted font-mono">Permanent Storage</span>
               </div>
             </div>

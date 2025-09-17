@@ -6,7 +6,7 @@ import humanTechLogo from '@/assets/logos/logo-human-tech-blue.jpg';
 import grassrootsEconomicsLogo from '@/assets/logos/logo-grassroots-economics.png';
 import ccProtocolLogo from '@/assets/logos/logo-cc-protocol.jpeg';
 import filecoinFoundationLogo from '@/assets/logos/logo-filecoin-foundation.png';
-import gsrFoundationLogo from '@/assets/logos/logo-icon-gsr.png';
+import fundingTheCommonsLogo from '@/assets/logos/logo-ftc-icon.png';
 
 export interface Partner {
   name: string;
@@ -85,11 +85,11 @@ export const partners: Partner[] = [
     website: 'https://gitcoin.co',
   },
   {
-    name: 'GSR Foundation',
-    logo: gsrFoundationLogo,
-    role: 'Independent charity and grantmaker',
+    name: 'Funding the Commons',
+    logo: fundingTheCommonsLogo,
+    role: 'Public goods funding expertise',
     description:
-      "GSR Foundation provides independent oversight and grant-making expertise to ensure RelayFunder's operations maintain the highest standards of transparency and accountability. Their charitable mission aligns with RelayFunder's commitment to dignified humanitarian support.",
-    website: 'https://gsr.io/',
+      "Funding the Commons brings deep expertise in public goods funding mechanisms and community governance. Their work advancing sustainable funding models for open source and public benefit projects helps inform RelayFunder's approach to transparent, community-driven resource allocation.",
+    website: 'https://fundingthecommons.io/',
   },
 ];

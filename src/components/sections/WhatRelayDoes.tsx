@@ -1,17 +1,19 @@
 const WhatRelayDoes = () => {
   const reasons = [
     {
-      title: 'Agency for leaders',
-      description: 'Community leaders propose and lead their own projects',
+      title: 'Leadership Driven',
+      description:
+        'Local leaders know what works best in their own communities. Relay Funder equips them with the tools to launch and fund the initiatives that matter most.',
     },
     {
-      title: 'More impact per dollar',
-      description: 'Match Fund amplifies every contribution',
+      title: 'Amplified Impact',
+      description:
+        'Every contribution is multiplied through our sponsor-seeded matching pool, turning individual support into collective momentum.',
     },
     {
-      title: 'Straightforward transparency',
-      description: 'Verifiable ledger under the hood',
-      tooltip: true,
+      title: 'Radical Transparency',
+      description:
+        'A verifiable ledger tracks funds from donor to project, showing clearly how resources are used and what impact they create.',
     },
   ];
 
@@ -37,14 +39,6 @@ const WhatRelayDoes = () => {
               >
                 <h3 className="font-semibold text-text-primary mb-2 border-l-3 border-accent pl-4 relative">
                   {reason.title}
-                  {reason.tooltip && (
-                    <span
-                      className="ml-2 text-xs text-accent cursor-help"
-                      title="Verifiable ledger under the hood"
-                    >
-                      ⓘ
-                    </span>
-                  )}
                 </h3>
                 <p className="text-text-muted text-sm pl-4">{reason.description}</p>
               </div>
