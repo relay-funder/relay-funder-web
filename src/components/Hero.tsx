@@ -19,7 +19,7 @@ const Hero = () => {
           {/* Desktop: Two column layout, Mobile: Centered single column */}
           <div className="grid lg:grid-cols-2 gap-16 items-center w-full max-w-7xl">
             {/* Left column - Text content */}
-            <div className="text-center lg:text-left space-y-10">
+            <div className="text-center lg:text-left space-y-10 pb-10">
               <div className="space-y-6">
                 <div className="text-mono-accent mb-4">Humanitarian Technology</div>
                 <h1 className="text-hero leading-[0.95]">

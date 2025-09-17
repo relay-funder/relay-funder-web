@@ -21,8 +21,8 @@ const CommunityMatch = () => {
           </h2>
 
           <p className="text-subhero text-text-secondary leading-relaxed mb-12">
-            More diverse community support creates exponentially larger matches from the
-            Sponsor-seeded Match Fund.
+            Community support is the signal that directs matching funds. The more supporters, the
+            larger the match.
           </p>
 
           {/* Interactive calculator */}
