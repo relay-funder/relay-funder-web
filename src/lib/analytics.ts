@@ -1,8 +1,18 @@
 import { track } from '@vercel/analytics';
 
-// Helper function to check if we should track (skip in development)
-const shouldTrack = () => {
-  return import.meta.env.PROD;
+// Helper function to check if we should track analytics
+const shouldTrack = (): boolean => {
+  // Don't track in development
+  if (!import.meta.env.PROD) {
+    return false;
+  }
+
+  // Respect Do Not Track header
+  if (navigator.doNotTrack === '1') {
+    return false;
+  }
+
+  return true;
 };
 
 // Page view tracking
@@ -76,3 +86,6 @@ export const trackLinkClick = (
     ...additionalData,
   });
 };
+
+// Export shouldTrack for external use
+export { shouldTrack };

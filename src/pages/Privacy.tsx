@@ -2,6 +2,8 @@ import { useEffect } from 'react';
 import Layout from '@/components/Layout';
 import { trackPageView } from '@/lib/analytics';
 
+const LAST_UPDATED = 'September 15, 2025';
+
 const Privacy = () => {
   useEffect(() => {
     trackPageView('Privacy Policy');
@@ -16,7 +18,7 @@ const Privacy = () => {
           </h1>
           <p className="text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
             We're committed to protecting your privacy and maintaining transparency about how we
-            collect and use your information. Last updated: {new Date().toLocaleDateString()}
+            collect and use your information. Last updated: {LAST_UPDATED}
           </p>
         </div>
       </section>

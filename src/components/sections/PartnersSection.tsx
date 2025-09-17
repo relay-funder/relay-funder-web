@@ -24,11 +24,11 @@ const PartnersSection = () => {
               trackLinkClick(foundingPartner.name, foundingPartner.website, 'founding_partner')
             }
           >
-            <div className="w-60 h-21 mx-auto mb-6 flex items-center justify-center">
+            <div className="w-60 h-[5.25rem] mx-auto mb-6 flex items-center justify-center">
               <ThemeAwareImage
                 src={foundingPartner.logo}
                 alt={`${foundingPartner.name} logo`}
-                className="w-60 h-21 object-contain"
+                className="w-60 h-[5.25rem] object-contain"
               />
             </div>
             <div className="text-mono-accent mb-4 group-hover:text-accent transition-colors">
