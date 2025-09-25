@@ -43,12 +43,12 @@ const FAQ = () => {
     {
       question: 'How is this different from traditional crowdfunding?',
       answer:
-        'Relay Funder is community-driven rather than platform-driven. Leaders propose projects they know will work, supporters worldwide can contribute, and the Match Fund amplifies impact. Everything is built with dignity and agency for refugees and displaced communities at the center.',
+        'Relay Funder is community-driven rather than platform-driven. Leaders propose campaigns they know will work, supporters worldwide can contribute, and the Match Fund amplifies impact. Everything is built with dignity and agency for refugees and displaced communities at the center.',
     },
     {
-      question: 'What kind of projects get funded?',
+      question: 'What kind of campaigns get funded?',
       answer:
-        'Projects are led by trusted community leaders and typically focus on essential needs such as housing, water, food security, skill development, education, and small business resilience.  All projects are proposed by community leaders who understand local needs and have existing trust within their communities.',
+        'Campaigns are led by trusted community leaders and typically focus on essential needs such as housing, water, food security, skill development, education, and small business resilience.  All campaigns are proposed by community leaders who understand local needs and have existing trust within their communities.',
     },
     {
       question: 'How do you ensure real impact and transparency?',

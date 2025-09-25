@@ -13,20 +13,20 @@ const WhatRelayDoes = () => {
     {
       title: 'Radical Transparency',
       description:
-        'A verifiable ledger tracks funds from donor to project, showing clearly how resources are used and what impact they create.',
+        'A verifiable ledger tracks funds from donor to campaign, showing clearly how resources are used and what impact they create.',
     },
   ];
 
   return (
-    <section className="py-20 bg-surface">
+    <section className="py-20 mesh-bg">
       <div className="max-w-content mx-auto px-6">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-4xl mx-auto text-center relative z-10">
           <div className="text-mono-accent mb-4">Our Mission</div>
           <h2 className="text-section-title text-text-primary mb-8">What Relay Funder Does</h2>
 
           <p className="text-xl text-text-secondary leading-relaxed mb-12 max-w-3xl mx-auto">
             Relay Funder is a simple way for refugee and displaced community leaders to fund the
-            projects they know will work—backed by supporters worldwide and amplified by a
+            campaigns they know will work—backed by supporters worldwide and amplified by a
             Sponsor-seeded Match Fund.
           </p>
 

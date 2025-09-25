@@ -4,9 +4,9 @@ import { trackLinkClick } from '@/lib/analytics';
 
 const PartnersSection = () => {
   return (
-    <section className="py-20 mesh-bg">
+    <section className="py-20 bg-surface">
       <div className="max-w-content mx-auto px-6">
-        <div className="text-center mb-16 relative z-10">
+        <div className="text-center mb-16">
           <div className="text-mono-accent mb-4">Trusted Partners</div>
           <h2 className="text-section-title font-display text-text-primary">
             Collaborative ecosystem for refugees and displaced communities
@@ -14,7 +14,7 @@ const PartnersSection = () => {
         </div>
 
         {/* Featured partner */}
-        <div className="mb-16 relative z-10">
+        <div className="mb-16">
           <a
             href={foundingPartner.website}
             target="_blank"
@@ -44,7 +44,7 @@ const PartnersSection = () => {
         </div>
 
         {/* Partner grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-8 relative z-10 justify-items-center">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-8 justify-items-center">
           {partners.map((partner) => (
             <a
               key={partner.name}

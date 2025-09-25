@@ -5,6 +5,8 @@ import relayFunderLogo from '@/assets/RelayFunder_highres_transparent-horizontal
 import relayFunderWhiteLogo from '@/assets/RelayFunder-white_highres_transparent-horizontal.png';
 import fundingTheCommonsLogo from '@/assets/logos/logo-ftc-icon.png';
 import fundingTheCommonsWhiteLogo from '@/assets/logos/logo-ftc-icon-white.png';
+import hypercertsLogo from '@/assets/logos/logo-hypercerts.png';
+import hypercertsWhiteLogo from '@/assets/logos/logo-hypercerts-white.png';
 
 // Logo mappings for different themes
 const logoMappings = {
@@ -19,6 +21,10 @@ const logoMappings = {
   [fundingTheCommonsLogo]: {
     light: fundingTheCommonsLogo,
     dark: fundingTheCommonsWhiteLogo,
+  },
+  [hypercertsLogo]: {
+    light: hypercertsLogo,
+    dark: hypercertsWhiteLogo,
   },
 } as const;
 
