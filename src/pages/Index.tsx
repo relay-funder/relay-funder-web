@@ -6,7 +6,6 @@ import WhatRelayDoes from '@/components/sections/WhatRelayDoes';
 import CommunityMatch from '@/components/sections/CommunityMatch';
 import PilotsProof from '@/components/sections/PilotsProof';
 import AkashicArchive from '@/components/sections/AkashicArchive';
-import SponsorsPreview from '@/components/sections/SponsorsPreview';
 import { trackPageView } from '@/lib/analytics';
 
 const Index = () => {
@@ -16,12 +15,11 @@ const Index = () => {
   return (
     <Layout>
       <Hero />
-      <PartnersSection />
       <WhatRelayDoes />
+      <PartnersSection />
       <CommunityMatch />
       <PilotsProof />
       <AkashicArchive />
-      <SponsorsPreview />
     </Layout>
   );
 };

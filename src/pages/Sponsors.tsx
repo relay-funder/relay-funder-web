@@ -24,7 +24,7 @@ const Sponsors = () => {
       color: 'bg-hope',
     },
     {
-      title: 'General Aid',
+      title: 'Emergency Response',
       description: 'Essential services and emergency support',
       color: 'bg-surface',
     },
@@ -33,7 +33,7 @@ const Sponsors = () => {
   const benefits = [
     {
       title: 'Clear attribution',
-      description: 'Your support is prominently recognized in project communications and updates.',
+      description: 'Your support is prominently recognized in campaign communications and updates.',
     },
     {
       title: 'Transparent allocations',
@@ -58,7 +58,7 @@ const Sponsors = () => {
             Fuel the Match Fund. <span className="text-gradient">Multiply community power.</span>
           </h1>
           <p className="text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed">
-            Partner with Relay Funder to amplify the impact of community-driven projects. Your
+            Partner with Relay Funder to amplify the impact of community-driven campaigns. Your
             sponsorship creates a multiplier effect that transforms individual contributions into
             substantial funding for refugee-led initiatives.
           </p>
@@ -94,7 +94,7 @@ const Sponsors = () => {
               Funding Themes
             </h2>
             <p className="text-xl text-text-secondary max-w-2xl mx-auto font-serif">
-              Support community-led projects across key areas of impact
+              Support community-led campaigns across key areas of impact
             </p>
           </div>
 

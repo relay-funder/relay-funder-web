@@ -51,7 +51,7 @@ const Navigation = () => {
           {/* Primary CTAs */}
           <div className="hidden md:flex items-center space-x-4">
             <div className="bg-muted text-text-primary text-sm px-4 py-2 rounded-xl border border-border cursor-not-allowed font-semibold">
-              Explore Projects (Coming Soon)
+              Explore Campaigns (Coming Soon)
             </div>
             <Link
               to="/sponsors"
@@ -97,7 +97,7 @@ const Navigation = () => {
               ))}
               <div className="pt-4 space-y-3">
                 <div className="block bg-muted text-text-primary text-center text-sm px-6 py-2 rounded-xl border border-border cursor-not-allowed font-semibold">
-                  Explore Projects (Coming Soon)
+                  Explore Campaigns (Coming Soon)
                 </div>
                 <Link
                   to="/sponsors"

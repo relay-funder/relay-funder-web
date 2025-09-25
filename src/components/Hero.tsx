@@ -23,11 +23,11 @@ const Hero = () => {
               <div className="space-y-6">
                 <div className="text-mono-accent mb-4">Humanitarian Technology</div>
                 <h1 className="text-hero leading-[0.95]">
-                  Community-driven crowdfunding for{' '}
+                  Crowdfunding for{' '}
                   <span className="text-quantum">refugees and displaced communities</span>
                 </h1>
                 <p className="text-subhero text-text-secondary lg:max-w-xl">
-                  Leaders propose. Supporters worldwide back them. Sponsors multiply support through
+                  Community leaders propose. Supporters worldwide back them. Sponsors multiply support through
                   a <span className="text-serif-elegant">shared Match Fund</span>.
                 </p>
               </div>
@@ -35,7 +35,7 @@ const Hero = () => {
               {/* CTAs */}
               <div className="flex flex-col sm:flex-row gap-6 lg:justify-start justify-center">
                 <div className="bg-muted text-text-primary inline-flex items-center justify-center px-6 py-3 rounded-xl border border-border cursor-not-allowed font-semibold">
-                  Explore Projects (Coming Soon)
+                  Explore Campaigns (Coming Soon)
                 </div>
                 <Link
                   to="/sponsors"
@@ -48,7 +48,7 @@ const Hero = () => {
 
               {/* Status badge */}
               <div className="quantum-surface p-6 inline-block">
-                <div className="text-mono-accent mb-2">Project Status</div>
+                <div className="text-mono-accent mb-2">Campaign Status</div>
                 <div className="text-display-bold text-bio">
                   Launching in Kenya and Uganda with Refunite's Community Leader Network
                 </div>

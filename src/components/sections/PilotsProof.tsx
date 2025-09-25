@@ -1,4 +1,6 @@
 import mobilePaymentsImage from '@/assets/mobile-payments.jpg';
+import refuniteLogo from '@/assets/logos/logo-refunite-black.png';
+import { ThemeAwareImage } from '@/hooks/useThemeLogo';
 
 const PilotsProof = () => {
   const networkStats = [
@@ -21,9 +23,16 @@ const PilotsProof = () => {
               {/* Callout card */}
               <div className="web3-card p-8 border-l-4 border-l-bio hover-bio">
                 <div className="text-mono-accent mb-3">Launch Partner</div>
-                <h3 className="font-medium text-text-primary mb-4 font-display text-lg">
-                  Launching with Refunite's Community Leader Network
-                </h3>
+                <div className="flex items-center space-x-6 mb-4">
+                  <ThemeAwareImage
+                    src={refuniteLogo}
+                    alt="Refunite logo"
+                    className="w-32 h-16 object-contain block"
+                  />
+                  <h3 className="font-medium text-text-primary font-display text-lg">
+                    Community Leader Network
+                  </h3>
+                </div>
                 <p className="text-text-muted leading-relaxed">
                   A proven platform connecting displaced families across crisis-affected regions,
                   powered by trusted community leaders who understand local needs and cultural
@@ -49,7 +58,7 @@ const PilotsProof = () => {
               <div className="web3-card overflow-hidden hover-quantum">
                 <img
                   src={mobilePaymentsImage}
-                  alt="Mobile-first financial technology enabling community-led projects"
+                  alt="Mobile-first financial technology enabling community-led campaigns"
                   className="w-full h-full object-cover"
                 />
               </div>
