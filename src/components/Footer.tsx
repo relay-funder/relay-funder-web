@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { getAppUrl } from '@/lib/utils';
 
 const Footer = () => {
   return (
@@ -52,9 +53,14 @@ const Footer = () => {
             <h4 className="font-semibold text-text-primary mb-4">Platform</h4>
             <ul className="space-y-2">
               <li>
-                <div className="text-text-muted cursor-not-allowed">
-                  Explore Campaigns (Coming Soon)
-                </div>
+                <a
+                  href={getAppUrl()}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-text-muted hover:text-accent interactive-base"
+                >
+                  Explore Campaigns
+                </a>
               </li>
               <li>
                 <Link to="/partners" className="text-text-muted hover:text-accent interactive-base">

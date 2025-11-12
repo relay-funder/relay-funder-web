@@ -5,6 +5,7 @@ import relayFunderLogo from '@/assets/RelayFunder_highres_transparent-horizontal
 import { ThemeToggle } from '@/components/ThemeToggle';
 import { ThemeAwareImage } from '@/hooks/useThemeLogo';
 import { trackNavigation, trackCTAClick } from '@/lib/analytics';
+import { getAppUrl } from '@/lib/utils';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -50,12 +51,18 @@ const Navigation = () => {
 
           {/* Primary CTAs */}
           <div className="hidden md:flex items-center space-x-4">
-            <div className="bg-muted text-text-primary text-sm px-4 py-2 rounded-xl border border-border cursor-not-allowed font-semibold">
-              Explore Campaigns (Coming Soon)
-            </div>
+            <a
+              href={getAppUrl()}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-quantum text-white text-sm px-4 py-2 rounded-xl border border-quantum hover:bg-quantum/90 transition-colors font-semibold"
+              onClick={() => trackCTAClick('Explore Campaigns', 'Navigation Desktop')}
+            >
+              Explore Campaigns
+            </a>
             <Link
               to="/sponsors"
-              className="btn-quantum text-sm px-4 py-2"
+              className="btn-ghost text-sm px-4 py-2"
               onClick={() => trackCTAClick('Sponsor Match Fund', 'Navigation Desktop')}
             >
               Sponsor Match Fund
@@ -96,12 +103,18 @@ const Navigation = () => {
                 </Link>
               ))}
               <div className="pt-4 space-y-3">
-                <div className="block bg-muted text-text-primary text-center text-sm px-6 py-2 rounded-xl border border-border cursor-not-allowed font-semibold">
-                  Explore Campaigns (Coming Soon)
-                </div>
+                <a
+                  href={getAppUrl()}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block btn-primary text-center text-sm px-6 py-2"
+                  onClick={() => trackCTAClick('Explore Campaigns', 'Mobile Navigation')}
+                >
+                  Explore Campaigns
+                </a>
                 <Link
                   to="/sponsors"
-                  className="block btn-primary text-center text-sm px-6 py-2"
+                  className="block btn-ghost text-center text-sm px-6 py-2"
                   onClick={() => trackCTAClick('Sponsor the Match Fund', 'Mobile Navigation')}
                 >
                   Sponsor the Match Fund

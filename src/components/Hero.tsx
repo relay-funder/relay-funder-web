@@ -5,6 +5,7 @@ import heroImage4 from '@/assets/hero/relay-help-refunite.jpg';
 import heroImage3 from '@/assets/hero/6717da50e7b2fb4fa2a4c278_portrait-of-smiling-amhara-woman-wearing-blue-trad-2023-11-27-05-19-56-utc-min.jpg';
 import heroImage5 from '@/assets/hero/relay-help-refunite-sewing.jpg';
 import { trackCTAClick } from '@/lib/analytics';
+import { getAppUrl } from '@/lib/utils';
 
 const Hero = () => {
   return (
@@ -34,12 +35,18 @@ const Hero = () => {
 
               {/* CTAs */}
               <div className="flex flex-col sm:flex-row gap-6 lg:justify-start justify-center">
-                <div className="bg-muted text-text-primary inline-flex items-center justify-center px-6 py-3 rounded-xl border border-border cursor-not-allowed font-semibold">
-                  Explore Campaigns (Coming Soon)
-                </div>
+                <a
+                  href={getAppUrl()}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-ghost inline-flex items-center justify-center px-6 py-3"
+                  onClick={() => trackCTAClick('Explore Campaigns', 'Hero')}
+                >
+                  Explore Campaigns
+                </a>
                 <Link
                   to="/sponsors"
-                  className="btn-ghost inline-flex items-center justify-center"
+                  className="btn-primary inline-flex items-center justify-center px-6 py-3"
                   onClick={() => trackCTAClick('Sponsor Match Fund', 'Hero')}
                 >
                   Sponsor Match Fund
