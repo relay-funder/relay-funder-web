@@ -4,8 +4,8 @@ import { trackLinkClick } from '@/lib/analytics';
 
 const PartnersSection = () => {
   return (
-    <section className="py-20 bg-surface">
-      <div className="max-w-content mx-auto px-6">
+    <section className="py-20 mesh-bg">
+      <div className="max-w-content mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           <div className="text-mono-accent mb-4">Trusted Partners</div>
           <h2 className="text-section-title font-display text-text-primary">

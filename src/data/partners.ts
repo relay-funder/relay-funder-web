@@ -1,10 +1,9 @@
 import refuniteLogo from '@/assets/logos/logo-refunite-black.png';
 import celoLogo from '@/assets/logos/logo-celo.png';
-import operaLogo from '@/assets/logos/logo-opera-mini.png';
 import gitcoinLogo from '@/assets/logos/logo-gitcoin.png';
 import humanTechLogo from '@/assets/logos/logo-human-tech-blue.jpg';
 import grassrootsEconomicsLogo from '@/assets/logos/logo-grassroots-economics.png';
-import ccProtocolLogo from '@/assets/logos/logo-cc-protocol.jpeg';
+import oakNetworkLogo from '@/assets/logos/logo-oaknetwork.png';
 import filecoinFoundationLogo from '@/assets/logos/logo-filecoin-foundation.png';
 import fundingTheCommonsLogo from '@/assets/logos/logo-ftc-icon.png';
 import hypercertsLogo from '@/assets/logos/logo-hypercerts.png';
@@ -31,12 +30,12 @@ export const foundingPartner = {
 
 export const partners: Partner[] = [
   {
-    name: 'CC Protocol',
-    logo: ccProtocolLogo,
-    role: 'Kickstarter supported crowdfunding infrastructure',
+    name: 'Oak Network',
+    logo: oakNetworkLogo,
+    role: 'Crowdfunding infrastructure',
     description:
-      "CC Protocol is supported by Kickstarter and provides the foundational open-source crowdfunding infrastructure that powers Relay Funder's on-chain campaign creation and management. Their protocol enables transparent, community-driven fundraising with built-in governance and accountability mechanisms.",
-    website: 'https://www.ccprotocol.xyz/',
+      "Oak Network builds the behind the scenes 'engine' that lets creators run their own Kickstarter style campaigns, online shops, and preorders, with blockchain quietly handling the money and trust in the background.",
+    website: 'https://www.oaknetwork.org/',
   },
   {
     name: 'Celo',
@@ -61,14 +60,6 @@ export const partners: Partner[] = [
     description:
       "Grassroots Economics brings expertise in community currency design and local economic resilience. Their work with complementary currencies in Kenya and beyond informs Relay Funder's approach to sustainable, community-owned financial systems.",
     website: 'https://grassrootseconomics.org',
-  },
-  {
-    name: 'Opera Mini',
-    logo: operaLogo,
-    role: 'MiniPay wallet distribution',
-    description:
-      "Opera's MiniPay wallet provides seamless access to Relay Funder through their mobile browser ecosystem. With millions of users across Africa, Opera enables direct integration of funding capabilities into everyday mobile experiences.",
-    website: 'https://www.minipay.to/',
   },
   {
     name: 'Filecoin Foundation',
