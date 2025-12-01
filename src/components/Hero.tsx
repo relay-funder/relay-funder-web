@@ -55,13 +55,13 @@ const Hero = () => {
                     <div>
                       <span className="text-text-muted">
                         {(() => {
-                          const startDate = new Date('2025-12-15T00:00:00');
+                          const applicationDeadline = new Date('2025-12-15T00:00:00');
                           const today = new Date();
                           const daysUntil = Math.ceil(
-                            (startDate.getTime() - today.getTime()) / (1000 * 60 * 60 * 24)
+                            (applicationDeadline.getTime() - today.getTime()) / (1000 * 60 * 60 * 24)
                           );
                           return daysUntil > 0
-                            ? `Applications close in ${daysUntil} days`
+                            ? `Applications close in ${daysUntil} ${daysUntil === 1 ? 'day' : 'days'}`
                             : 'Round Active';
                         })()}
                       </span>
