@@ -93,7 +93,7 @@ const Sponsors = () => {
             <h2 className="text-section-title text-text-primary mb-6 font-display">
               Funding Themes
             </h2>
-            <p className="text-xl text-text-secondary max-w-2xl mx-auto font-serif">
+            <p className="text-xl text-text-secondary max-w-2xl mx-auto">
               Support community-led campaigns across key areas of impact
             </p>
           </div>
@@ -120,7 +120,7 @@ const Sponsors = () => {
         <div className="max-w-content mx-auto px-6 text-center">
           <div className="max-w-2xl mx-auto">
             <h2 className="text-section-title text-text-primary mb-6">Ready to multiply impact?</h2>
-            <p className="text-text-secondary mb-8">
+            <p className="text-xl text-text-secondary mb-8">
               Join our growing network of sponsors who believe in community-led solutions.
             </p>
             <div className="flex justify-center">

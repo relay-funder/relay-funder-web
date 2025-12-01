@@ -9,8 +9,8 @@ const PilotsProof = () => {
   ];
 
   return (
-    <section className="py-20 bg-surface">
-      <div className="max-w-content mx-auto px-6">
+    <section className="py-20 mesh-bg">
+      <div className="max-w-content mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
             <div className="text-mono-accent mb-4">Network Overview</div>

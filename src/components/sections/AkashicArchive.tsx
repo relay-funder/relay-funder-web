@@ -1,8 +1,8 @@
 const AkashicArchive = () => {
   return (
-    <section className="py-20 mesh-bg">
+    <section className="py-20 bg-surface">
       <div className="max-w-content mx-auto px-6">
-        <div className="max-w-4xl mx-auto text-center relative z-10">
+        <div className="max-w-4xl mx-auto text-center">
           <div className="inline-flex items-center px-4 py-2 bg-solar text-background rounded-xl mb-6">
             <div className="font-medium">Coming Soon</div>
           </div>

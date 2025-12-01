@@ -7,6 +7,8 @@ import fundingTheCommonsLogo from '@/assets/logos/logo-ftc-icon.png';
 import fundingTheCommonsWhiteLogo from '@/assets/logos/logo-ftc-icon-white.png';
 import hypercertsLogo from '@/assets/logos/logo-hypercerts.png';
 import hypercertsWhiteLogo from '@/assets/logos/logo-hypercerts-white.png';
+import protocolLabsLogo from '@/assets/logos/logo-protocol-labs-black.png';
+import protocolLabsWhiteLogo from '@/assets/logos/logo-protocol-labs-white.png';
 
 // Logo mappings for different themes
 const logoMappings = {
@@ -25,6 +27,10 @@ const logoMappings = {
   [hypercertsLogo]: {
     light: hypercertsLogo,
     dark: hypercertsWhiteLogo,
+  },
+  [protocolLabsLogo]: {
+    light: protocolLabsLogo,
+    dark: protocolLabsWhiteLogo,
   },
 } as const;
 

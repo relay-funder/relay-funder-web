@@ -33,6 +33,43 @@ const Hero = () => {
                 </p>
               </div>
 
+              {/* Upcoming Round */}
+              <div className="quantum-surface p-6 block w-full lg:max-w-2xl mx-auto lg:mx-0">
+                <div className="space-y-4">
+                  <div>
+                    <div className="text-mono-accent mb-2">Upcoming Round</div>
+                    <h3 className="text-xl font-semibold text-text-primary mb-2">
+                      Celo - Prezenti Round
+                    </h3>
+                    <p className="text-text-secondary text-sm">
+                      Fast, flexible micro-grants for community leaders and emerging projects.
+                    </p>
+                  </div>
+
+                  <div className="flex items-center justify-center lg:justify-start gap-4 sm:gap-6 text-sm flex-wrap sm:flex-nowrap">
+                    <div>
+                      <span className="text-text-muted">Match Fund: </span>
+                      <span className="text-quantum font-semibold font-mono">$10,000</span>
+                    </div>
+                    <div className="border-l border-border h-4 hidden sm:block"></div>
+                    <div>
+                      <span className="text-text-muted">
+                        {(() => {
+                          const applicationDeadline = new Date('2025-12-15T00:00:00');
+                          const today = new Date();
+                          const daysUntil = Math.ceil(
+                            (applicationDeadline.getTime() - today.getTime()) / (1000 * 60 * 60 * 24)
+                          );
+                          return daysUntil > 0
+                            ? `Applications close in ${daysUntil} ${daysUntil === 1 ? 'day' : 'days'}`
+                            : 'Round Active';
+                        })()}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               {/* CTAs */}
               <div className="flex flex-col sm:flex-row gap-6 lg:justify-start justify-center">
                 <a
@@ -51,14 +88,6 @@ const Hero = () => {
                 >
                   Sponsor Match Fund
                 </Link>
-              </div>
-
-              {/* Status badge */}
-              <div className="quantum-surface p-6 inline-block">
-                <div className="text-mono-accent mb-2">Campaign Status</div>
-                <div className="text-display-bold text-bio">
-                  Launching in Kenya and Uganda with Refunite's Community Leader Network
-                </div>
               </div>
 
               {/* Photo grid - Mobile version (below text) */}

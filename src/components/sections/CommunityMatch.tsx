@@ -12,9 +12,9 @@ const CommunityMatch = () => {
   const totalImpact = backerCount + matchMultiplier;
 
   return (
-    <section className="py-20 mesh-bg">
+    <section className="py-20 bg-surface">
       <div className="max-w-content mx-auto px-6">
-        <div className="max-w-4xl mx-auto text-center relative z-10">
+        <div className="max-w-4xl mx-auto text-center">
           <div className="text-mono-accent mb-4">Funding Innovation</div>
           <h2 className="text-section-title text-text-primary mb-6 font-display">
             Community Match
@@ -80,7 +80,15 @@ const CommunityMatch = () => {
             The Community Match rewards broad community support over large individual donations,
             ensuring projects with genuine grassroots backing receive the most funding.
             <span className="block mt-1 text-xs opacity-75">
-              Powered by quadratic funding algorithms
+              Powered by quadratic funding (QF). Learn more about QF{' '}
+              <a 
+                href="https://www.wtfisqf.com/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="underline hover:text-quantum transition-colors"
+              >
+                here.
+              </a>
             </span>
           </p>
         </div>
