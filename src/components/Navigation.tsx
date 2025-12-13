@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { ExternalLink, Menu, X } from 'lucide-react';
 import relayFunderLogo from '@/assets/RelayFunder_highres_transparent-horizontal.png';
 import { ThemeToggle } from '@/components/ThemeToggle';
 import { ThemeAwareImage } from '@/hooks/useThemeLogo';
+import { NEWSLETTER_URL } from '@/config/links';
 import { trackNavigation, trackCTAClick } from '@/lib/analytics';
 import { getAppUrl } from '@/lib/utils';
 
@@ -15,9 +16,10 @@ const Navigation = () => {
     { name: 'Partners', href: '/partners' },
     { name: 'Sponsors', href: '/sponsors' },
     { name: 'FAQ', href: '/faq' },
+    { name: 'Newsletter', href: NEWSLETTER_URL, external: true },
   ];
 
-  const isActive = (href: string) => location.pathname === href;
+  const isActive = (href: string, isExternal?: boolean) => !isExternal && location.pathname === href;
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-surface/80 backdrop-blur-xl border-b border-quantum/20">
@@ -33,24 +35,41 @@ const Navigation = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-8">
             {navItems.map((item) => (
-              <Link
-                key={item.name}
-                to={item.href}
-                className={`interactive-base font-medium ${
-                  isActive(item.href) ? 'text-quantum' : 'text-text-secondary hover:text-quantum'
-                }`}
-                onClick={() => trackNavigation(item.name, 'Navigation Menu')}
-                {...(isActive(item.href) && { 'aria-current': 'page' })}
-              >
-                {item.name}
-              </Link>
+              item.external ? (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="interactive-base font-medium text-text-secondary hover:text-quantum inline-flex items-center gap-1"
+                  aria-label={`${item.name} (opens in a new tab)`}
+                  onClick={() => trackNavigation(item.name, 'Navigation Menu')}
+                >
+                  {item.name}
+                  <ExternalLink className="h-4 w-4" aria-hidden="true" />
+                </a>
+              ) : (
+                <Link
+                  key={item.name}
+                  to={item.href}
+                  className={`interactive-base font-medium ${
+                    isActive(item.href, item.external)
+                      ? 'text-quantum'
+                      : 'text-text-secondary hover:text-quantum'
+                  }`}
+                  onClick={() => trackNavigation(item.name, 'Navigation Menu')}
+                  {...(isActive(item.href, item.external) && { 'aria-current': 'page' })}
+                >
+                  {item.name}
+                </Link>
+              )
             ))}
           </div>
 
           {/* Primary CTAs */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden lg:flex items-center space-x-4">
             <a
               href={getAppUrl()}
               target="_blank"
@@ -71,7 +90,7 @@ const Navigation = () => {
           </div>
 
           {/* Mobile controls */}
-          <div className="md:hidden flex items-center space-x-2">
+          <div className="lg:hidden flex items-center space-x-2">
             <ThemeToggle />
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -84,23 +103,43 @@ const Navigation = () => {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="md:hidden py-4 border-t border-border animate-fade-in-up">
+          <div className="lg:hidden py-4 border-t border-border animate-fade-in-up">
             <div className="flex flex-col space-y-4">
               {navItems.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  className={`interactive-base font-medium py-2 ${
-                    isActive(item.href) ? 'text-accent' : 'text-text-secondary hover:text-accent'
-                  }`}
-                  onClick={() => {
-                    setIsOpen(false);
-                    trackNavigation(item.name, 'Mobile Navigation Menu');
-                  }}
-                  {...(isActive(item.href) && { 'aria-current': 'page' })}
-                >
-                  {item.name}
-                </Link>
+                item.external ? (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="interactive-base font-medium py-2 text-text-secondary hover:text-accent inline-flex items-center gap-1"
+                    aria-label={`${item.name} (opens in a new tab)`}
+                    onClick={() => {
+                      setIsOpen(false);
+                      trackNavigation(item.name, 'Mobile Navigation Menu');
+                    }}
+                  >
+                    {item.name}
+                    <ExternalLink className="h-4 w-4" aria-hidden="true" />
+                  </a>
+                ) : (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    className={`interactive-base font-medium py-2 ${
+                      isActive(item.href, item.external)
+                        ? 'text-accent'
+                        : 'text-text-secondary hover:text-accent'
+                    }`}
+                    onClick={() => {
+                      setIsOpen(false);
+                      trackNavigation(item.name, 'Mobile Navigation Menu');
+                    }}
+                    {...(isActive(item.href, item.external) && { 'aria-current': 'page' })}
+                  >
+                    {item.name}
+                  </Link>
+                )
               ))}
               <div className="pt-4 space-y-3">
                 <a
