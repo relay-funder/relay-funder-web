@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom';
+import { ExternalLink } from 'lucide-react';
+import { NEWSLETTER_URL } from '@/config/links';
 import { getAppUrl } from '@/lib/utils';
 
 const Footer = () => {
@@ -60,6 +62,18 @@ const Footer = () => {
                   className="text-text-muted hover:text-accent interactive-base"
                 >
                   Explore Campaigns
+                </a>
+              </li>
+              <li>
+                <a
+                  href={NEWSLETTER_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-text-muted hover:text-accent interactive-base inline-flex items-center gap-1"
+                  aria-label="Newsletter (opens in a new tab)"
+                >
+                  Newsletter
+                  <ExternalLink className="h-4 w-4" aria-hidden="true" />
                 </a>
               </li>
               <li>

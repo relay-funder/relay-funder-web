@@ -6,6 +6,7 @@ import heroImage3 from '@/assets/hero/6717da50e7b2fb4fa2a4c278_portrait-of-smili
 import heroImage5 from '@/assets/hero/relay-help-refunite-sewing.jpg';
 import { trackCTAClick } from '@/lib/analytics';
 import { getAppUrl } from '@/lib/utils';
+import { heroRoundInfo } from '@/config/rounds';
 
 const Hero = () => {
   return (
@@ -39,23 +40,23 @@ const Hero = () => {
                   <div>
                     <div className="text-mono-accent mb-2">Upcoming Round</div>
                     <h3 className="text-xl font-semibold text-text-primary mb-2">
-                      Celo - Prezenti Round
+                      {heroRoundInfo.name}
                     </h3>
                     <p className="text-text-secondary text-sm">
-                      Fast, flexible micro-grants for community leaders and emerging projects.
+                      {heroRoundInfo.description}
                     </p>
                   </div>
 
                   <div className="flex items-center justify-center lg:justify-start gap-4 sm:gap-6 text-sm flex-wrap sm:flex-nowrap">
                     <div>
                       <span className="text-text-muted">Match Fund: </span>
-                      <span className="text-quantum font-semibold font-mono">$10,000</span>
+                      <span className="text-quantum font-semibold font-mono">${heroRoundInfo.matchFund}</span>
                     </div>
                     <div className="border-l border-border h-4 hidden sm:block"></div>
                     <div>
                       <span className="text-text-muted">
                         {(() => {
-                          const applicationDeadline = new Date('2025-12-16T00:00:00');
+                          const applicationDeadline = heroRoundInfo.applicationDeadline;
                           const today = new Date();
                           const daysUntil = Math.ceil(
                             (applicationDeadline.getTime() - today.getTime()) / (1000 * 60 * 60 * 24)
