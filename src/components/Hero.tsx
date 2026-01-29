@@ -38,7 +38,7 @@ const Hero = () => {
               <div className="quantum-surface p-6 block w-full lg:max-w-2xl mx-auto lg:mx-0">
                 <div className="space-y-4">
                   <div>
-                    <div className="text-mono-accent mb-2">Upcoming Round</div>
+                    <div className="text-mono-accent mb-2">Round Live</div>
                     <h3 className="text-xl font-semibold text-text-primary mb-2">
                       {heroRoundInfo.name}
                     </h3>
@@ -50,22 +50,7 @@ const Hero = () => {
                   <div className="flex items-center justify-center lg:justify-start gap-4 sm:gap-6 text-sm flex-wrap sm:flex-nowrap">
                     <div>
                       <span className="text-text-muted">Match Fund: </span>
-                      <span className="text-quantum font-semibold font-mono">${heroRoundInfo.matchFund}</span>
-                    </div>
-                    <div className="border-l border-border h-4 hidden sm:block"></div>
-                    <div>
-                      <span className="text-text-muted">
-                        {(() => {
-                          const applicationDeadline = heroRoundInfo.applicationDeadline;
-                          const today = new Date();
-                          const daysUntil = Math.ceil(
-                            (applicationDeadline.getTime() - today.getTime()) / (1000 * 60 * 60 * 24)
-                          );
-                          return daysUntil > 0
-                            ? `Applications close in ${daysUntil} ${daysUntil === 1 ? 'day' : 'days'}`
-                            : 'Round Active';
-                        })()}
-                      </span>
+                      <span className="text-quantum font-semibold font-mono">${heroRoundInfo.matchFund.toLocaleString()}</span>
                     </div>
                   </div>
                 </div>
