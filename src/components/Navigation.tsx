@@ -13,7 +13,7 @@ const Navigation = () => {
   const location = useLocation();
 
   const navItems = [
-    { name: 'Usecase', href: '/use-case' },
+    { name: 'Usecase', href: '/use-case', forceReload: true },
     { name: 'Partners', href: '/partners' },
     { name: 'Sponsors', href: '/sponsors' },
     { name: 'FAQ', href: '/faq' },
@@ -50,6 +50,19 @@ const Navigation = () => {
                 >
                   {item.name}
                   <ExternalLink className="h-4 w-4" aria-hidden="true" />
+                </a>
+              ) : item.forceReload ? (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  className={`interactive-base font-medium ${
+                    isActive(item.href)
+                      ? 'text-quantum'
+                      : 'text-text-secondary hover:text-quantum'
+                  }`}
+                  onClick={() => trackNavigation(item.name, 'Navigation Menu')}
+                >
+                  {item.name}
                 </a>
               ) : (
                 <Link
@@ -122,6 +135,22 @@ const Navigation = () => {
                   >
                     {item.name}
                     <ExternalLink className="h-4 w-4" aria-hidden="true" />
+                  </a>
+                ) : item.forceReload ? (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    className={`interactive-base font-medium py-2 ${
+                      isActive(item.href)
+                        ? 'text-accent'
+                        : 'text-text-secondary hover:text-accent'
+                    }`}
+                    onClick={() => {
+                      setIsOpen(false);
+                      trackNavigation(item.name, 'Mobile Navigation Menu');
+                    }}
+                  >
+                    {item.name}
                   </a>
                 ) : (
                   <Link

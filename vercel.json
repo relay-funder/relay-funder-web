@@ -5,7 +5,11 @@
       "destination": "https://app.capsules.ink/sara/relay-funder"
     },
     {
-      "source": "/((?!api/|use-case).*)",
+      "source": "/usecase",
+      "destination": "https://app.capsules.ink/sara/relay-funder"
+    },
+    {
+      "source": "/((?!api/|use-case|usecase).*)",
       "destination": "/index.html"
     }
   ]
