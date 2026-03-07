@@ -8,6 +8,8 @@ import filecoinFoundationLogo from '@/assets/logos/logo-filecoin-foundation.png'
 import fundingTheCommonsLogo from '@/assets/logos/logo-ftc-icon.png';
 import hypercertsLogo from '@/assets/logos/logo-hypercerts.png';
 import protocolLabsLogo from '@/assets/logos/logo-protocol-labs-black.png';
+import daimoLogo from '@/assets/logos/logo-daimo.svg';
+import pretiumFinanceLogo from '@/assets/logos/logo-pretium-finance-white.png';
 
 export interface Partner {
   name: string;
@@ -15,20 +17,28 @@ export interface Partner {
   role: string;
   description: string;
   website: string;
+  logoWrapperClassName?: string;
+  logoClassName?: string;
 }
 
-export type FoundingPartner = Partner;
-
-export const foundingPartner = {
-  name: 'Refunite',
-  logo: refuniteLogo,
-  description:
-    'Our founding partner brings the Community Leader Network—109k+ trusted leaders with 100M+ reach across crisis-affected communities worldwide.',
-  role: 'Community Leader Network & Distribution',
-  website: 'https://refunite.org',
-} as const satisfies FoundingPartner;
-
 export const partners: Partner[] = [
+  {
+    name: 'Refunite',
+    logo: refuniteLogo,
+    role: 'Refugee nonprofit',
+    description:
+      "Refunite works directly with refugees and displaced communities to strengthen access to information, support, and livelihoods. Their long-standing community networks help ground Relay Funder's model in real local relationships.",
+    website: 'https://refunite.org',
+  },
+  {
+    name: 'Daimo',
+    logo: daimoLogo,
+    role: 'Stablecoin app',
+    description:
+      'Daimo makes stablecoin payments simple and usable on mobile, helping reduce friction for cross-border support and everyday digital transactions.',
+    website: 'https://daimo.com',
+    logoWrapperClassName: 'rounded-2xl bg-white p-2 ring-1 ring-border/50',
+  },
   {
     name: 'Oak Network',
     logo: oakNetworkLogo,
@@ -44,6 +54,16 @@ export const partners: Partner[] = [
     description:
       "Celo's mobile-first blockchain provides the underlying infrastructure for Relay Funder's financial operations. Their carbon-negative network enables fast, low-cost transactions optimized for mobile devices, making digital payments accessible to communities worldwide.",
     website: 'https://celo.org',
+  },
+  {
+    name: 'Pretium Finance',
+    logo: pretiumFinanceLogo,
+    role: 'Off-ramp payment platform',
+    description:
+      'Pretium Finance helps convert digital funds into usable local payouts, strengthening the last-mile payment flows needed for community-led funding programs.',
+    website: 'https://pretium.africa',
+    logoWrapperClassName: 'rounded-2xl bg-slate-950 p-2',
+    logoClassName: 'scale-90',
   },
   {
     name: 'human.tech',

@@ -1,8 +1,9 @@
 import { useEffect } from 'react';
 import Layout from '@/components/Layout';
-import { partners, foundingPartner } from '@/data/partners';
+import { partners } from '@/data/partners';
 import { ThemeAwareImage } from '@/hooks/useThemeLogo';
 import { trackPageView, trackCTAClick } from '@/lib/analytics';
+import { cn } from '@/lib/utils';
 
 const Partners = () => {
   useEffect(() => {
@@ -24,50 +25,11 @@ const Partners = () => {
         </div>
       </section>
 
-      {/* Founding Partner */}
-      <section className="py-20">
-        <div className="max-w-content mx-auto px-6">
-          <h2 className="text-section-title text-text-primary mb-12 text-center">
-            Founding Partner
-          </h2>
-
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-card border-2 border-accent/20 rounded-2xl p-8 hover-lift">
-              <div>
-                <div className="mb-6">
-                  <a
-                    href={foundingPartner.website}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:opacity-80 transition-opacity"
-                  >
-                    <ThemeAwareImage
-                      src={foundingPartner.logo}
-                      alt={`${foundingPartner.name} logo`}
-                      className="w-48 object-contain mb-4"
-                    />
-                  </a>
-                  {/* <h3 className="text-3xl font-bold text-accent">
-                    {foundingPartner.name}
-                  </h3> */}
-                </div>
-                <p className="text-text-secondary text-lg leading-relaxed mb-6">
-                  {foundingPartner.description}
-                </p>
-                <div className="inline-flex items-center px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-medium">
-                  {foundingPartner.role}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Partner Grid */}
       <section className="py-20 mesh-bg">
         <div className="max-w-content mx-auto px-6 relative z-10">
           <h2 className="text-section-title text-text-primary mb-12 text-center">
-            Technology & Infrastructure Partners
+            Partners Across the Ecosystem
           </h2>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -84,11 +46,18 @@ const Partners = () => {
                     rel="noopener noreferrer"
                     className="inline-block hover:opacity-80 transition-opacity"
                   >
-                    <ThemeAwareImage
-                      src={partner.logo}
-                      alt={`${partner.name} logo`}
-                      className="w-16 h-16 object-contain rounded-full mb-3"
-                    />
+                    <div
+                      className={cn(
+                        'w-32 h-16 mb-3 flex items-center justify-start',
+                        partner.logoWrapperClassName
+                      )}
+                    >
+                      <ThemeAwareImage
+                        src={partner.logo}
+                        alt={`${partner.name} logo`}
+                        className={cn('w-full h-full object-contain', partner.logoClassName)}
+                      />
+                    </div>
                   </a>
                   <a
                     href={partner.website}
