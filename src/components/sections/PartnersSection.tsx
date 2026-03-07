@@ -1,6 +1,7 @@
-import { partners, foundingPartner } from '@/data/partners';
+import { partners } from '@/data/partners';
 import { ThemeAwareImage } from '@/hooks/useThemeLogo';
 import { trackLinkClick } from '@/lib/analytics';
+import { cn } from '@/lib/utils';
 
 const PartnersSection = () => {
   return (
@@ -11,36 +12,6 @@ const PartnersSection = () => {
           <h2 className="text-section-title font-display text-text-primary">
             Collaborative ecosystem for refugees and displaced communities
           </h2>
-        </div>
-
-        {/* Featured partner */}
-        <div className="mb-16">
-          <a
-            href={foundingPartner.website}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block max-w-lg mx-auto web3-card p-8 text-center hover-bio group hover:transform hover:scale-105 transition-transform duration-200"
-            onClick={() =>
-              trackLinkClick(foundingPartner.name, foundingPartner.website, 'founding_partner')
-            }
-          >
-            <div className="w-60 h-[5.25rem] mx-auto mb-6 flex items-center justify-center">
-              <ThemeAwareImage
-                src={foundingPartner.logo}
-                alt={`${foundingPartner.name} logo`}
-                className="w-60 h-[5.25rem] object-contain"
-              />
-            </div>
-            <div className="text-mono-accent mb-4 group-hover:text-accent transition-colors">
-              Founding Partner
-            </div>
-            <p className="text-text-secondary leading-relaxed">
-              Community Leader Network with{' '}
-              <strong className="text-quantum">109,000+ trusted leaders</strong> and{' '}
-              <strong className="text-bio">100M+ reach</strong> across refugees and displaced
-              communities worldwide
-            </p>
-          </a>
         </div>
 
         {/* Partner grid */}
@@ -54,12 +25,17 @@ const PartnersSection = () => {
               className="text-center group hover:transform hover:scale-105 transition-transform duration-200"
               onClick={() => trackLinkClick(partner.name, partner.website, 'partner')}
             >
-              <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center transition-colors">
+              <div
+                className={cn(
+                  'w-28 h-16 mx-auto mb-4 flex items-center justify-center transition-colors',
+                  partner.logoWrapperClassName
+                )}
+              >
                 {partner.logo ? (
                   <ThemeAwareImage
                     src={partner.logo}
                     alt={`${partner.name} logo`}
-                    className="w-16 h-16 object-contain rounded-full"
+                    className={cn('w-full h-full object-contain', partner.logoClassName)}
                   />
                 ) : (
                   <span className="text-quantum text-xl font-bold font-display">

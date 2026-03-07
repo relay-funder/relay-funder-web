@@ -1,6 +1,7 @@
 export const heroRoundInfo = {
+  status: 'Pilot Round Complete',
   name: 'Celo - Prezenti Round',
   description: 'Funds for community leaders in refugee communities.',
-  matchFund: 10000,
-  applicationDeadline: new Date('2026-01-05T00:00:00'),
+  resultsUrl: 'https://app.relayfunder.com/rounds/5',
+  resultsLabel: 'View Prezenti Round Results',
 };
