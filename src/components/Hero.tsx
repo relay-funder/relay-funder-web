@@ -4,7 +4,7 @@ import heroImage2 from '@/assets/hero/6717d6c77b41816950fdfc88_volunteer-helping
 import heroImage4 from '@/assets/hero/relay-help-refunite.jpg';
 import heroImage3 from '@/assets/hero/6717da50e7b2fb4fa2a4c278_portrait-of-smiling-amhara-woman-wearing-blue-trad-2023-11-27-05-19-56-utc-min.jpg';
 import heroImage5 from '@/assets/hero/relay-help-refunite-sewing.jpg';
-import { trackCTAClick } from '@/lib/analytics';
+import { trackCTAClick, trackLinkClick } from '@/lib/analytics';
 import { getAppUrl } from '@/lib/utils';
 import { heroRoundInfo } from '@/config/rounds';
 
@@ -34,11 +34,11 @@ const Hero = () => {
                 </p>
               </div>
 
-              {/* Upcoming Round */}
+              {/* Round status */}
               <div className="quantum-surface p-6 block w-full lg:max-w-2xl mx-auto lg:mx-0">
                 <div className="space-y-4">
                   <div>
-                    <div className="text-mono-accent mb-2">Round Live</div>
+                    <div className="text-mono-accent mb-2">{heroRoundInfo.status}</div>
                     <h3 className="text-xl font-semibold text-text-primary mb-2">
                       {heroRoundInfo.name}
                     </h3>
@@ -47,12 +47,21 @@ const Hero = () => {
                     </p>
                   </div>
 
-                  <div className="flex items-center justify-center lg:justify-start gap-4 sm:gap-6 text-sm flex-wrap sm:flex-nowrap">
-                    <div>
-                      <span className="text-text-muted">Match Fund: </span>
-                      <span className="text-quantum font-semibold font-mono">${heroRoundInfo.matchFund.toLocaleString()}</span>
-                    </div>
-                  </div>
+                  <a
+                    href={heroRoundInfo.resultsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-sm font-medium text-quantum transition-colors hover:text-quantum/80"
+                    onClick={() =>
+                      trackLinkClick(
+                        heroRoundInfo.resultsLabel,
+                        heroRoundInfo.resultsUrl,
+                        'Hero Round Card'
+                      )
+                    }
+                  >
+                    {heroRoundInfo.resultsLabel}
+                  </a>
                 </div>
               </div>
 
