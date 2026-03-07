@@ -30,7 +30,7 @@ const Hero = () => {
                 </h1>
                 <p className="text-subhero text-text-secondary lg:max-w-xl">
                   Community leaders propose. Supporters worldwide back them. Sponsors multiply support through
-                  a <span className="text-serif-elegant">shared Match Fund</span>.
+                  a <span className="text-serif-elegant">Match Fund</span>.
                 </p>
               </div>
 
