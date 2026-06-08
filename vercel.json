@@ -1,15 +1,7 @@
 {
   "rewrites": [
     {
-      "source": "/use-case",
-      "destination": "https://app.capsules.ink/sara/relay-funder"
-    },
-    {
-      "source": "/usecase",
-      "destination": "https://app.capsules.ink/sara/relay-funder"
-    },
-    {
-      "source": "/((?!api/|use-case|usecase).*)",
+      "source": "/((?!api/).*)",
       "destination": "/index.html"
     }
   ]
