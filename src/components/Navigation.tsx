@@ -13,7 +13,7 @@ const Navigation = () => {
   const location = useLocation();
 
   const navItems = [
-    { name: 'Usecase', href: '/use-case', forceReload: true },
+    { name: 'Usecase', href: '/use-case' },
     { name: 'Partners', href: '/partners' },
     { name: 'Sponsors', href: '/sponsors' },
     { name: 'FAQ', href: '/faq' },
