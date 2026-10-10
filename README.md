@@ -15,22 +15,22 @@ Informational website and presentation layer for the Relay Funder crowdfunding p
 
 ```bash
 # Install dependencies
-bun install
+npm install
 
 # Start development server
-bun run dev
+npm run dev
 
 # Build for production
-bun run build
+npm run build
 
 # Preview production build
-bun run preview
+npm run preview
 
 # Lint code
-bun run lint
+npm run lint
 
 # Format code
-bun run format
+npm run format
 ```
 
 ## Project Status
